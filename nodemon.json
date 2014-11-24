@@ -1,0 +1,4 @@
+{
+ "ignore": ["public/*", "newrelic_agent.log"],
+ "verbose": true
+}

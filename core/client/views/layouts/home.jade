@@ -1,0 +1,34 @@
+doctype html
+html
+	block vars
+	include ../includes/head
+
+	- if (subText === undefined)
+		- subText = 'Oops'
+
+	body
+		div(class="l-container #{page}")
+			include ../includes/header
+
+			.illust-container
+				.illust-level.illust-level--intro
+					.symbol.symbol--snow
+						.illustItem.illustItem--snowglobe
+							p.symbol-total
+
+				.illust-level--1
+					.symbol.symbol--santa
+						.illustItem.illustItem--santa
+							p.symbol-total
+
+
+
+
+			//- .symbols
+			//- 	include ../symbols/index
+
+			#scroll-proxy
+
+			include ../includes/footer
+
+	include ../includes/foot
