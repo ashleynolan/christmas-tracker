@@ -7,14 +7,13 @@ var io = require('socket.io'), //socket.io - used for our websocket connection;
 	twitter = require('core/server/controllers/twitterController');
 
 var SocketServer = {
+	client : null,
 
-	//client : clientio.connect('http://localhost:3001'),
-	client : clientio.connect('http://christmas-tracker-daemon.herokuapp.com'),
-
-	init : function (app, server) {
+	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
 		var socketServer = io.listen(server);
+		_self.client = clientio.connect(config.clientURL);
 
 		//  ==================
 		//  === ON CONNECT ===
@@ -53,7 +52,7 @@ var SocketServer = {
 
 		return socketServer;
 	}
-}
+};
 
 var _self = SocketServer;
 

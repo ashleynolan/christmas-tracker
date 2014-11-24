@@ -11,6 +11,7 @@ var sharedConfig = {
 module.exports = {
 	local: {
 		mode: 'local',
+		clientURL: 'http://localhost:3001',
 		port: 3002,
 		app: {
 			name: 'Twitter vote counter - local'
@@ -20,6 +21,7 @@ module.exports = {
 
 	dev: {
 		mode: 'development',
+		clientURL: 'http://localhost:3001',
 		port: 3002,
 		app: {
 			name: 'Twitter vote counter - Dev'
@@ -29,6 +31,7 @@ module.exports = {
 
 	prod: {
 		mode: 'production',
+		clientURL: 'http://christmas-tracker-daemon.herokuapp.com',
 		port: 3002,
 		app: {
 			name: 'Twitter vote counter - Prod'
