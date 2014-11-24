@@ -5,7 +5,7 @@
 
 var async = require('async');
 
-	symbol = require('./controllers/symbolController');
+	twitter = require('./controllers/twitterController');
 
 
 /**
@@ -14,7 +14,7 @@ var async = require('async');
 
 module.exports = function (app) {
 
-	app.get('/', symbol.display);
+	app.get('/', twitter.display);
 
 	// assume "not found" in the error msgs
 	// is a 404. this is somewhat silly, but

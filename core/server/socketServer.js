@@ -1,9 +1,14 @@
 
 
-var io = require('socket.io'); //socket.io - used for our websocket connection
+var io = require('socket.io'), //socket.io - used for our websocket connection;
 
+	clientio  = require('socket.io-client'),
 
-var socketServer = {
+	twitter = require('core/server/controllers/twitterController');
+
+var SocketServer = {
+
+	client : clientio.connect('http://localhost:3001'),
 
 	init : function (app, server) {
 
@@ -19,8 +24,22 @@ var socketServer = {
 		socketServer.sockets.on('connection', function(socket) {
 			console.log('twitter.js: New connection logged');
 
-			//needs to emit a state from our twitter controller
-			//socket.emit('data', twitterController.getState);
+			//recieved symbolState data from the daemon
+			socket.on('symbolState', function (data) {
+				// console.log('Received new twitter state');
+
+			});
+
+			//received an updated state of our tweets
+			socket.on('tweet', function (data) {
+				// console.log('Received new tweet');
+				socketServer.sockets.emit('tweet', data);
+			});
+
+			//received state of our app from the daemon
+			socket.on('initialState', function (data) {
+				twitter.storeReceivedState(data);
+			});
 		});
 
 		//  ============================
@@ -35,4 +54,6 @@ var socketServer = {
 	}
 }
 
-module.exports = socketServer.init;
+var _self = SocketServer;
+
+module.exports = SocketServer.init;
