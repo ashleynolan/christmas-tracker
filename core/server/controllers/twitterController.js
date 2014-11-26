@@ -16,8 +16,10 @@ var TwitterController = {
 
 	storeReceivedState : function (state) {
 
-		console.log('Storing initial data');
-		_self.state = state;
+		console.log('Storing state from server');
+		if (state !== null) {
+			_self.state = state;
+		}
 
 	},
 

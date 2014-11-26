@@ -1,7 +1,10 @@
 
 header.page-header
 	.page-header-text.symbol--christmas
-		h2.page-header-title #{title}
-		p.page-header-total.symbol-total #{symbols.christmas.total}
+		h2.page-header-title.illustItem #{title}
+		p.page-header-total-wrapper
+			span.page-header-total
+				span.symbol-total #{symbols.christmas.total}
+				span.page-header-total-subtext christmas mentions today
 
-	p #{pageContent}
+	//- p #{pageContent}

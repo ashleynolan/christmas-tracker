@@ -16,7 +16,7 @@
  * Set this in pixels (but do not add px),
  * the font-size mixin will convert to REMS
  */
-$font-size-base                : 20;
+$font-size-base                : 18;
 $font-size-base-px             : $font-size-base * 1px;
 $font-size-base-narrow         : $font-size-base - 2;
 $font-size-base-narrow-px      : $font-size-base-narrow * 1px;
@@ -43,10 +43,10 @@ $font-weight-bold             : bold;
 
 /* Font stacks */
 $font-family-sans             : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif            : Georgia, "Times New Roman", Times, serif;
+$font-family-serif            : 'Roboto Slab', Times, serif;
 $font-family-mono             : Menlo, Monaco, "Courier New", monospace;
 
-$font-family-base             : $font-family-sans;
+$font-family-base             : $font-family-serif;
 $font-family-alt              : $font-family-serif;
 
 $font-family-headings         : inherit; // using inherit will use $font-family-base for all headings

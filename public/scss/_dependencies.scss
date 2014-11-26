@@ -36,21 +36,11 @@
  * Components:
  * =================================
  * Buttons
- * Grid
  * Lists
- * Forms
- * Embedded content
- * Media Object
- * Block grids
- * Fluid video
- * Tabs
  * Tables
- * Code
- * Skip navigation
  * Scrollbars
  */
 @import "partials/components/buttons";
-// @import "partials/components/grid"; // See http://tmwagency.github.io/kickoff/docs/grid.html for more info
 @import "partials/components/lists";
 @import "partials/components/tables";
 @import "partials/components/scrollbars";
@@ -64,6 +54,7 @@
  * Icons - used in conjunction with grunticon
  */
 @import "global";
+@import "partials/illustrations";
 @import "partials/masthead";
 @import "partials/footer";
 @import "partials/icons";

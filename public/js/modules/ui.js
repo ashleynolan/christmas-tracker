@@ -60,7 +60,7 @@ function Zoomer( content ) {
 	// position of vertical scroll
 	this.scrolled = 0;
 	// zero-based number of sections
-	this.levels = 2;
+	this.levels = 5;
 
 	var body = document.body,
 		html = document.documentElement;
@@ -90,13 +90,13 @@ Zoomer.prototype.scroll = function( event ) {
 
 	if (this.scrolled < 0.5) {
 		var scale = Math.pow( 3, this.scrolled * this.levels );
-		transformValue = 'scale('+scale+')';
+		transformValue = 'scale(' + scale + ')';
 	} else {
 		var scale = Math.pow( 3, 0.5 * this.levels );
 		var percentageTranslate = ((this.scrolled - 0.5) / 0.5);
 		// log(this.scrolled, percentageTranslate);
-		var translate = -(percentageTranslate * 1000);
-		transformValue = 'scale('+scale+') translate('+translate+'px)';
+		var translate = percentageTranslate * 1000;
+		transformValue = 'scale(' + scale + ') translate(0, ' + translate + 'px)';
 	}
 
 	// log(this.scrolled);

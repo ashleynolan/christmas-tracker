@@ -3,7 +3,6 @@
 var io = require('socket.io'), //socket.io - used for our websocket connection;
 
 	clientio  = require('socket.io-client'),
-
 	twitter = require('core/server/controllers/twitterController');
 
 var SocketServer = {
@@ -27,18 +26,13 @@ var SocketServer = {
 			//recieved symbolState data from the daemon
 			socket.on('symbolState', function (data) {
 				// console.log('Received new twitter state');
-
+				twitter.storeReceivedState(data);
 			});
 
 			//received an updated state of our tweets
 			socket.on('tweet', function (data) {
 				// console.log('Received new tweet');
 				socketServer.sockets.emit('tweet', data);
-			});
-
-			//received state of our app from the daemon
-			socket.on('initialState', function (data) {
-				twitter.storeReceivedState(data);
 			});
 		});
 
