@@ -7,6 +7,8 @@
 var $ = require('traversty'),
 	qwery = require('qwery'),
 
+	IScroll = require("../libs/iscroll-probe.js");
+
 	d3 = require('d3');
 
 
@@ -107,5 +109,8 @@ Zoomer.prototype.scroll = function( event ) {
 	this.content.style.OTransform = transformValue;
 	this.content.style.transform = transformValue;
 };
+
+
+
 
 module.exports = UI;
