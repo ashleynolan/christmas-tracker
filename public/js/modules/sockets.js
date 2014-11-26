@@ -35,9 +35,7 @@ var Sockets = {
 		onTweetReceived : function (stateObj) {
 
 			for (var key in stateObj) {
-
 				UI.updateSymbol(key, stateObj[key]);
-
 			}
 
 		}

@@ -91,13 +91,13 @@ h1, .h1, .alpha {
 }
 
 h2, .h2, .beta {
-	@include font-size($type-larger);
+	@include font-size(18);
 	margin-top: 0;
 	margin-bottom: $baseline;
 }
 
 h3, .h3, .gamma {
-	@include font-size($type-large);
+	@include font-size(16);
 	margin-top: 0;
 	margin-bottom: $baseline;
 }

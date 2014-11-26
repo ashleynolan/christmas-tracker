@@ -11,6 +11,9 @@ html, body,
 body {
 	background-color: $color-bg;
 	color: #333;
+
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAeCAYAAABNChwpAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAH5JREFUeNpiZMADfv77pwCkQPgBOxPTA1qoxafIAYj/Q/F7IBaghVomPA51QGKDDDSghVp8DjiAxP4AxBdooZZx0KaBUTBiACO9EhtOtfQqcHCpZaJXgYNLLRO9Chxcagc+DYyCQVEOjDZIRhskow2SUTDaIBltkAxkgwQgwAAjgVm5fvLtdwAAAABJRU5ErkJggg==');
+	background-repeat: repeat;
 }
 
 /**
@@ -23,6 +26,7 @@ body {
 	max-width: #{$layout-max-width}px;
 	margin: 0 auto;
 
+
 	.lt-ie9 & {
 		min-width: #{$layout-min-width}px;
 	}
@@ -30,7 +34,6 @@ body {
 #scroll-proxy {
 	height: 10000px;
 }
-
 
 		.symbol {
 			position: relative;
@@ -50,6 +53,19 @@ body {
 					position: absolute;
 					top: 0;
 					left: 0;
+				}
+			}
+
+			//specific text sizing for certain symbols
+			.symbol-title,
+			.symbol-total {
+				//where we want the title and count on one line
+				.symbol--doves & {
+					display: inline-block;
+				}
+				.symbol--holly &,
+				.symbol--doves & {
+					@include font-size(16);
 				}
 			}
 
