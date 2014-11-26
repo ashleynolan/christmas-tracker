@@ -73,8 +73,6 @@ function Zoomer( content ) {
 	// height of document
 	this.docHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-	log('ADDING LISTENER');
-
 	// bind Zoomer to scroll event
 	window.addEventListener( 'scroll', this, false);
 }
@@ -89,8 +87,6 @@ Zoomer.prototype.handleEvent = function( event ) {
 
 // triggered every time window scrolls
 Zoomer.prototype.scroll = function( event ) {
-
-	log('SCROLLING');
 
 	//LETS HAVE SOME DEFAULTS HERE
 	var INITIAL_TOWN_WIDTH = 350,
@@ -128,9 +124,6 @@ Zoomer.prototype.scroll = function( event ) {
 		$('.illustItem--town')[0].style.marginLeft = -(townWidth / 2) + 'px';
 		$('.illustItem--town')[0].style.height = townHeight + 'px';
 		$('.illustItem--town')[0].style.marginTop = -((townHeight / 2) + townOffset) + 'px';
-
-		log($('.illustItem--town'));
-		log(this.content);
 
 		//update scale factor of the outside illustrations and text
 		this.content.style.WebkitTransform = transformValue;
