@@ -42,7 +42,8 @@ var UI = {
 	handleZooming : function () {
 
 		// only proceed if CSS transforms are supported
-		if ( !Modernizr.csstransforms ) { return; }
+		// NEED TO FIX
+		//if ( !Modernizr.csstransforms ) { return; }
 
 		var zoomContent = $('.illust-container')[0];
 
