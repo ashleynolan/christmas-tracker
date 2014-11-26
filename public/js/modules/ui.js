@@ -124,6 +124,9 @@ Zoomer.prototype.scroll = function( event ) {
 		$('.illustItem--town')[0].style.height = townHeight + 'px';
 		$('.illustItem--town')[0].style.marginTop = -((townHeight / 2) + townOffset) + 'px';
 
+		log($('.illustItem--town'));
+		log(this.content);
+
 		//update scale factor of the outside illustrations and text
 		this.content.style.WebkitTransform = transformValue;
 		this.content.style.MozTransform = transformValue;
