@@ -103,8 +103,13 @@ Zoomer.prototype.scroll = function( event ) {
 		TARGET_VERTICAL_TRANSLATE = 1700;
 
 
+	var supportPageOffset = window.pageXOffset !== undefined;
+	var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+
+	var yOffset = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+
 	// normalize scroll value from 0 to 1
-	this.scrolled = window.scrollY / ( this.docHeight - window.innerHeight );
+	this.scrolled = yOffset / ( this.docHeight - window.innerHeight );
 
 	var transformValue,
 		width;
