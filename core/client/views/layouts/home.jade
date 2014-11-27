@@ -52,20 +52,42 @@ html
 							p.symbol-total #{symbols.ivy.total}
 
 
-					.illustItem.illustItem--snowglobe
-						.symbol.symbol--snow
-							p.symbol-total
+			//- .illust-level.illust-level--symbols
+			//- 	.illust-level.illust-level--symbolsTown
+			//- 		.illustItem.illustItem--snowman.symbol.symbol--snowman
+			//- 			h2.symbol-title Snowman
+			//- 			p.symbol-total #{symbols.snowman.total}
 
-			.illust-level--1
+			.illust-level--town
+				.illustItem.illustItem--snowglobe
+					.symbol.symbol--snow
+						p.symbol-total
 				.illustItem.illustItem--town
 					include ../illustrations/town
-					.illustItem.illustItem--snowman.symbol.symbol--snowman
-						h2.symbol-title Snowman
-						p.symbol-total
-
-					//- .symbol.symbol--santa
-					//- 	.illustItem.illustItem--santa
-					//- 		p.symbol-total
+					
+					.illust-level.illust-level--symbolsTown
+						.illustItem.illustItem--snowman.symbol.symbol--snowman
+							a.symbol-link(href="")
+								h2.symbol-title Snowman
+								p.symbol-total #{symbols.snowman.total}
+						.illustItem.illustItem--yule.symbol.symbol--yule
+							a.symbol-link(href="")
+								h2.symbol-title Yule
+								p.symbol-total #{symbols.yule.total}
+						.illustItem.illustItem--cold.symbol.symbol--cold
+							a.symbol-link(href="")
+								h2.symbol-title Cold
+								p.symbol-total #{symbols.cold.total}
+								
+						.illustItem.illustItem--robin.symbol.symbol--robin
+							a.symbol-link(href="")
+								h2.symbol-title Robin
+								p.symbol-total #{symbols.robin.total}
+						.illustItem.illustItem--christmaslights.symbol.symbol--christmaslights
+							a.symbol-link(href="")
+								h2.symbol-title Christmas Lights
+								p.symbol-total #{symbols.christmaslights.total}
+						
 
 			- }
 

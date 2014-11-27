@@ -139,11 +139,10 @@ a {
 	&, &:link {
 		color: $color-link-default;
 		text-decoration: none;
-	}
 
-	&:visited {
-		color: $color-link-visited;
-		text-decoration: none;
+		.illust-level--symbolsTown & {
+			color: #fff;
+		}
 	}
 	&:hover, &:focus {
 		color: $color-link-hover;

@@ -58,12 +58,13 @@ function Zoomer( content ) {
 	// keep track of DOM
 	this.content = content;
 
-	this.town = $('.illustItem--town')[0];
+	this.town = $('.illust-level--town')[0];
+	this.townSymbols = $('.illust-level--symbolsTown')[0];
 
 	// position of vertical scroll
 	this.scrolled = 0;
 	// zero-based number of sections
-	this.levels = 5.5;
+	this.levels = 6;
 
 	var body = document.body,
 		html = document.documentElement;
@@ -88,13 +89,13 @@ Zoomer.prototype.scroll = function( event ) {
 
 	//LETS HAVE SOME DEFAULTS HERE
 	var INITIAL_TOWN_WIDTH = 350,
-		INITIAL_TOWN_HEIGHT = 358,
+		INITIAL_TOWN_HEIGHT = 320,
 		TARGET_TOWN_WIDTH = 2800,
-		TARGET_TOWN_HEIGHT = 2864,
+		TARGET_TOWN_HEIGHT = 2560,
 
 		TARGET_BG_ZSCALE = 200,
 
-		OFFSET_MARGIN = 60,
+		OFFSET_MARGIN = 80,
 
 		TARGET_VERTICAL_TRANSLATE = 1700;
 
@@ -120,13 +121,15 @@ Zoomer.prototype.scroll = function( event ) {
 
 		var zScale = Math.round((scale * TARGET_BG_ZSCALE) - TARGET_BG_ZSCALE);
 		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
-											// transformValue = 'translateZ(' + zScale + 'px)';
+
+		// symboltransformValue = 'translateZ(' + zScale + 'px)';
 
 		townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
 		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
 		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
-		townTransform = 'translate(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px)';
+		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
+		symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
 
 		this.town.style.width = townWidth + 'px';
 		this.town.style.height = townHeight + 'px';
@@ -140,31 +143,40 @@ Zoomer.prototype.scroll = function( event ) {
 		this.content.style.WebkitTransform = transformValue;
 		this.content.style.MozTransform = transformValue;
 		this.content.style.transform = transformValue;
+		//town symbols scaling
+		this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
+		this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
+		this.townSymbols.style.transform = 'scale(' + scale + ')';
 
 	//the second half is the translate
 	} else {
 
 		scale = Math.pow( 3, 0.5 * this.levels ); //work out the fixed scale factor for halfway
 
+		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
+
 		townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
 		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
 		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
-		var percentageSection = ((this.scrolled - 0.5) / 0.5);
+		var percentageThroughSection = ((this.scrolled - 0.5) / 0.5); //get the percentage of the amount through the section (on a scale 0-1)
+		var verticalTranslate = percentageThroughSection * TARGET_VERTICAL_TRANSLATE; //gets a scaled amount dependent on the percentage of the section scrolled through
 
-		var translate = percentageSection * TARGET_VERTICAL_TRANSLATE; //gets a scaled amount dependent on the percentage of the section scrolled through
+		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
 
-		townTransform = 'translate(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset - translate) + 'px)';
-
-		// townTransform = 'translate(0, ' + translate + 'px)';
-		// townTransform = 'scale(' + scale + ') translate(0, ' + translate + 'px)';
-
+		//update width and height of town
 		this.town.style.width = townWidth + 'px';
 		this.town.style.height = townHeight + 'px';
 
+		//update tranform value of town
 		this.town.style.WebkitTransform = townTransform;
 		this.town.style.MozTransform = townTransform;
 		this.town.style.transform = townTransform;
+
+		//update scale factor of the outside illustrations and text
+		this.content.style.WebkitTransform = transformValue;
+		this.content.style.MozTransform = transformValue;
+		this.content.style.transform = transformValue;
 
 	}
 

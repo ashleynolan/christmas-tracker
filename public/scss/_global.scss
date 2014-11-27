@@ -61,12 +61,19 @@ body {
 			.symbol-title,
 			.symbol-total {
 				//where we want the title and count on one line
+				.symbol--christmaslights &,
+				.symbol--cold &,
+				.symbol--yule &,
 				.symbol--doves & {
 					display: inline-block;
 				}
 				.symbol--holly &,
+				.symbol--ivy &,
 				.symbol--doves & {
 					@include font-size(16);
+				}
+				.symbol--yule & {
+					@include font-size(20);
 				}
 			}
 
