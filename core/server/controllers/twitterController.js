@@ -27,11 +27,9 @@ var TwitterController = {
 
 	display : function(req, res) {
 
-		if (_self.state.symbols !== null) {
-			res.render('index', {
-				symbols: _self.state.symbols
-			});
-		}
+		res.render('index', {
+			symbols: _self.state.symbols
+		});
 
 	}
 };
