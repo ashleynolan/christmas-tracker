@@ -25,7 +25,6 @@ var SocketServer = {
 
 			//recieved symbolState data from the daemon
 			socket.on('symbolState', function (data) {
-				console.log('Received new twitter state');
 				twitter.storeReceivedState(data);
 			});
 
