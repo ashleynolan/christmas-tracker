@@ -1,18 +1,14 @@
 
 
 var io = require('socket.io'), //socket.io - used for our websocket connection;
-
-	clientio  = require('socket.io-client'),
 	twitter = require('core/server/controllers/twitterController');
 
 var SocketServer = {
-	client : null,
 
 	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
 		var socketServer = io.listen(server);
-		_self.client = clientio.connect(config.clientURL);
 
 		//  ==================
 		//  === ON CONNECT ===
