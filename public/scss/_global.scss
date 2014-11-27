@@ -26,6 +26,7 @@ body {
 	max-width: #{$layout-max-width}px;
 	margin: 0 auto;
 
+	// perspective: 300px;
 
 	.lt-ie9 & {
 		min-width: #{$layout-min-width}px;

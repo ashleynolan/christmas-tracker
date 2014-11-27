@@ -92,6 +92,8 @@ Zoomer.prototype.scroll = function( event ) {
 		TARGET_TOWN_WIDTH = 2800,
 		TARGET_TOWN_HEIGHT = 2864,
 
+		TARGET_BG_ZSCALE = 200,
+
 		OFFSET_MARGIN = 60,
 
 		TARGET_VERTICAL_TRANSLATE = 1700;
@@ -105,44 +107,64 @@ Zoomer.prototype.scroll = function( event ) {
 	// normalize scroll value from 0 to 1
 	this.scrolled = yOffset / ( this.docHeight - window.innerHeight );
 
-	var transformValue,
-		width;
+	var scale,
+		transformValue,
+		width,
+		townWidth,
+		townHeight,
+		townOffset;
 
 	//first half of app is the scale – this zooms into the house
 	if (this.scrolled < 0.5) {
-		var scale = Math.pow( 3, this.scrolled * this.levels );
-		transformValue = 'scale(' + scale + ')';
+		scale = Math.pow( 3, this.scrolled * this.levels );
+
+		var zScale = Math.round((scale * TARGET_BG_ZSCALE) - TARGET_BG_ZSCALE);
+		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
+											// transformValue = 'translateZ(' + zScale + 'px)';
 
 		townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
 		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
 		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
+		townTransform = 'translate(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px)';
+
 		this.town.style.width = townWidth + 'px';
-		this.town.style.marginLeft = -(townWidth / 2) + 'px';
 		this.town.style.height = townHeight + 'px';
-		this.town.style.marginTop = -((townHeight / 2) + townOffset) + 'px';
+
+		//update the transformed value for the town
+		this.town.style.WebkitTransform = townTransform;
+		this.town.style.MozTransform = townTransform;
+		this.town.style.transform = townTransform;
 
 		//update scale factor of the outside illustrations and text
 		this.content.style.WebkitTransform = transformValue;
 		this.content.style.MozTransform = transformValue;
-		this.content.style.OTransform = transformValue;
 		this.content.style.transform = transformValue;
 
 	//the second half is the translate
 	} else {
 
-		var scale = Math.pow( 3, 0.5 * this.levels );
+		scale = Math.pow( 3, 0.5 * this.levels ); //work out the fixed scale factor for halfway
+
+		townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
+		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
+		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
+
 		var percentageSection = ((this.scrolled - 0.5) / 0.5);
 
 		var translate = percentageSection * TARGET_VERTICAL_TRANSLATE; //gets a scaled amount dependent on the percentage of the section scrolled through
 
-		townTransforn = 'translate(0, ' + translate + 'px)';
-		//transformValue = 'scale(' + scale + ') translate(0, ' + translate + 'px)';
+		townTransform = 'translate(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset - translate) + 'px)';
 
-		this.town.style.WebkitTransform = townTransforn;
-		this.town.style.MozTransform = townTransforn;
-		this.town.style.OTransform = townTransforn;
-		this.town.style.transform = townTransforn;
+		// townTransform = 'translate(0, ' + translate + 'px)';
+		// townTransform = 'scale(' + scale + ') translate(0, ' + translate + 'px)';
+
+		this.town.style.width = townWidth + 'px';
+		this.town.style.height = townHeight + 'px';
+
+		this.town.style.WebkitTransform = townTransform;
+		this.town.style.MozTransform = townTransform;
+		this.town.style.transform = townTransform;
 
 	}
 

@@ -206,8 +206,9 @@
 				position: relative;
 				width: 350px;
 				height: 358px;
-				margin-left: -175px;
-				margin-top: -179px;
+				transform: translate(-175px, -179px);
+
+				-webkit-backface-visibility: hidden;
 				// margin: 0 auto;
 				// top: 0;
 				// left: 50%;

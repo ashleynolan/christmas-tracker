@@ -1251,8 +1251,11 @@ body {
   position: relative;
   width: 350px;
   height: 358px;
-  margin-left: -175px;
-  margin-top: -179px;
+  -webkit-transform: translate(-175px, -179px);
+     -moz-transform: translate(-175px, -179px);
+      -ms-transform: translate(-175px, -179px);
+          transform: translate(-175px, -179px);
+  -webkit-backface-visibility: hidden;
 }
 .illustItem--town svg {
   width: 100%;
