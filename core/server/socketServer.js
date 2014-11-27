@@ -7,6 +7,8 @@ var SocketServer = {
 
 	init : function (app, server, config) {
 
+		console.log('LISTENING');
+
 		//Start a Socket.IO listen
 		var socketServer = io.listen(server);
 
