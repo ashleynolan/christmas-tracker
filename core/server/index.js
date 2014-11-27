@@ -45,7 +45,7 @@ var server = {
 			next();
 		});
 
-		app.use(timeout('20s'));
+		// app.use(timeout('20s'));
 
 		// bodyParser should be above methodOverride
 		app.use(bodyParser.urlencoded({
