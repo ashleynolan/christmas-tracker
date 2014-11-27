@@ -25,7 +25,7 @@ function init (app, config) {
 	//  ===============================
 	//  === SOCKET CONNECTION SETUP ===
 	//  ===============================
-	var socketServer = require('./server/socketServer')(app, server, config);
+	// var socketServer = require('./server/socketServer')(app, server, config);
 
 
 	//  ================================
