@@ -1,16 +1,18 @@
 
 
 var io = require('socket.io'), //socket.io - used for our websocket connection;
+
+	// clientio  = require('socket.io-client'),
 	twitter = require('core/server/controllers/twitterController');
 
 var SocketServer = {
+	client : null,
 
 	init : function (app, server, config) {
 
-		console.log('LISTENING');
-
 		//Start a Socket.IO listen
 		var socketServer = io.listen(server);
+		// _self.client = clientio.connect(config.clientURL);
 
 		//  ==================
 		//  === ON CONNECT ===
@@ -18,12 +20,12 @@ var SocketServer = {
 
 		//If a client connects, give them the current data that the server has tracked
 		//so here that would be how many tweets of each type we have stored
-		socketServer.sockets.on('connection', function(socket) {
+		socketServer.sockets.on('connection', function (socket) {
 			console.log('twitter.js: New connection logged');
 
 			//recieved symbolState data from the daemon
 			socket.on('symbolState', function (data) {
-				// console.log('Received new twitter state');
+				console.log('Received new twitter state');
 				twitter.storeReceivedState(data);
 			});
 
