@@ -10,6 +10,7 @@ html
 		div(class="l-container #{page}")
 			include ../includes/header
 
+			- if (symbols !== null) {
 			.illust-container
 				.illust-level.illust-level--intro
 					.illustItem.illustItem--bgGrass
@@ -66,7 +67,7 @@ html
 					//- 	.illustItem.illustItem--santa
 					//- 		p.symbol-total
 
-
+			- }
 
 
 
