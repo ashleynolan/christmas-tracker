@@ -23,7 +23,7 @@ KO.Config = {
 
 	init : function () {
 		UI.init();
-		Sockets.init();
+		// Sockets.init();
 	}
 };
 
