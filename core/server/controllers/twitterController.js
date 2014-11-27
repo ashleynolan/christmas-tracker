@@ -5,8 +5,6 @@
 
 var	_this = this;
 
-
-
 var TwitterController = {
 
 	state : {
@@ -16,8 +14,8 @@ var TwitterController = {
 
 	storeReceivedState : function (state) {
 
-		console.log('Storing state from server');
 		if (state !== null) {
+			console.log('Storing state from server');
 			_self.state = state;
 		}
 
@@ -28,6 +26,8 @@ var TwitterController = {
 	 */
 
 	display : function(req, res) {
+
+		console.log(_self.state);
 
 		if (_self.state.symbols !== null) {
 			res.render('index', {
