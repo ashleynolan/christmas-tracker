@@ -7,8 +7,6 @@
 var $ = require('traversty'),
 	qwery = require('qwery'),
 
-	IScroll = require("../libs/iscroll-probe.js");
-
 	d3 = require('d3');
 
 
@@ -49,8 +47,6 @@ var UI = {
 
 		var zoomContent = $('.illust-container')[0];
 
-		log('ABOUT TO SET ZOOMER');
-
 		ZUI = new Zoomer(zoomContent);
 
 	}
@@ -61,6 +57,8 @@ function Zoomer( content ) {
 
 	// keep track of DOM
 	this.content = content;
+
+	this.town = $('.illustItem--town')[0];
 
 	// position of vertical scroll
 	this.scrolled = 0;
@@ -119,11 +117,10 @@ Zoomer.prototype.scroll = function( event ) {
 		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
 		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
-		// log($('.illustItem--town'));
-		$('.illustItem--town')[0].style.width = townWidth + 'px';
-		$('.illustItem--town')[0].style.marginLeft = -(townWidth / 2) + 'px';
-		$('.illustItem--town')[0].style.height = townHeight + 'px';
-		$('.illustItem--town')[0].style.marginTop = -((townHeight / 2) + townOffset) + 'px';
+		this.town.style.width = townWidth + 'px';
+		this.town.style.marginLeft = -(townWidth / 2) + 'px';
+		this.town.style.height = townHeight + 'px';
+		this.town.style.marginTop = -((townHeight / 2) + townOffset) + 'px';
 
 		//update scale factor of the outside illustrations and text
 		this.content.style.WebkitTransform = transformValue;
@@ -142,10 +139,10 @@ Zoomer.prototype.scroll = function( event ) {
 		townTransforn = 'translate(0, ' + translate + 'px)';
 		//transformValue = 'scale(' + scale + ') translate(0, ' + translate + 'px)';
 
-		$('.illustItem--town')[0].style.WebkitTransform = townTransforn;
-		$('.illustItem--town')[0].style.MozTransform = townTransforn;
-		$('.illustItem--town')[0].style.OTransform = townTransforn;
-		$('.illustItem--town')[0].style.transform = townTransforn;
+		this.town.style.WebkitTransform = townTransforn;
+		this.town.style.MozTransform = townTransforn;
+		this.town.style.OTransform = townTransforn;
+		this.town.style.transform = townTransforn;
 
 	}
 

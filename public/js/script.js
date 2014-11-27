@@ -11,7 +11,6 @@
 // force compilation of global libs that don't return a value.
 require("./helpers/log");
 require("./helpers/shims");
-require("./helpers/requestAnimationFrame");
 
 var Sockets = require('./modules/sockets'),
 	UI = require('./modules/ui');
