@@ -27,6 +27,8 @@ var TwitterController = {
 
 	display : function(req, res) {
 
+		console.log(_self.state);
+
 		res.render('index', {
 			symbols: _self.state.symbols
 		});
