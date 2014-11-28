@@ -33,9 +33,13 @@ var UI = {
 		var symbolTotal = $('.symbol--' + name + ' .symbol-total');
 
 		if (symbolTotal.length > 0) {
-			symbolTotal[0].innerHTML = data.total;
+			symbolTotal[0].innerHTML = this.numberWithCommas(data.total);
 		}
 
+	},
+
+	numberWithCommas : function(x) {
+		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	},
 
 
