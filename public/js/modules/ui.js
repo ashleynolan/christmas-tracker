@@ -58,6 +58,7 @@ function Zoomer( content ) {
 	// keep track of DOM
 	this.content = content;
 
+	this.body = $('body')[0];
 	this.town = $('.illust-level--town')[0];
 	this.townSymbols = $('.illust-level--symbolsTown')[0];
 	this.house = $('.svg-house')[0];
@@ -119,7 +120,15 @@ Zoomer.prototype.scroll = function( event ) {
 	//first half of app is the scale – this zooms into the house
 	if (this.scrolled < 0.5) {
 
-		this.house.classList.remove('inactive')
+		log(this.scrolled);
+		//do a test whether to switch to night or not
+		if (this.scrolled > 0.3) {
+			this.body.classList.add('night');
+		} else {
+			this.body.classList.remove('night');
+		}
+
+		this.house.classList.remove('inactive');
 
 		scale = Math.pow( 3, this.scrolled * this.levels );
 

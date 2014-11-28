@@ -1,5 +1,5 @@
 /*! 
-Included shims: Array.forEach,Array.filter,Array.map,Function.bind,EventListener
+Included shims: Array.forEach,Array.filter,Array.map,Function.bind,EventListener,Element.classList
 */
 
 /*
@@ -133,7 +133,7 @@ this.Element && Element.prototype.attachEvent && !Element.prototype.addEventList
                 };
                 t.relatedTarget = t.fromElement || null;
                 t.stopImmediatePropagation = function() {
-                    l = false;
+                    s = false;
                     t.cancelBubble = true;
                 };
                 t.stopPropagation = function() {
@@ -142,11 +142,11 @@ this.Element && Element.prototype.attachEvent && !Element.prototype.addEventList
                 t.target = t.srcElement || n;
                 t.timeStamp = +new Date();
                 // create an cached list of the master events list (to protect this loop from breaking when an event is removed)
-                for (var r = 0, o = [].concat(i), a, l = true; l && (a = o[r]); ++r) {
+                for (var r = 0, o = [].concat(i), a, s = true; s && (a = o[r]); ++r) {
                     // check to see if the cached event still exists in the master events list
-                    for (var c = 0, s; s = i[c]; ++c) {
-                        if (s == a) {
-                            s.call(n, t);
+                    for (var l = 0, c; c = i[l]; ++l) {
+                        if (c == a) {
+                            c.call(n, t);
                             break;
                         }
                     }
@@ -235,3 +235,119 @@ this.Element && Element.prototype.attachEvent && !Element.prototype.addEventList
         return r;
     };
 }();
+
+/*
+ * classList.js: Cross-browser full element.classList implementation.
+ * 2014-01-31
+ *
+ * By Eli Grey, http://eligrey.com
+ * Public Domain.
+ * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
+ */
+/*global self, document, DOMException */
+/*! @source http://purl.eligrey.com/github/classList.js/blob/master/classList.js*/
+if ("document" in self && !("classList" in document.createElement("_"))) {
+    (function(t) {
+        "use strict";
+        if (!("Element" in t)) return;
+        var e = "classList", n = "prototype", r = t.Element[n], i = Object, o = String[n].trim || function() {
+            return this.replace(/^\s+|\s+$/g, "");
+        }, a = Array[n].indexOf || function(t) {
+            var e = 0, n = this.length;
+            for (;e < n; e++) {
+                if (e in this && this[e] === t) {
+                    return e;
+                }
+            }
+            return -1;
+        }, s = function(t, e) {
+            this.name = t;
+            this.code = DOMException[t];
+            this.message = e;
+        }, l = function(t, e) {
+            if (e === "") {
+                throw new s("SYNTAX_ERR", "An invalid or illegal string was specified");
+            }
+            if (/\s/.test(e)) {
+                throw new s("INVALID_CHARACTER_ERR", "String contains an invalid character");
+            }
+            return a.call(t, e);
+        }, c = function(t) {
+            var e = o.call(t.getAttribute("class") || ""), n = e ? e.split(/\s+/) : [], r = 0, i = n.length;
+            for (;r < i; r++) {
+                this.push(n[r]);
+            }
+            this._updateClassName = function() {
+                t.setAttribute("class", this.toString());
+            };
+        }, u = c[n] = [], f = function() {
+            return new c(this);
+        };
+        // Most DOMException implementations don't allow calling DOMException's toString()
+        // on non-DOMExceptions. Error's toString() is sufficient here.
+        s[n] = Error[n];
+        u.item = function(t) {
+            return this[t] || null;
+        };
+        u.contains = function(t) {
+            t += "";
+            return l(this, t) !== -1;
+        };
+        u.add = function() {
+            var t = arguments, e = 0, n = t.length, r, i = false;
+            do {
+                r = t[e] + "";
+                if (l(this, r) === -1) {
+                    this.push(r);
+                    i = true;
+                }
+            } while (++e < n);
+            if (i) {
+                this._updateClassName();
+            }
+        };
+        u.remove = function() {
+            var t = arguments, e = 0, n = t.length, r, i = false;
+            do {
+                r = t[e] + "";
+                var o = l(this, r);
+                if (o !== -1) {
+                    this.splice(o, 1);
+                    i = true;
+                }
+            } while (++e < n);
+            if (i) {
+                this._updateClassName();
+            }
+        };
+        u.toggle = function(t, e) {
+            t += "";
+            var n = this.contains(t), r = n ? e !== true && "remove" : e !== false && "add";
+            if (r) {
+                this[r](t);
+            }
+            return !n;
+        };
+        u.toString = function() {
+            return this.join(" ");
+        };
+        if (i.defineProperty) {
+            var p = {
+                get: f,
+                enumerable: true,
+                configurable: true
+            };
+            try {
+                i.defineProperty(r, e, p);
+            } catch (h) {
+                // IE 8 doesn't support enumerable:true
+                if (h.number === -2146823252) {
+                    p.enumerable = false;
+                    i.defineProperty(r, e, p);
+                }
+            }
+        } else if (i[n].__defineGetter__) {
+            r.__defineGetter__(e, f);
+        }
+    })(self);
+}
