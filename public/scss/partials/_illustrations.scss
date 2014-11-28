@@ -34,6 +34,8 @@ $layerIndex: level-1, level-2, level-2, level-3, level-4, level-5;
 
 			top: 50%;
 			left: 50%;
+
+			transition: 0ms;
 		}
 			.illust-level--symbolsTown {
 				z-index: index($layerIndex, level-3);
@@ -226,7 +228,18 @@ $layerIndex: level-1, level-2, level-2, level-3, level-4, level-5;
 					&.inactive { @include opacity(0); }
 				}
 				.svg-sleigh {
-					transform: translate(11.65%, -143.75%) scale(0.14);
+					position: absolute;
+					top: 77%;
+					left: 60%;
+					transform-origin: left top;
+					transform: scale(0.14) translate(-50%, 0);
+				}
+				.svg-nativity {
+					position: absolute;
+					top: 57%;
+					left: 50%;
+					transform-origin: left top;
+					transform: scale(0.09) translate(-50%, 0);
 				}
 
 

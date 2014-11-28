@@ -120,9 +120,8 @@ Zoomer.prototype.scroll = function( event ) {
 	//first half of app is the scale – this zooms into the house
 	if (this.scrolled < 0.5) {
 
-		log(this.scrolled);
 		//do a test whether to switch to night or not
-		if (this.scrolled > 0.3) {
+		if (this.scrolled > 0.25) {
 			this.body.classList.add('night');
 		} else {
 			this.body.classList.remove('night');
