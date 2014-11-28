@@ -60,6 +60,7 @@ function Zoomer( content ) {
 
 	this.town = $('.illust-level--town')[0];
 	this.townSymbols = $('.illust-level--symbolsTown')[0];
+	this.house = $('.svg-house')[0];
 
 	// position of vertical scroll
 	this.scrolled = 0;
@@ -97,7 +98,7 @@ Zoomer.prototype.scroll = function( event ) {
 
 		OFFSET_MARGIN = 80,
 
-		TARGET_VERTICAL_TRANSLATE = 1700;
+		TARGET_VERTICAL_TRANSLATE = 2600;
 
 
 	var supportPageOffset = window.pageXOffset !== undefined;
@@ -117,6 +118,9 @@ Zoomer.prototype.scroll = function( event ) {
 
 	//first half of app is the scale – this zooms into the house
 	if (this.scrolled < 0.5) {
+
+		this.house.classList.remove('inactive')
+
 		scale = Math.pow( 3, this.scrolled * this.levels );
 
 		var zScale = Math.round((scale * TARGET_BG_ZSCALE) - TARGET_BG_ZSCALE);
@@ -150,6 +154,8 @@ Zoomer.prototype.scroll = function( event ) {
 
 	//the second half is the translate
 	} else {
+
+		this.house.classList.add('inactive')
 
 		scale = Math.pow( 3, 0.5 * this.levels ); //work out the fixed scale factor for halfway
 

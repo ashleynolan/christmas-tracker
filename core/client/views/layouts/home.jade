@@ -35,7 +35,7 @@ html
 							h2.symbol-title Holly
 							p.symbol-total #{symbols.holly.total}
 
-					.illustItem.illustItem--doves.symbol.symbol--doves
+					.illustItem.illustItem--doves.symbol.symbol--doves.symbol--inline
 						a.symbol-link(href="")
 							h2.symbol-title Doves
 							p.symbol-total #{symbols.doves.total}
@@ -51,30 +51,23 @@ html
 							h2.symbol-title Ivy
 							p.symbol-total #{symbols.ivy.total}
 
-
-			//- .illust-level.illust-level--symbols
-			//- 	.illust-level.illust-level--symbolsTown
-			//- 		.illustItem.illustItem--snowman.symbol.symbol--snowman
-			//- 			h2.symbol-title Snowman
-			//- 			p.symbol-total #{symbols.snowman.total}
-
 			.illust-level--town
 				.illustItem.illustItem--snowglobe
-					.symbol.symbol--snow
-						p.symbol-total
 				.illustItem.illustItem--town
 					include ../illustrations/town
+					include ../illustrations/santa
+					include ../illustrations/sleigh
 					
 					.illust-level.illust-level--symbolsTown
 						.illustItem.illustItem--snowman.symbol.symbol--snowman
 							a.symbol-link(href="")
 								h2.symbol-title Snowman
 								p.symbol-total #{symbols.snowman.total}
-						.illustItem.illustItem--yule.symbol.symbol--yule
+						.illustItem.illustItem--yule.symbol.symbol--yule.symbol--inline
 							a.symbol-link(href="")
 								h2.symbol-title Yule
 								p.symbol-total #{symbols.yule.total}
-						.illustItem.illustItem--cold.symbol.symbol--cold
+						.illustItem.illustItem--cold.symbol.symbol--cold.symbol--inline
 							a.symbol-link(href="")
 								h2.symbol-title Cold
 								p.symbol-total #{symbols.cold.total}
@@ -83,10 +76,14 @@ html
 							a.symbol-link(href="")
 								h2.symbol-title Robin
 								p.symbol-total #{symbols.robin.total}
-						.illustItem.illustItem--christmaslights.symbol.symbol--christmaslights
+						.illustItem.illustItem--christmaslights.symbol.symbol--christmaslights.symbol--inline
 							a.symbol-link(href="")
 								h2.symbol-title Christmas Lights
 								p.symbol-total #{symbols.christmaslights.total}
+						.illustItem.illustItem--snow.symbol.symbol--snow.symbol--inline
+							a.symbol-link(href="")
+								h2.symbol-title Snow
+								p.symbol-total #{symbols.snow.total}
 						
 
 			- }
