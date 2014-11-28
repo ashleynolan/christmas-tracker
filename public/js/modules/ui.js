@@ -59,6 +59,24 @@ var UI = {
 // the constructor that will do all the work
 function Zoomer( content ) {
 
+	this.setLevels = function() {
+
+		if (this.docWidth > 1100) {
+			this.levels = 5.8;
+			this.verticalTranslate = 2600;
+		} else if (this.docWidth > 1000) {
+			this.levels = 5.5;
+			this.verticalTranslate = 2600;
+		} else if (this.docWidth > 750) {
+			this.levels = 5;
+			this.verticalTranslate = 2600;
+		} else  {
+			this.levels = 4.5;
+			this.verticalTranslate = 2600;
+		}
+
+	};
+
 	// keep track of DOM
 	this.content = content;
 
@@ -69,14 +87,16 @@ function Zoomer( content ) {
 
 	// position of vertical scroll
 	this.scrolled = 0;
-	// zero-based number of sections
-	this.levels = 6;
 
 	var body = document.body,
 		html = document.documentElement;
 
 	// height of document
 	this.docHeight = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+	this.docWidth = html.clientWidth;
+
+	// zero-based number of sections
+	this.setLevels();
 
 	// bind Zoomer to scroll event
 	window.addEventListener( 'scroll', this, false);
@@ -178,7 +198,7 @@ Zoomer.prototype.scroll = function( event ) {
 		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
 		var percentageThroughSection = ((this.scrolled - 0.5) / 0.5); //get the percentage of the amount through the section (on a scale 0-1)
-		var verticalTranslate = percentageThroughSection * TARGET_VERTICAL_TRANSLATE; //gets a scaled amount dependent on the percentage of the section scrolled through
+		var verticalTranslate = percentageThroughSection * this.verticalTranslate; //gets a scaled amount dependent on the percentage of the section scrolled through
 
 		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
 

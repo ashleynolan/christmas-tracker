@@ -54,6 +54,12 @@ body {
 			}
 			.symbol-link {
 				display: block;
+				color: #000;
+
+				.symbol--snowflake & { color: $turquoise; }
+				.symbol--holly & { color: $red; }
+				.symbol--ivy & { color: $brown; }
+
 			}
 
 			.symbol-total {
