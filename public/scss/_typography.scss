@@ -136,13 +136,13 @@ small {
  * Links
  */
 a {
-	&, &:link {
+	& {
 		color: $color-link-default;
 		text-decoration: none;
 	}
 	&:hover, &:focus {
 		color: $color-link-hover;
-		//text-decoration: underline;
+		text-decoration: underline;
 	}
 	&:active {
 		color: $color-link-active;
