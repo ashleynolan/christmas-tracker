@@ -33,7 +33,7 @@ var UI = {
 		var symbolTotal = $('.symbol--' + name + ' .symbol-total');
 
 		if (symbolTotal.length > 0) {
-			symbolTotal[0].innerHTML = this.numberWithCommas(data.total);
+			// symbolTotal[0].innerHTML = this.numberWithCommas(data.total);
 		}
 
 	},
@@ -62,16 +62,16 @@ function Zoomer( content ) {
 	this.setLevels = function() {
 
 		if (this.docWidth > 1100) {
-			this.levels = 5.8;
+			this.levels = 5.9;
 			this.verticalTranslate = 2600;
 		} else if (this.docWidth > 1000) {
 			this.levels = 5.5;
 			this.verticalTranslate = 2600;
-		} else if (this.docWidth > 750) {
-			this.levels = 5;
+		} else if (this.docWidth > 700) {
+			this.levels = 5.4;
 			this.verticalTranslate = 2600;
-		} else  {
-			this.levels = 4.5;
+		} else {
+			this.levels = 5.4;
 			this.verticalTranslate = 2600;
 		}
 
@@ -167,22 +167,6 @@ Zoomer.prototype.scroll = function( event ) {
 		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
 		symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
 
-		this.town.style.width = townWidth + 'px';
-		this.town.style.height = townHeight + 'px';
-
-		//update the transformed value for the town
-		this.town.style.WebkitTransform = townTransform;
-		this.town.style.MozTransform = townTransform;
-		this.town.style.transform = townTransform;
-
-		//update scale factor of the outside illustrations and text
-		this.content.style.WebkitTransform = transformValue;
-		this.content.style.MozTransform = transformValue;
-		this.content.style.transform = transformValue;
-		//town symbols scaling
-		this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
-		this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
-		this.townSymbols.style.transform = 'scale(' + scale + ')';
 
 	//the second half is the translate
 	} else {
@@ -202,21 +186,26 @@ Zoomer.prototype.scroll = function( event ) {
 
 		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
 
-		//update width and height of town
-		this.town.style.width = townWidth + 'px';
-		this.town.style.height = townHeight + 'px';
-
-		//update tranform value of town
-		this.town.style.WebkitTransform = townTransform;
-		this.town.style.MozTransform = townTransform;
-		this.town.style.transform = townTransform;
-
-		//update scale factor of the outside illustrations and text
-		this.content.style.WebkitTransform = transformValue;
-		this.content.style.MozTransform = transformValue;
-		this.content.style.transform = transformValue;
-
 	}
+
+	//update width and height of town
+	this.town.style.width = townWidth + 'px';
+	this.town.style.height = townHeight + 'px';
+
+	//update the transformed value for the town
+	this.town.style.WebkitTransform = townTransform;
+	this.town.style.MozTransform = townTransform;
+	this.town.style.transform = townTransform;
+
+	//update scale factor of the outside illustrations and text
+	this.content.style.WebkitTransform = transformValue;
+	this.content.style.MozTransform = transformValue;
+	this.content.style.transform = transformValue;
+
+	//town symbols scaling
+	this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
+	this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
+	this.townSymbols.style.transform = 'scale(' + scale + ')';
 
 };
 
