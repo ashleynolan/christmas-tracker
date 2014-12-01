@@ -8,8 +8,7 @@ require('newrelic'); //requires new relic
 // agent.start()
 
 
-var express = require('express'), //express - application framework for node
-	forever = require('forever-monitor');
+var express = require('express'); //express - application framework for node
 
 //fixes long ../../ require calls
 //https://gist.github.com/branneman/8048520
