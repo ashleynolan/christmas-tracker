@@ -4,7 +4,7 @@
  */
 
 var express = require('express'),
-	toobusy = require('toobusy'),
+	// toobusy = require('toobusy'),
 	memwatch = require('memwatch'),
 	compress = require('compression'),
 	logger  = require('morgan'),
@@ -20,13 +20,13 @@ var server = {
 		app.set('showStackError', true);
 
 		// middleware which blocks requests when we're too busy
-		app.use(function(req, res, next) {
-			if (toobusy()) {
-				res.status(503).send("I'm busy right now, sorry.")
-			} else {
-				next();
-			}
-		});
+		// app.use(function(req, res, next) {
+		// 	if (toobusy()) {
+		// 		res.status(503).send("I'm busy right now, sorry.")
+		// 	} else {
+		// 		next();
+		// 	}
+		// });
 
 		// should be placed before express.static - compressed with gzip
 		app.use(compress({
