@@ -243,6 +243,7 @@ $layerIndex: level-1, level-2, level-2, level-3, level-4, level-5;
 				}
 
 				.svg-house {
+					z-index: index($layerIndex, level-3);
 					position: absolute;
 					top: 51%;
 					left: 49.9%;
@@ -273,6 +274,7 @@ $layerIndex: level-1, level-2, level-2, level-3, level-4, level-5;
 				}
 
 				.svg-nativity {
+					z-index: index($layerIndex, level-2);
 					position: absolute;
 					top: 57%;
 					left: 50%;
@@ -334,6 +336,23 @@ $layerIndex: level-1, level-2, level-2, level-3, level-4, level-5;
 				top: 202px;
 				right: 20px;
 				transform: scale(0.15);
+				text-align: center;
+			}
+
+			.illustItem--sledge {
+				width: 200px;
+				height: 50px;
+				top: 234px;
+				right: 15px;
+				transform: scale(0.15);
+			}
+
+			.illustItem--wreath {
+				width: 202px;
+				height: 50px;
+				top: 202px;
+				left: 75px;
+				transform: scale(0.1);
 				text-align: center;
 			}
 

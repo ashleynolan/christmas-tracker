@@ -1098,6 +1098,8 @@ body.night {
 .symbol--inline .symbol-title, .symbol--inline
 .symbol-total {
   display: inline-block;
+  font-size: 18px;
+  font-size: 1.125rem;
 }
 .symbol--holly .symbol-title, .symbol--ivy .symbol-title, .symbol--doves .symbol-title, .symbol--holly
 .symbol-total, .symbol--ivy
@@ -1351,6 +1353,7 @@ body.night {
 }
 
 .svg-house {
+  z-index: 4;
   position: absolute;
   top: 51%;
   left: 49.9%;
@@ -1402,6 +1405,7 @@ body.night {
 }
 
 .svg-nativity {
+  z-index: 2;
   position: absolute;
   top: 57%;
   left: 50%;
@@ -1480,6 +1484,29 @@ body.night {
      -moz-transform: scale(0.15);
       -ms-transform: scale(0.15);
           transform: scale(0.15);
+  text-align: center;
+}
+
+.illustItem--sledge {
+  width: 200px;
+  height: 50px;
+  top: 234px;
+  right: 15px;
+  -webkit-transform: scale(0.15);
+     -moz-transform: scale(0.15);
+      -ms-transform: scale(0.15);
+          transform: scale(0.15);
+}
+
+.illustItem--wreath {
+  width: 202px;
+  height: 50px;
+  top: 202px;
+  left: 75px;
+  -webkit-transform: scale(0.1);
+     -moz-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+          transform: scale(0.1);
   text-align: center;
 }
 
@@ -1568,6 +1595,7 @@ body.night {
 }
 
 .page-footer {
+  z-index: 5;
   position: fixed;
   width: 100%;
   padding: 10px 10%;

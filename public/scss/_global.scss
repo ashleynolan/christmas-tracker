@@ -72,6 +72,7 @@ body {
 				//where we want the title and count on one line
 				.symbol--inline & {
 					display: inline-block;
+					@include font-size(18);
 				}
 				.symbol--holly &,
 				.symbol--ivy &,
