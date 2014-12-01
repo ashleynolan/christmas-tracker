@@ -1114,6 +1114,21 @@ body.night {
   font-size: 1.25rem;
 }
 
+.symbols--inside,
+.symbols--outside {
+  zoom: 1;
+  filter: alpha(opacity=100);
+  opacity: 1;
+  -moz-transition: opacity 300ms;
+       transition: opacity 300ms;
+}
+.symbols--inside.inactive,
+.symbols--outside.inactive {
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
 .symbol-list-wrapper {
   display: none;
   width: 100%;

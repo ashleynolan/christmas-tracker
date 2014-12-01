@@ -85,6 +85,17 @@ body {
 				}
 			}
 
+			//hide symbols until needed
+			.symbols--inside,
+			.symbols--outside {
+				@include opacity(100);
+				transition: opacity 300ms;
+
+				&.inactive {
+					@include opacity(0);
+				}
+			}
+
 
 // Symbol styling – full list
 	.symbol-list-wrapper {

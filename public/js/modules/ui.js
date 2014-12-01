@@ -141,17 +141,10 @@ Zoomer.prototype.scroll = function( event ) {
 		townHeight,
 		townOffset;
 
+	this.checkStates();
+
 	//first half of app is the scale – this zooms into the house
 	if (this.scrolled < 0.5) {
-
-		//do a test whether to switch to night or not
-		if (this.scrolled > 0.25) {
-			this.body.classList.add('night');
-		} else {
-			this.body.classList.remove('night');
-		}
-
-		this.house.classList.remove('inactive');
 
 		scale = Math.pow( 3, this.scrolled * this.levels );
 
@@ -167,11 +160,8 @@ Zoomer.prototype.scroll = function( event ) {
 		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
 		symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
 
-
-	//the second half is the translate
+	//the second half is the translate vertically
 	} else {
-
-		this.house.classList.add('inactive')
 
 		scale = Math.pow( 3, 0.5 * this.levels ); //work out the fixed scale factor for halfway
 
@@ -206,6 +196,38 @@ Zoomer.prototype.scroll = function( event ) {
 	this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.transform = 'scale(' + scale + ')';
+
+};
+
+
+Zoomer.prototype.checkStates = function () {
+
+	log('checking states');
+
+	if (this.scrolled < 0.5) {
+
+		//do a test whether to switch to night or not (after 0.25 scrolled)
+		if (this.scrolled > 0.25) {
+			this.body.classList.add('night');
+		} else {
+			this.body.classList.remove('night');
+		}
+
+		this.house.classList.remove('inactive'); //make house visible
+		this.townSymbols.querySelector('.symbols--inside').classList.add('inactive'); //make nativity symbols not visible
+		this.townSymbols.querySelector('.symbols--outside').classList.remove('inactive'); //make nativity symbols not visible
+
+	} else {
+
+		this.body.classList.add('night');
+
+		log(this.townSymbols.querySelector('.symbols--nativity'));
+
+		this.house.classList.add('inactive'); //make house not visible
+		this.townSymbols.querySelector('.symbols--inside').classList.remove('inactive'); //make nativity symbols visible
+		this.townSymbols.querySelector('.symbols--outside').classList.add('inactive'); //make nativity symbols not visible
+
+	}
 
 };
 
