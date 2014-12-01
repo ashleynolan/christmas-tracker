@@ -4,6 +4,8 @@
  */
 
 var express = require('express'),
+	toobusy = require('toobusy'),
+	memwatch = require('memwatch'),
 	compress = require('compression'),
 	logger  = require('morgan'),
 	bodyParser = require('body-parser'),
@@ -16,6 +18,15 @@ var server = {
 
 	init : function (app, config) {
 		app.set('showStackError', true);
+
+		// middleware which blocks requests when we're too busy
+		app.use(function(req, res, next) {
+			if (toobusy()) {
+				res.status(503).send("I'm busy right now, sorry.")
+			} else {
+				next();
+			}
+		});
 
 		// should be placed before express.static - compressed with gzip
 		app.use(compress({
@@ -37,7 +48,7 @@ var server = {
 		app.set('views', 'core/client/views');
 		app.set('view engine', 'jade');
 
-		app.set('port', process.env.PORT || 3002);
+		app.set('port', process.env.PORT || 5000);
 
 		// expose package.json to views
 		app.use(function (req, res, next) {
@@ -58,6 +69,18 @@ var server = {
 		if (config.mode === 'local') {
 			app.locals.pretty = true;
 		}
+
+		memwatch.on('leak', function(info) {
+			// look at info to find out about what might be leaking
+			console.log('We may have a memory leak – check out the info…')
+			console.log(info);
+		});
+
+		// memwatch.on('stats', function(stats) {
+		// 	// do something with post-gc memory usage stats
+		// 	console.log('Emitting stats');
+		// 	console.log(stats);
+		// });
 	}
 
 };

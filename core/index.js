@@ -9,7 +9,6 @@ function init (app, config) {
 
 	require('./server')(app, config);
 
-
 	//Create the HTTP server with the express app as an argument
 	var server = http.createServer(app);
 

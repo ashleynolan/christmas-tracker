@@ -34,7 +34,6 @@ var TwitterController = {
 	}
 };
 
-
 var _self = TwitterController;
 
 module.exports = TwitterController;

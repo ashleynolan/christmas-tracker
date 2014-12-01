@@ -11,7 +11,7 @@ var SocketServer = {
 	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
-		var socketServer = io.listen(server);
+		var socketServer = io(server);
 		_self.client = clientio.connect(config.clientURL);
 
 		//  ==================
@@ -23,16 +23,21 @@ var SocketServer = {
 		socketServer.sockets.on('connection', function (socket) {
 			console.log('twitter.js: New connection logged');
 
-			//recieved symbolState data from the daemon
-			socket.on('symbolState', function (data) {
-				twitter.storeReceivedState(data);
-			});
+			//test to see if our new connection is from our backend server or a front-end connection
+			//if it’s the backend server, set up these events
+			if (socket.handshake.headers['user-agent'] === 'node-XMLHttpRequest') {
+				console.log('Backend connection made – setup event listeners');
+				//recieved symbolState data from the daemon
+				socket.on('symbolState', function (data) {
+					twitter.storeReceivedState(data);
+				});
 
-			//received an updated state of our tweets
-			socket.on('tweet', function (data) {
-				// console.log('Received new tweet');
-				socketServer.sockets.emit('tweet', data);
-			});
+				//received an updated state of our tweets
+				socket.on('tweet', function (data) {
+					// console.log('Received new tweet');
+					socketServer.sockets.emit('tweet', data);
+				});
+			}
 		});
 
 		//  ============================
