@@ -29,7 +29,7 @@ body {
  * Default layout container
  */
 .l-container {
-	position: relative;
+	// position: relative;
 	padding-left: #{$layout-margin}px;
 	padding-right: #{$layout-margin}px;
 	width: 95%;
@@ -89,11 +89,12 @@ body {
 // Symbol styling – full list
 	.symbol-list-wrapper {
 		display: none;
+		width: 100%;
+		max-width: 1000px;
 		position: absolute;
 		top: 280px;
 		z-index: 10;
 		background: #fff;
-		width: 100%;
 		margin: 0 auto;
 		padding: 20px;
 		border-radius: 6px;
