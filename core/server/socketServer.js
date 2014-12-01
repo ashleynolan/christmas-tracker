@@ -21,7 +21,8 @@ var SocketServer = {
 		//If a client connects, give them the current data that the server has tracked
 		//so here that would be how many tweets of each type we have stored
 		socketServer.sockets.on('connection', function (socket) {
-			console.log('twitter.js: New connection logged');
+			console.log('socketServer: New connection logged');
+			console.log(socket.handshake.headers['user-agent']);
 
 			//test to see if our new connection is from our backend server or a front-end connection
 			//if it’s the backend server, set up these events
