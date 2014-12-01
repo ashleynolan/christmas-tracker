@@ -239,6 +239,11 @@ $layerIndex: level-1, level-2, level-2, level-3, level-4, level-5;
 
 					transition: opacity 300ms;
 					&.inactive { @include opacity(0); }
+
+					& svg {
+						width: 100%;
+						height: 100%;
+					}
 				}
 
 				.svg-santa {

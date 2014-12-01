@@ -1053,6 +1053,7 @@ body.night {
  * Default layout container
  */
 .l-container {
+  position: relative;
   padding-left: 0px;
   padding-right: 0px;
   width: 95%;
@@ -1112,6 +1113,35 @@ body.night {
 .symbol-total {
   font-size: 20px;
   font-size: 1.25rem;
+}
+
+.symbol-list-wrapper {
+  display: none;
+  position: absolute;
+  top: 280px;
+  z-index: 10;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.symbol-list {
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+@media screen and (min-width: 48em) {
+  .symbol {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 62em) {
+  .symbol {
+    width: 33%;
+  }
 }
 
 .illust-container {
@@ -1374,6 +1404,10 @@ body.night {
   zoom: 1;
   filter: alpha(opacity=0);
   opacity: 0;
+}
+.svg-house svg {
+  width: 100%;
+  height: 100%;
 }
 
 .svg-santa {

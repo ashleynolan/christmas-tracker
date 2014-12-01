@@ -55,7 +55,8 @@ html
 				.illustItem.illustItem--snowglobe
 				.illustItem.illustItem--town
 					include ../illustrations/town.html
-					include ../illustrations/house.html
+					.svg-house
+						include ../illustrations/house.html
 					include ../illustrations/santa
 					include ../illustrations/sleigh.html
 					include ../illustrations/nativity.html
@@ -151,9 +152,9 @@ html
 			- }
 
 
-
-			//- .symbols
-			//- 	include ../symbols/index
+			.symbol-list-wrapper
+				ul.symbol-list.unstyled
+					include ../symbols/index
 
 			#scroll-proxy
 

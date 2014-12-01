@@ -33,7 +33,7 @@ var UI = {
 		var symbolTotal = $('.symbol--' + name + ' .symbol-total');
 
 		if (symbolTotal.length > 0) {
-			// symbolTotal[0].innerHTML = this.numberWithCommas(data.total);
+			symbolTotal[0].innerHTML = this.numberWithCommas(data.total);
 		}
 
 	},

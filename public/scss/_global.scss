@@ -29,6 +29,7 @@ body {
  * Default layout container
  */
 .l-container {
+	position: relative;
 	padding-left: #{$layout-margin}px;
 	padding-right: #{$layout-margin}px;
 	width: 95%;
@@ -86,13 +87,27 @@ body {
 
 
 // Symbol styling – full list
-	// .symbols {
-	// 	overflow: hidden;
-	// 	padding-bottom: 50px;
-	// }
-	// 	.symbol {
-	// 		@include respond-min($bp-mid) {
-	// 			float: left;
-	// 			width: 25%;
-	// 		}
-	// }
+	.symbol-list-wrapper {
+		display: none;
+		position: absolute;
+		top: 280px;
+		z-index: 10;
+		background: #fff;
+		width: 100%;
+		margin: 0 auto;
+		padding: 20px;
+		border-radius: 6px;
+	}
+	.symbol-list {
+		overflow: hidden;
+		padding-bottom: 50px;
+	}
+		.symbol {
+			@include respond-min($bp-mid) {
+				float: left;
+				width: 50%;
+			}
+			@include respond-min($bp-wide) {
+				width: 33%;
+			}
+	}
