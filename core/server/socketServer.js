@@ -49,6 +49,12 @@ var SocketServer = {
 			console.log('twitter.js: socketServer has closed');
 		});
 
+
+		//setup a keepalive from the client to the server
+		setInterval(function() {
+			_self.client.emit('keepalive');
+		}, 20000);
+
 		return socketServer;
 	}
 };
