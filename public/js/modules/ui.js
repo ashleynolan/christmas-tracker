@@ -53,6 +53,8 @@ var UI = {
 
 		ZUI = new Zoomer(zoomContent);
 
+
+
 	}
 };
 
@@ -113,6 +115,14 @@ Zoomer.prototype.handleEvent = function( event ) {
 // triggered every time window scrolls
 Zoomer.prototype.scroll = function( event ) {
 
+
+	this.recalculatePositions();
+
+};
+
+Zoomer.prototype.recalculatePositions = function () {
+
+
 	//LETS HAVE SOME DEFAULTS HERE
 	var INITIAL_TOWN_WIDTH = 350,
 		INITIAL_TOWN_HEIGHT = 320,
@@ -134,49 +144,41 @@ Zoomer.prototype.scroll = function( event ) {
 	// normalize scroll value from 0 to 1
 	this.scrolled = yOffset / ( this.docHeight - window.innerHeight );
 
-	var scale,
-		transformValue,
-		width,
-		townWidth,
-		townHeight,
-		townOffset;
+	var transformValue,
+		width;
 
 	this.checkStates();
 
-	//first half of app is the scale – this zooms into the house
-	if (this.scrolled < 0.5) {
+	var scrollFactor = (this.scrolled < 0.5 ? this.scrolled : 0.5);
+	var scale = Math.pow( 3, scrollFactor * this.levels );
+	var townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
+	var townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
+	var townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
-		scale = Math.pow( 3, this.scrolled * this.levels );
+	//first half of app is the scale – this zooms into the house
+	if (scrollFactor < 0.5) {
 
 		var zScale = Math.round((scale * TARGET_BG_ZSCALE) - TARGET_BG_ZSCALE);
 		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
 
 		// symboltransformValue = 'translateZ(' + zScale + 'px)';
 
-		townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
-		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
-		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
-
-		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
+		townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
 		symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
 
 	//the second half is the translate vertically
 	} else {
 
-		scale = Math.pow( 3, 0.5 * this.levels ); //work out the fixed scale factor for halfway
-
 		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
-
-		townHeight = Math.round(scale * INITIAL_TOWN_HEIGHT);
-		townWidth = Math.round(scale * INITIAL_TOWN_WIDTH);
-		townOffset = Math.round(scale * OFFSET_MARGIN) - OFFSET_MARGIN;
 
 		var percentageThroughSection = ((this.scrolled - 0.5) / 0.5); //get the percentage of the amount through the section (on a scale 0-1)
 		var verticalTranslate = percentageThroughSection * this.verticalTranslate; //gets a scaled amount dependent on the percentage of the section scrolled through
 
-		townTransform = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
+		townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
 
 	}
+
+	// SETTING OF OUR NEW VALUES
 
 	//update width and height of town
 	this.town.style.width = townWidth + 'px';
@@ -202,12 +204,10 @@ Zoomer.prototype.scroll = function( event ) {
 
 Zoomer.prototype.checkStates = function () {
 
-	log('checking states');
-
 	if (this.scrolled < 0.5) {
 
 		//do a test whether to switch to night or not (after 0.25 scrolled)
-		if (this.scrolled > 0.25) {
+		if (this.scrolled > 0.15) {
 			this.body.classList.add('night');
 		} else {
 			this.body.classList.remove('night');
@@ -220,8 +220,6 @@ Zoomer.prototype.checkStates = function () {
 	} else {
 
 		this.body.classList.add('night');
-
-		log(this.townSymbols.querySelector('.symbols--nativity'));
 
 		this.house.classList.add('inactive'); //make house not visible
 		this.townSymbols.querySelector('.symbols--inside').classList.remove('inactive'); //make nativity symbols visible

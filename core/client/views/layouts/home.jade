@@ -15,50 +15,61 @@ html
 				.illust-level.illust-level--intro
 					.illustItem.illustItem--bgGrass
 					.illustItem.illustItem--snowflake.symbol.symbol--snowflake
+						include ../illustrations/snowflake.html
 						a.symbol-link(href="")
 							h2.symbol-title Snowflake
 							p.symbol-total #{symbols.snowflake.total}
 
 					.illustItem.illustItem--fencePost.illustItem--fencePost--first
+						include ../illustrations/fence-post.html
 						.illustItem.illustItem--northpole.illustItem--fence-arrow.illustItem--fence-arrow-left.symbol.symbol--northpole
+							include ../illustrations/fence-left.html
 							a.symbol-link(href="")
 								h2.symbol-title North Pole
 								p.symbol-total #{symbols.northpole.total}
 
 						.illustItem.illustItem--grotto.illustItem--fence-arrow.illustItem--fence-arrow-right.symbol.symbol--grotto
+							include ../illustrations/fence-right.html
 							a.symbol-link(href="")
 								h2.symbol-title Grotto
 								p.symbol-total #{symbols.grotto.total}
 
 					.illustItem.illustItem--holly.symbol.symbol--holly
+						include ../illustrations/holly.html
 						a.symbol-link(href="")
 							h2.symbol-title Holly
 							p.symbol-total #{symbols.holly.total}
 
 					.illustItem.illustItem--doves.symbol.symbol--doves.symbol--inline
+						include ../illustrations/doves.html
 						a.symbol-link(href="")
 							h2.symbol-title Doves
 							p.symbol-total #{symbols.doves.total}
 
 					.illustItem.illustItem--fencePost.illustItem--fencePost--second
+						include ../illustrations/fence-post.html
 						.illustItem.illustItem--lapland.illustItem--fence-arrow.illustItem--fence-arrow-right.symbol.symbol--lapland
+							include ../illustrations/fence-right.html
 							a.symbol-link(href="")
 								h2.symbol-title Lapland
 								p.symbol-total #{symbols.lapland.total}
 
 					.illustItem.illustItem--ivy.symbol.symbol--ivy
+						include ../illustrations/ivy.html
 						a.symbol-link(href="")
 							h2.symbol-title Ivy
 							p.symbol-total #{symbols.ivy.total}
 
 			.illust-level--town
 				.illustItem.illustItem--snowglobe
+					include ../illustrations/snowglobe.html
 				.illustItem.illustItem--town
 					include ../illustrations/town.html
 					.svg-house
 						include ../illustrations/house.html
 					include ../illustrations/sleigh.html
 					include ../illustrations/sledge.html
+					include ../illustrations/carollers.html
 					include ../illustrations/nativity.html
 					
 					.illust-level.illust-level--symbolsTown
@@ -97,6 +108,10 @@ html
 								a.symbol-link(href="")
 									h2.symbol-title Wreath
 									p.symbol-total #{symbols.wreath.total}
+							.illustItem.illustItem--carols.symbol.symbol--carols.symbol--inline
+								a.symbol-link(href="")
+									h2.symbol-title Carols
+									p.symbol-total #{symbols.carols.total}
 								
 						.symbols--inside.inactive
 							//- Nativity Scene totals
