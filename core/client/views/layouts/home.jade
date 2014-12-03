@@ -9,6 +9,39 @@ html
 	body
 		div(class="l-container #{page}")
 			include ../includes/header
+			
+			.overlay.overlay--intro.inactive
+				.overlay-contents
+					h2.infoWindow-title Christmas Tracker
+					p.infoWindow-subText
+						| This is an interactive illustration displaying a host of Christmassy words along with the number of times that they’ve been mentioned on Twitter today.
+					p.infoWindow-subText
+						| These numbers update in realtime as more people tweet about them.
+						| Scroll to see more of the illustration and click on a word to see it’s mentions over the last couple of weeks.
+
+					button.btn Get Started
+
+					p.infoWindow-baseText I’d love for this site to make a bit of a difference to those who need it at Christmas.
+					p.infoWindow-subtext 
+						| If you like what you see, please consider donating a little something to Shelter – a UK charity that 
+						a(href="http://england.shelter.org.uk/what_we_do") helps the homeless
+						| .
+						
+			.overlay.overlay--info.inactive
+				.overlay-contents
+					h2.infoWindow-title Christmas Tracker was created by these little angels…
+					.info-helper
+						h3: a(href="https://twitter.com/AshNolan_" target="_blank") Ashley Nolan 
+							span.info-helper-role Developer
+					.info-helper
+						h3: a(href="" target="_blank") Lorena Teruel 
+							span.info-helper-role Designer
+					.info-helper
+						h3: a(href="https://twitter.com/kinslowdian" target="_blank") Simon Kinslow 
+							span.info-helper-role Designer
+						
+					button.btn Close
+					
 
 			- if (symbols !== null) {
 			.illust-container
@@ -171,6 +204,7 @@ html
 			//- .symbol-list-wrapper
 			//- 	ul.symbol-list.unstyled
 			//- 		include ../symbols/index
+
 
 			#scroll-proxy
 

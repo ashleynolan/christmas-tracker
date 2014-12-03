@@ -1,11 +1,17 @@
 
 .page-header {
-	position: relative;
+	position: fixed;
 	z-index: 20;
-	margin: 0 auto;
+	left: 50%;
+	transform: translate(-50%, 0);
+	transition: transform 600ms;
 
 	@include respond-min($bp-narrow) {
 		width: 600px;
+	}
+
+	&.scaled {
+		transform: translate(-50%, -18%) scale(0.7);
 	}
 
 	&:before,
@@ -71,7 +77,8 @@
 
 				& .symbol-total {
 					display: inline-block;
-					transform: translateY(-4px);
+					@include font-size(22);
+					transform: translateY(-3px);
 				}
 			}
 				.page-header-total-subtext {

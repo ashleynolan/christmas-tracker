@@ -91,7 +91,7 @@ h1, .h1, .alpha {
 }
 
 h2, .h2, .beta {
-	@include font-size(18);
+	@include font-size(30);
 	margin-top: 0;
 	margin-bottom: $baseline;
 }

@@ -15,6 +15,9 @@ var $ = require('traversty'),
 $.setSelectorEngine(qwery);
 
 var UI = {
+	overlayBtn: null,
+	overlay: null,
+
 	init : function () {
 		console.debug('KO.UI module is being initialised');
 
@@ -23,6 +26,39 @@ var UI = {
 		// });
 		//
 		this.handleZooming();
+
+		this.initOverlay();
+		this.initInfoOverlay();
+
+	},
+
+	initOverlay : function () {
+
+		this.overlay = $('.overlay');
+		this.overlayBtn = $('.overlay .btn');
+
+		var index = 0,
+			overlayNum = this.overlay.length;
+
+		for (index; index < overlayNum; index++) {
+			this.overlayBtn[index].addEventListener('click', function (e) {
+				e.preventDefault();
+
+				this.parentElement.parentElement.classList.add('inactive');
+			});
+		}
+
+	},
+
+	initInfoOverlay : function () {
+
+		var footerLink = $('.page-footer-info')[0];
+
+		footerLink.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			$('.overlay--info')[0].classList.remove('inactive');
+		});
 
 	},
 
@@ -53,7 +89,8 @@ var UI = {
 
 		ZUI = new Zoomer(zoomContent);
 
-
+		//on page load calculate current position and scale to it
+		ZUI.recalculatePositions();
 
 	}
 };
@@ -82,6 +119,7 @@ function Zoomer( content ) {
 	// keep track of DOM
 	this.content = content;
 
+	this.header = $('.page-header')[0];
 	this.body = $('body')[0];
 	this.town = $('.illust-level--town')[0];
 	this.townSymbols = $('.illust-level--symbolsTown')[0];
@@ -114,7 +152,6 @@ Zoomer.prototype.handleEvent = function( event ) {
 
 // triggered every time window scrolls
 Zoomer.prototype.scroll = function( event ) {
-
 
 	this.recalculatePositions();
 
@@ -204,22 +241,27 @@ Zoomer.prototype.recalculatePositions = function () {
 
 Zoomer.prototype.checkStates = function () {
 
-	if (this.scrolled < 0.5) {
+	if (this.scrolled > 0) {
+		this.header.classList.add('scaled');
+	} else {
+		this.header.classList.remove('scaled');
+	}
 
-		//do a test whether to switch to night or not (after 0.25 scrolled)
-		if (this.scrolled > 0.15) {
-			this.body.classList.add('night');
-		} else {
-			this.body.classList.remove('night');
-		}
+	//do a test whether to switch to night or not (after 0.25 scrolled)
+	if (this.scrolled > 0.15) {
+		this.body.classList.add('night');
+	} else {
+		this.body.classList.remove('night');
+	}
+
+	//test between state of movement
+	if (this.scrolled < 0.5) {
 
 		this.house.classList.remove('inactive'); //make house visible
 		this.townSymbols.querySelector('.symbols--inside').classList.add('inactive'); //make nativity symbols not visible
 		this.townSymbols.querySelector('.symbols--outside').classList.remove('inactive'); //make nativity symbols not visible
 
 	} else {
-
-		this.body.classList.add('night');
 
 		this.house.classList.add('inactive'); //make house not visible
 		this.townSymbols.querySelector('.symbols--inside').classList.remove('inactive'); //make nativity symbols visible

@@ -48,6 +48,7 @@ body {
 	height: 10000px;
 }
 
+	//SYMBOL RELATED STUFF
 		.symbol {
 			position: relative;
 		}
@@ -88,16 +89,18 @@ body {
 			}
 
 			//hide symbols until needed
+			.overlay,
 			.symbols--inside,
 			.symbols--outside {
 				@include opacity(100);
 				transition: opacity 300ms;
 
 				&.inactive {
+					z-index: -10;
+					transition: opacity 300ms, z-index 0ms 300ms;
 					@include opacity(0);
 				}
 			}
-
 
 // Symbol styling – full list
 	.symbol-list-wrapper {
