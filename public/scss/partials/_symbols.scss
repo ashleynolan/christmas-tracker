@@ -6,6 +6,7 @@
 		}
 			.symbol-title {
 				@include font-size(18);
+				margin-right: 6px;
 			}
 			.symbol-link {
 				display: block;

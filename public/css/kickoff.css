@@ -1093,6 +1093,7 @@ body.night {
 .symbol-title {
   font-size: 18px;
   font-size: 1.125rem;
+  margin-right: 6px;
 }
 
 .symbol-link {
