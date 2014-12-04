@@ -1038,29 +1038,32 @@ body.night {
   display: block;
   color: #000;
 }
-.symbol--snowflake .symbol-link, .symbol--snow .symbol-link {
+.symbol--snowflake .symbol-link, .symbol--snow .symbol-link, .symbol--sledge .symbol-link {
   color: #34a8a6;
+}
+.symbol--ivy .symbol-link, .illustItem--sleigh .symbol-link, .symbol--wreath .symbol-link {
+  color: #8f693c;
 }
 .symbol--holly .symbol-link {
   color: #e41f44;
 }
-.symbol--robin .symbol-link {
+.symbol--robin .symbol-link, .illustItem--elf .symbol-link {
   color: #d5ea7d;
-}
-.symbol--ivy .symbol-link {
-  color: #8f693c;
 }
 .symbol--cold .symbol-link {
   color: #fff;
-}
-.symbol--wreath .symbol-link {
-  color: #8f693c;
 }
 .symbol--christmaslights .symbol-link {
   color: #ff99ad;
 }
 .symbol--carols .symbol-link {
   color: #eee0b7;
+}
+.symbol--rudolph .symbol-link, .symbol--dancer .symbol-link, .symbol--vixen .symbol-link, .symbol--cupid .symbol-link, .symbol--blitzen .symbol-link {
+  color: #36a9e1;
+}
+.symbol--dasher .symbol-link, .symbol--prancer .symbol-link, .symbol--comet .symbol-link, .symbol--donner .symbol-link {
+  color: #DF03DF;
 }
 
 .symbol-total {
@@ -1449,10 +1452,10 @@ body.night {
      -moz-transform-origin: left top;
       -ms-transform-origin: left top;
           transform-origin: left top;
-  -webkit-transform: scale(0.15) translate(-43%, -240%) rotate(8deg);
-     -moz-transform: scale(0.15) translate(-43%, -240%) rotate(8deg);
-      -ms-transform: scale(0.15) translate(-43%, -240%) rotate(8deg);
-          transform: scale(0.15) translate(-43%, -240%) rotate(8deg);
+  -webkit-transform: scale(0.14) translate(-43%, -245%) rotate(8deg);
+     -moz-transform: scale(0.14) translate(-43%, -245%) rotate(8deg);
+      -ms-transform: scale(0.14) translate(-43%, -245%) rotate(8deg);
+          transform: scale(0.14) translate(-43%, -245%) rotate(8deg);
 }
 .svg-sleigh.inactive {
   zoom: 1;
@@ -1465,7 +1468,7 @@ body.night {
   width: 100%;
   height: 100%;
   top: 75%;
-  left: 65%;
+  left: 64%;
   -webkit-transform-origin: left top;
      -moz-transform-origin: left top;
       -ms-transform-origin: left top;
@@ -1498,16 +1501,16 @@ body.night {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 55%;
+  top: 55.6%;
   left: 50%;
   -webkit-transform-origin: left top;
      -moz-transform-origin: left top;
       -ms-transform-origin: left top;
           transform-origin: left top;
-  -webkit-transform: scale(0.11) translate(-50%, 430px);
-     -moz-transform: scale(0.11) translate(-50%, 430px);
-      -ms-transform: scale(0.11) translate(-50%, 430px);
-          transform: scale(0.11) translate(-50%, 430px);
+  -webkit-transform: scale(0.11) translate(-50%, 0);
+     -moz-transform: scale(0.11) translate(-50%, 0);
+      -ms-transform: scale(0.11) translate(-50%, 0);
+          transform: scale(0.11) translate(-50%, 0);
 }
 
 .illustItem--yule {
@@ -1579,12 +1582,12 @@ body.night {
 .illustItem--sledge {
   width: 200px;
   height: 50px;
-  top: 234px;
-  right: -2px;
-  -webkit-transform: scale(0.15);
-     -moz-transform: scale(0.15);
-      -ms-transform: scale(0.15);
-          transform: scale(0.15);
+  top: 247px;
+  right: 12px;
+  -webkit-transform: scale(0.12) translate(0, 2px) rotate(9deg);
+     -moz-transform: scale(0.12) translate(0, 2px) rotate(9deg);
+      -ms-transform: scale(0.12) translate(0, 2px) rotate(9deg);
+          transform: scale(0.12) translate(0, 2px) rotate(9deg);
 }
 
 .illustItem--wreath {
@@ -1604,10 +1607,10 @@ body.night {
   height: 50px;
   top: 230px;
   left: 102px;
-  -webkit-transform: scale(0.07) translate(0, 6px);
-     -moz-transform: scale(0.07) translate(0, 6px);
-      -ms-transform: scale(0.07) translate(0, 6px);
-          transform: scale(0.07) translate(0, 6px);
+  -webkit-transform: scale(0.07) translate(0, 7px);
+     -moz-transform: scale(0.07) translate(0, 7px);
+      -ms-transform: scale(0.07) translate(0, 7px);
+          transform: scale(0.07) translate(0, 7px);
   text-align: center;
 }
 
@@ -1741,6 +1744,126 @@ body.night {
       -ms-transform: scale(0.032) translate(4px, -2px);
           transform: scale(0.032) translate(4px, -2px);
   text-align: center;
+}
+
+.illustItem--sleigh {
+  width: 180px;
+  height: 50px;
+  top: 124px;
+  left: 104px;
+  -webkit-transform: scale(0.035) translate(0, 2px) rotate(8deg);
+     -moz-transform: scale(0.035) translate(0, 2px) rotate(8deg);
+      -ms-transform: scale(0.035) translate(0, 2px) rotate(8deg);
+          transform: scale(0.035) translate(0, 2px) rotate(8deg);
+  text-align: center;
+}
+
+.illustItem--elf {
+  width: 180px;
+  height: 50px;
+  top: 120px;
+  left: 106px;
+  -webkit-transform: scale(0.03) translate(0, 19px) rotate(8deg);
+     -moz-transform: scale(0.03) translate(0, 19px) rotate(8deg);
+      -ms-transform: scale(0.03) translate(0, 19px) rotate(8deg);
+          transform: scale(0.03) translate(0, 19px) rotate(8deg);
+  text-align: center;
+}
+
+.illustItem--rudolph,
+.illustItem--dancer,
+.illustItem--vixen,
+.illustItem--cupid,
+.illustItem--blitzen,
+.illustItem--dasher,
+.illustItem--prancer,
+.illustItem--comet,
+.illustItem--donner {
+  width: 180px;
+  height: 24px;
+  padding: 0 8px;
+  background-color: #0d0f27;
+}
+
+.illustItem--rudolph {
+  top: 128px;
+  left: 63px;
+  -webkit-transform: scale(0.03) translate(10px, 30px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(10px, 30px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(10px, 30px) rotate(52deg);
+          transform: scale(0.03) translate(10px, 30px) rotate(52deg);
+}
+
+.illustItem--dancer {
+  top: 130px;
+  left: 70px;
+  -webkit-transform: scale(0.03) translate(30px, 30px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(30px, 30px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(30px, 30px) rotate(52deg);
+          transform: scale(0.03) translate(30px, 30px) rotate(52deg);
+}
+
+.illustItem--vixen {
+  top: 132px;
+  left: 77px;
+  -webkit-transform: scale(0.03) translate(42px, 30px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(42px, 30px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(42px, 30px) rotate(52deg);
+          transform: scale(0.03) translate(42px, 30px) rotate(52deg);
+}
+
+.illustItem--cupid {
+  top: 134px;
+  left: 85px;
+  -webkit-transform: scale(0.03) translate(20px, 20px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(20px, 20px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(20px, 20px) rotate(52deg);
+          transform: scale(0.03) translate(20px, 20px) rotate(52deg);
+}
+
+.illustItem--blitzen {
+  top: 136px;
+  left: 92px;
+  -webkit-transform: scale(0.03) translate(30px, 14px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(30px, 14px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(30px, 14px) rotate(52deg);
+          transform: scale(0.03) translate(30px, 14px) rotate(52deg);
+}
+
+.illustItem--dasher {
+  top: 129px;
+  left: 68px;
+  -webkit-transform: scale(0.03) translate(30px, 20px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(30px, 20px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(30px, 20px) rotate(52deg);
+          transform: scale(0.03) translate(30px, 20px) rotate(52deg);
+}
+
+.illustItem--prancer {
+  top: 131px;
+  left: 75px;
+  -webkit-transform: scale(0.03) translate(42px, 20px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(42px, 20px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(42px, 20px) rotate(52deg);
+          transform: scale(0.03) translate(42px, 20px) rotate(52deg);
+}
+
+.illustItem--comet {
+  top: 133px;
+  left: 83px;
+  -webkit-transform: scale(0.03) translate(20px, 10px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(20px, 10px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(20px, 10px) rotate(52deg);
+          transform: scale(0.03) translate(20px, 10px) rotate(52deg);
+}
+
+.illustItem--donner {
+  top: 135px;
+  left: 90px;
+  -webkit-transform: scale(0.03) translate(30px, 4px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(30px, 4px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(30px, 4px) rotate(52deg);
+          transform: scale(0.03) translate(30px, 4px) rotate(52deg);
 }
 
 .page-header {

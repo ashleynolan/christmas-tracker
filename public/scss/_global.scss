@@ -60,15 +60,36 @@ body {
 				display: block;
 				color: #000;
 
+				//turquoise
 				.symbol--snowflake &,
-				.symbol--snow & { color: $turquoise; }
-				.symbol--holly & { color: $red; }
-				.symbol--robin & { color: $green; }
-				.symbol--ivy & { color: $brown; }
-				.symbol--cold & { color: #fff; }
+				.symbol--snow &,
+				.symbol--sledge & { color: $turquoise; }
+
+				//brown
+				.symbol--ivy &,
+				.illustItem--sleigh &,
 				.symbol--wreath & { color: $brown; }
+
+				.symbol--holly & { color: $red; }
+				.symbol--robin &,.illustItem--elf & { color: $green; }
+				.symbol--cold & { color: #fff; }
 				.symbol--christmaslights & { color: $pink; }
 				.symbol--carols & { color: $brownLight; }
+
+				.symbol--rudolph &,
+				.symbol--dancer &,
+				.symbol--vixen &,
+				.symbol--cupid &,
+				.symbol--blitzen & {
+					color: $blueLight;
+				}
+
+				.symbol--dasher &,
+				.symbol--prancer &,
+				.symbol--comet &,
+				.symbol--donner & {
+					color: $purple;
+				}
 
 			}
 
