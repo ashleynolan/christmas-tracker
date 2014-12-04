@@ -2,10 +2,14 @@
 	z-index: index($layerIndex, level-4);
 	position: fixed;
 	width: 100%;
-	padding: 20px 10% 20px;
+	padding: 0px 5% 16px;
 	background: #fff;
 	bottom: 0;
 	left: 0;
+
+	@include respond-min($bp-narrow) {
+		padding: 20px 10%;
+	}
 
 	&:before {
 		content: '';
@@ -19,8 +23,13 @@
 	}
 }
 	.page-footer-links {
-		> li {
+		@include respond-max($bp-narrow - 1) {
 			float: left;
+		}
+		> li {
+			@include respond-min($bp-narrow) {
+				float: left;
+			}
 
 			&:first-child a {
 				border-left: none;

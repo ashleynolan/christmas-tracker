@@ -11,6 +11,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 	transform: translate3d(0, 0, 0);
 }
 
+//for small widths - hide the illustrations as won’t be able to see the words
+.illust-container,
+.illust-level--town {
+	@include respond-max($bp-narrow) {
+		display: none;
+	}
+}
+
 	.illust-level {
 		position: absolute;
 		left: 0;
@@ -172,7 +180,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 
 					.symbol-title,
 					.symbol-total {
-						padding-top: 4px;
+						padding-top: 6px;
 
 						@include respond-max($bp-mid) {
 							@include font-size(12);
@@ -239,7 +247,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				@include respond-min($bp-mid) {
 					right: 8%;
 					width: 212px;
-					padding: 60px 0 0 40px;
+					padding: 62px 0 0 38px;
 				}
 
 				@media screen and (min-height: 650px) { top: 180px; }
@@ -387,35 +395,40 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: center;
 			}
 			.illustItem--carols {
-				width: 202px; height: 50px;
-				top: 230px; left: 102px;
-				transform: scale(0.07) translate(0, 7px);
+				width: 212px;
+				top: 233px; left: 97px;
+				padding: 8px 0;
+				transform: scale(0.07) translate(0, 15px);
 				text-align: center;
 			}
 
 		// NATIVITY LABELS
 
 			.illustItem--jesus {
-				width: 100px; height: 50px;
-				top: 171px; left: 125px;
-				transform: scale(0.03);
+				top: 177px; left: 50%;
+				transform: translate(-50%, 0) scale(0.03);
+				text-align: center;
+			}
+			.illustItem--mary,
+			.illustItem--joseph {
+				background-color: #033649;
+				top: 163px;
+				padding: 10px;
 				text-align: center;
 			}
 			.illustItem--mary {
-				width: 100px; height: 50px;
-				top: 169px; left: 128px;
+				width: 120px;
+				left: 118px;
 				transform: scale(0.03) translate(23px, -2px);
-				text-align: center;
 			}
 			.illustItem--joseph {
-				width: 100px; height: 50px;
-				top: 169px; left: 121px;
+				width: 120px;
+				left: 111px;
 				transform: scale(0.03) translate(6px, -2px);
-				text-align: center;
 			}
 			.illustItem--angel {
-				width: 100px; height: 50px;
-				top: 153px; left: 125px;
+				width: 120px;
+				top: 153px; left: 115px;
 				transform: scale(0.032) translate(4px, -2px);
 				text-align: center;
 			}
@@ -426,55 +439,74 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: center;
 			}
 			.illustItem--wisemen {
-				width: 100px; height: 50px;
-				top: 175px; left: 111px;
-				transform: scale(0.03);
+				width: 350px;
+				top: 188px; left: -14px;
+				transform: scale(0.03) translate(14px, 16px);
 				text-align: center;
 			}
 			.illustItem--shepherd {
-				width: 100px; height: 50px;
-				top: 175px; left: 138px;
-				transform: scale(0.03);
+				width: 350px;
+				top: 188px; left: 13px;
+				transform: scale(0.03) translate(26px, 16px);
 				text-align: center;
 			}
+			.illustItem--gold,
+			.illustItem--frankincense,
+			.illustItem--myrrh {
+				width: 150px;
+				top: 184px;
+			}
 			.illustItem--gold {
-				width: 100px; height: 50px;
-				top: 178px; left: 121px;
-				transform: scale(0.025) translateX(6px);
+				left: 96px;
+				transform: scale(0.025) translate(6px, 14px);
 				text-align: center;
 			}
 			.illustItem--frankincense {
-				width: 150px; height: 50px;
-				top: 178px; left: 100px;
-				transform: scale(0.025) translateX(2px);
+				left: 100px;
+				transform: scale(0.025) translate(2px, 14px);
 				text-align: center;
 			}
 			.illustItem--myrrh {
-				width: 150px; height: 50px;
-				top: 178px; left: 103px;
-				transform: scale(0.025) translateX(28px);
+				left: 103px;
+				transform: scale(0.025) translate(28px, 14px);
 				text-align: center;
 			}
 			.illustItem--stable {
-				width: 100px; height: 50px;
-				top: 161px; left: 125px;
-				transform: scale(0.032) translate(4px, -2px);
+				top: 157px; left: 50%;
+				padding: 10px;
+				background-color: #033649;
+				transform: translate(-50%, 0) scale(0.032);
 				text-align: center;
 			}
 
 		// SLEIGH LABELS
 
 			.illustItem--sleigh {
-				width: 180px; height: 50px;
-				top: 124px; left: 104px;
+				width: 180px;
+				top: 136px; left: 104px;
 				transform: scale(0.035) translate(0, 2px) rotate(8deg);
 				text-align: center;
 			}
 			.illustItem--elf {
-				width: 180px; height: 50px;
-				top: 120px; left: 106px;
+				width: 180px;
+				top: 124px; left: 106px;
 				transform: scale(0.03) translate(0, 19px) rotate(8deg);
 				text-align: center;
+			}
+			.illustItem--santa {
+				width: 180px;
+				top: 124px; left: 106px;
+				transform: scale(0.03) translate(0, 19px) rotate(8deg);
+			}
+			.illustItem--hohoho {
+				width: 140px; height: 50px;
+				top: 114px; left: 120px;
+				transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
+			}
+			.illustItem--sack {
+				width: 180px;
+				top: 121px; left: 111px;
+				transform: scale(0.03) translate(0, 19px) rotate(-20deg);
 			}
 
 		// REINDEER

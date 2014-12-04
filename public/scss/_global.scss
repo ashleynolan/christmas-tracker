@@ -4,8 +4,10 @@
 
 html, body,
 .l-container {
-	width: 100%;
-	height: 100%;
+	@include respond-min($bp-narrow) {
+		width: 100%;
+		height: 100%;
+	}
 }
 
 body {
@@ -31,7 +33,6 @@ body {
  * Default layout container
  */
 .l-container {
-	// position: relative;
 	padding-left: #{$layout-margin}px;
 	padding-right: #{$layout-margin}px;
 	width: 95%;
@@ -40,118 +41,17 @@ body {
 
 	// perspective: 300px;
 
+	@include respond-max($bp-narrow - 1) {
+		position: relative;
+		margin-bottom: 150px;
+	}
+
 	.lt-ie9 & {
 		min-width: #{$layout-min-width}px;
 	}
 }
 #scroll-proxy {
-	height: 10000px;
+	@include respond-min($bp-narrow) {
+		height: 10000px;
+	}
 }
-
-	//SYMBOL RELATED STUFF
-		.symbol {
-			position: relative;
-		}
-			.symbol-title {
-				margin-bottom: 0;
-				@include font-size(18);
-			}
-			.symbol-link {
-				display: block;
-				color: #000;
-
-				//turquoise
-				.symbol--snowflake &,
-				.symbol--snow &,
-				.symbol--sledge & { color: $turquoise; }
-
-				//brown
-				.symbol--ivy &,
-				.illustItem--sleigh &,
-				.symbol--wreath & { color: $brown; }
-
-				.symbol--holly & { color: $red; }
-				.symbol--robin &,.illustItem--elf & { color: $green; }
-				.symbol--cold & { color: #fff; }
-				.symbol--christmaslights & { color: $pink; }
-				.symbol--carols & { color: $brownLight; }
-
-				.symbol--rudolph &,
-				.symbol--dancer &,
-				.symbol--vixen &,
-				.symbol--cupid &,
-				.symbol--blitzen & {
-					color: $blueLight;
-				}
-
-				.symbol--dasher &,
-				.symbol--prancer &,
-				.symbol--comet &,
-				.symbol--donner & {
-					color: $purple;
-				}
-
-			}
-
-			.symbol-total {
-				letter-spacing: 1px;
-			}
-
-			//specific text sizing for certain symbols
-			.symbol-title,
-			.symbol-total {
-				//where we want the title and count on one line
-				.symbol--inline & {
-					display: inline-block;
-					@include font-size(18);
-				}
-				.symbol--holly &,
-				.symbol--ivy &,
-				.symbol--doves & {
-					@include font-size(16);
-				}
-				.symbol--yule & {
-					@include font-size(20);
-				}
-			}
-
-			//hide symbols until needed
-			.overlay,
-			.symbols--inside,
-			.symbols--outside {
-				@include opacity(100);
-				transition: opacity 300ms;
-
-				&.inactive {
-					z-index: -10;
-					transition: opacity 300ms, z-index 0ms 300ms;
-					@include opacity(0);
-				}
-			}
-
-// Symbol styling – full list
-	.symbol-list-wrapper {
-		display: none;
-		width: 100%;
-		max-width: 1000px;
-		position: absolute;
-		top: 280px;
-		z-index: 10;
-		background: #fff;
-		margin: 0 auto;
-		padding: 20px;
-		border-radius: 6px;
-	}
-	.symbol-list {
-		overflow: hidden;
-		padding-bottom: 50px;
-	}
-		.symbol {
-			@include respond-min($bp-mid) {
-				float: left;
-				width: 50%;
-			}
-			@include respond-min($bp-wide) {
-				width: 33%;
-			}
-	}

@@ -10,7 +10,7 @@ html
 		div(class="l-container #{page}")
 			include ../includes/header
 			
-			.overlay.overlay--intro.inactive
+			.overlay.overlay--intro
 				.overlay-contents
 					h2.infoWindow-title Christmas Tracker
 					p.infoWindow-subText
@@ -18,12 +18,17 @@ html
 					p.infoWindow-subText
 						| These numbers update in realtime as more people tweet about them.
 						| Scroll to see more of the illustration and click on a word to see it’s mentions over the last couple of weeks.
+						
+					p.infoWindow-subText--narrow
+						| Christmas Tracker shows you what Christmassy things people are mentioning on Twitter in realtime!
+					p.infoWindow-subText--narrow
+						| If you view the site on a wider device you’ll be able to see the fully illustrated version of the site.
 
 					button.btn Get Started
 
 					p.infoWindow-baseText I’d love for this site to make a bit of a difference to those who need it at Christmas.
 					p.infoWindow-subtext 
-						| If you like what you see, please consider donating a little something to Shelter – a UK charity that 
+						| If you like the site, please consider donating a little something to Shelter – a UK charity that 
 						a(href="http://england.shelter.org.uk/what_we_do") helps the homeless
 						| .
 						
@@ -178,7 +183,7 @@ html
 									p.symbol-total #{symbols.wisemen.total}
 							.illustItem.illustItem--shepherd.symbol.symbol--shepherd.symbol--inline
 								a.symbol-link(href="")
-									h2.symbol-title Shepherd
+									h2.symbol-title Shepherds
 									p.symbol-total #{symbols.shepherd.total}
 							.illustItem.illustItem--angel.symbol.symbol--angel
 								a.symbol-link(href="")
@@ -214,6 +219,9 @@ html
 								a.symbol-link(href="")
 									h2.symbol-title Santa
 									p.symbol-total #{symbols.santa.total}
+							.illustItem.illustItem--hohoho.symbol.symbol--hohoho
+								a.symbol-link(href="")
+									p.symbol-total #{symbols.hohoho.total}
 									
 							//- Reindeer totals
 							.illustItem.illustItem--rudolph.symbol.symbol--rudolph.symbol--inline
@@ -257,9 +265,9 @@ html
 			- }
 
 
-			//- .symbol-list-wrapper
-			//- 	ul.symbol-list.unstyled
-			//- 		include ../symbols/index
+			.symbol-list-wrapper
+				ul.symbol-list.unstyled
+					include ../symbols/index
 
 
 			#scroll-proxy

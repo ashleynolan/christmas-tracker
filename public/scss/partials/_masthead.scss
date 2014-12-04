@@ -1,17 +1,23 @@
 
 .page-header {
-	position: fixed;
 	z-index: 20;
-	left: 50%;
-	transform: translate(-50%, 0);
-	transition: transform 600ms;
+	transform: translate(0, -18%) scale(0.7);
 
 	@include respond-min($bp-narrow) {
+		position: fixed;
+		left: 50%;
 		width: 600px;
+		transform: translate(-50%, -18%) scale(0.7);
+		transition: transform 600ms;
+	}
+	@include respond-min(700) {
+		transform: translate(-50%, 0);
 	}
 
 	&.scaled {
-		transform: translate(-50%, -18%) scale(0.7);
+		@include respond-min($bp-narrow) {
+			transform: translate(-50%, -18%) scale(0.7);
+		}
 	}
 
 	&:before,

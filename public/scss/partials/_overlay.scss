@@ -30,6 +30,36 @@
 		padding-top: 20px;
 	}
 
+.overlay--intro {
+	@include respond-max($bp-narrow - 1) {
+		z-index: inherit;
+		opacity: 1 !important;
+		position: static;
+		transform: none;
+		margin-bottom: 20px;
+		width: 94%;
+		padding: 0;
+
+		& .infoWindow-title,
+		& .btn {
+			display: none;
+		}
+	}
+}
+
+
+// hiding and showing different text at different widths
+.infoWindow-subText {
+	@include respond-max($bp-narrow - 1) {
+		display: none;
+	}
+}
+.infoWindow-subText--narrow {
+	@include respond-min($bp-narrow) {
+		display: none;
+	}
+}
+
 
 //helper overlay
 	.info-helper {

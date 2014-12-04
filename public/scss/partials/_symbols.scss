@@ -1,0 +1,158 @@
+
+
+	//SYMBOL RELATED STUFF
+		.symbol {
+			position: relative;
+		}
+			.symbol-title {
+				@include font-size(18);
+			}
+			.symbol-link {
+				display: block;
+				color: #000;
+
+				//turquoise
+				.symbol--snowflake &,
+				.symbol--snow &,
+				.symbol--sledge & { color: $turquoise; }
+
+				//brown
+				.symbol--ivy &,
+				.illustItem--sleigh &,
+				.symbol--wreath & { color: $brown; }
+
+				//white
+				.symbol--cold &,
+				.symbol--mary &,
+				.symbol--joseph &,
+				.symbol--wisemen &,
+				.symbol--shepherd &,
+				.symbol--stable & {
+					color: #fff;
+				}
+
+				.symbol--holly & { color: $red; }
+				.symbol--robin &,.illustItem--elf & { color: $green; }
+
+				.symbol--christmaslights & { color: $pink; }
+				.symbol--carols & { color: $brownLight; }
+
+				.symbol--rudolph &,
+				.symbol--dancer &,
+				.symbol--vixen &,
+				.symbol--cupid &,
+				.symbol--blitzen & {
+					color: $blueLight;
+				}
+
+				.symbol--dasher &,
+				.symbol--prancer &,
+				.symbol--comet &,
+				.symbol--donner & {
+					color: $purple;
+				}
+			}
+
+			.symbol-total {
+				letter-spacing: 1px;
+			}
+
+			//specific text sizing for certain symbols
+			.symbol-title,
+			.symbol-total {
+				margin-bottom: 0;
+
+				//where we want the title and count on one line
+				.symbol--inline & {
+					display: inline-block;
+					@include font-size(18);
+				}
+				.symbol--holly &,
+				.symbol--ivy &,
+				.symbol--doves & {
+					@include font-size(16);
+				}
+				.symbol--yule & {
+					@include font-size(20);
+				}
+			}
+
+			//hide symbols until needed
+			.overlay,
+			.symbols--inside,
+			.symbols--outside {
+				@include opacity(100);
+				transition: opacity 300ms;
+
+				&.inactive {
+					z-index: -10;
+					transition: opacity 300ms, z-index 0ms 300ms;
+					@include opacity(0);
+				}
+			}
+
+
+
+// Symbol styling – full list
+	.symbol-list-wrapper {
+		width: 94%;
+		max-width: 1000px;
+		margin-left: auto;	margin-right: auto;
+		background: #fff;
+		padding: 20px;
+		border-radius: 6px;
+
+		@include respond-min($bp-narrow) {
+			display: none;
+			z-index: 30;
+			position: absolute;
+			top: 280px;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 84%;
+		}
+	}
+	.symbol-list {
+		overflow: hidden;
+		// padding-bottom: 50px;
+
+		& .symbol-label {
+			@include respond-max($bp-narrow - 1) {
+				margin-bottom: 10px;
+			}
+		}
+
+		& .symbol-total {
+			@include respond-min($bp-narrow) {
+				display: block;
+			}
+		}
+	}
+		.symbol {
+
+			& + .symbol {
+				@include respond-max($bp-narrow - 1) {
+					border-top: 1px solid #ccc;
+					padding-top: 10px;
+				}
+			}
+
+			@include respond-max($bp-narrow - 1) {
+				text-align: center;
+			}
+			@include respond-min($bp-narrow) {
+				float: left;
+				width: 50%;
+			}
+			@include respond-min($bp-wide) {
+				width: 33%;
+			}
+
+	}
+
+
+
+
+
+
+

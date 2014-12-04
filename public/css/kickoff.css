@@ -1037,10 +1037,12 @@ table th[class*="col-"] {
 /**
  * Global app/site styles
  */
-html, body,
-.l-container {
-  width: 100%;
-  height: 100%;
+@media screen and (min-width: 34.375em) {
+  html, body,
+  .l-container {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 body {
@@ -1068,12 +1070,20 @@ body.night {
   max-width: 1000px;
   margin: 0 auto;
 }
+@media screen and (max-width: 34.3125em) {
+  .l-container {
+    position: relative;
+    margin-bottom: 150px;
+  }
+}
 .lt-ie9 .l-container {
   min-width: 1000px;
 }
 
-#scroll-proxy {
-  height: 10000px;
+@media screen and (min-width: 34.375em) {
+  #scroll-proxy {
+    height: 10000px;
+  }
 }
 
 .symbol {
@@ -1081,7 +1091,6 @@ body.night {
 }
 
 .symbol-title {
-  margin-bottom: 0;
   font-size: 18px;
   font-size: 1.125rem;
 }
@@ -1096,14 +1105,14 @@ body.night {
 .symbol--ivy .symbol-link, .illustItem--sleigh .symbol-link, .symbol--wreath .symbol-link {
   color: #8f693c;
 }
+.symbol--cold .symbol-link, .symbol--mary .symbol-link, .symbol--joseph .symbol-link, .symbol--wisemen .symbol-link, .symbol--shepherd .symbol-link, .symbol--stable .symbol-link {
+  color: #fff;
+}
 .symbol--holly .symbol-link {
   color: #e41f44;
 }
 .symbol--robin .symbol-link, .illustItem--elf .symbol-link {
   color: #d5ea7d;
-}
-.symbol--cold .symbol-link {
-  color: #fff;
 }
 .symbol--christmaslights .symbol-link {
   color: #ff99ad;
@@ -1122,6 +1131,10 @@ body.night {
   letter-spacing: 1px;
 }
 
+.symbol-title,
+.symbol-total {
+  margin-bottom: 0;
+}
 .symbol--inline .symbol-title, .symbol--inline
 .symbol-total {
   display: inline-block;
@@ -1162,24 +1175,55 @@ body.night {
 }
 
 .symbol-list-wrapper {
-  display: none;
-  width: 100%;
+  width: 94%;
   max-width: 1000px;
-  position: absolute;
-  top: 280px;
-  z-index: 10;
+  margin-left: auto;
+  margin-right: auto;
   background: #fff;
-  margin: 0 auto;
   padding: 20px;
   border-radius: 6px;
+}
+@media screen and (min-width: 34.375em) {
+  .symbol-list-wrapper {
+    display: none;
+    z-index: 30;
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 84%;
+  }
 }
 
 .symbol-list {
   overflow: hidden;
-  padding-bottom: 50px;
+}
+@media screen and (max-width: 34.3125em) {
+  .symbol-list .symbol-label {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 34.375em) {
+  .symbol-list .symbol-total {
+    display: block;
+  }
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (max-width: 34.3125em) {
+  .symbol + .symbol {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 34.3125em) {
+  .symbol {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 34.375em) {
   .symbol {
     float: left;
     width: 50%;
@@ -1200,6 +1244,13 @@ body.night {
   -webkit-transform: translate3d(0, 0, 0);
      -moz-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+}
+
+@media screen and (max-width: 34.375em) {
+  .illust-container,
+  .illust-level--town {
+    display: none;
+  }
 }
 
 .illust-level {
@@ -1382,7 +1433,7 @@ body.night {
 }
 .illustItem--fence-arrow-right .symbol-title,
 .illustItem--fence-arrow-right .symbol-total {
-  padding-top: 4px;
+  padding-top: 6px;
 }
 @media screen and (max-width: 48em) {
   .illustItem--fence-arrow-right .symbol-title,
@@ -1475,7 +1526,7 @@ body.night {
   -moz-transition: 300ms;
        transition: 300ms;
 }
-@media screen and (min-width: 28.125em) {
+@media screen and (min-width: 34.375em) {
   .illustItem--doves {
     width: 162px;
     padding: 56px 0 0 25px;
@@ -1485,7 +1536,7 @@ body.night {
   .illustItem--doves {
     right: 8%;
     width: 212px;
-    padding: 60px 0 0 40px;
+    padding: 62px 0 0 38px;
   }
 }
 @media screen and (min-height: 650px) {
@@ -1737,58 +1788,57 @@ body.night {
 }
 
 .illustItem--carols {
-  width: 202px;
-  height: 50px;
-  top: 230px;
-  left: 102px;
-  -webkit-transform: scale(0.07) translate(0, 7px);
-     -moz-transform: scale(0.07) translate(0, 7px);
-      -ms-transform: scale(0.07) translate(0, 7px);
-          transform: scale(0.07) translate(0, 7px);
+  width: 212px;
+  top: 233px;
+  left: 97px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.07) translate(0, 15px);
+     -moz-transform: scale(0.07) translate(0, 15px);
+      -ms-transform: scale(0.07) translate(0, 15px);
+          transform: scale(0.07) translate(0, 15px);
   text-align: center;
 }
 
 .illustItem--jesus {
-  width: 100px;
-  height: 50px;
-  top: 171px;
-  left: 125px;
-  -webkit-transform: scale(0.03);
-     -moz-transform: scale(0.03);
-      -ms-transform: scale(0.03);
-          transform: scale(0.03);
+  top: 177px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0) scale(0.03);
+     -moz-transform: translate(-50%, 0) scale(0.03);
+      -ms-transform: translate(-50%, 0) scale(0.03);
+          transform: translate(-50%, 0) scale(0.03);
+  text-align: center;
+}
+
+.illustItem--mary,
+.illustItem--joseph {
+  background-color: #033649;
+  top: 163px;
+  padding: 10px;
   text-align: center;
 }
 
 .illustItem--mary {
-  width: 100px;
-  height: 50px;
-  top: 169px;
-  left: 128px;
+  width: 120px;
+  left: 118px;
   -webkit-transform: scale(0.03) translate(23px, -2px);
      -moz-transform: scale(0.03) translate(23px, -2px);
       -ms-transform: scale(0.03) translate(23px, -2px);
           transform: scale(0.03) translate(23px, -2px);
-  text-align: center;
 }
 
 .illustItem--joseph {
-  width: 100px;
-  height: 50px;
-  top: 169px;
-  left: 121px;
+  width: 120px;
+  left: 111px;
   -webkit-transform: scale(0.03) translate(6px, -2px);
      -moz-transform: scale(0.03) translate(6px, -2px);
       -ms-transform: scale(0.03) translate(6px, -2px);
           transform: scale(0.03) translate(6px, -2px);
-  text-align: center;
 }
 
 .illustItem--angel {
-  width: 100px;
-  height: 50px;
+  width: 120px;
   top: 153px;
-  left: 125px;
+  left: 115px;
   -webkit-transform: scale(0.032) translate(4px, -2px);
      -moz-transform: scale(0.032) translate(4px, -2px);
       -ms-transform: scale(0.032) translate(4px, -2px);
@@ -1809,81 +1859,76 @@ body.night {
 }
 
 .illustItem--wisemen {
-  width: 100px;
-  height: 50px;
-  top: 175px;
-  left: 111px;
-  -webkit-transform: scale(0.03);
-     -moz-transform: scale(0.03);
-      -ms-transform: scale(0.03);
-          transform: scale(0.03);
+  width: 350px;
+  top: 188px;
+  left: -14px;
+  -webkit-transform: scale(0.03) translate(14px, 16px);
+     -moz-transform: scale(0.03) translate(14px, 16px);
+      -ms-transform: scale(0.03) translate(14px, 16px);
+          transform: scale(0.03) translate(14px, 16px);
   text-align: center;
 }
 
 .illustItem--shepherd {
-  width: 100px;
-  height: 50px;
-  top: 175px;
-  left: 138px;
-  -webkit-transform: scale(0.03);
-     -moz-transform: scale(0.03);
-      -ms-transform: scale(0.03);
-          transform: scale(0.03);
+  width: 350px;
+  top: 188px;
+  left: 13px;
+  -webkit-transform: scale(0.03) translate(26px, 16px);
+     -moz-transform: scale(0.03) translate(26px, 16px);
+      -ms-transform: scale(0.03) translate(26px, 16px);
+          transform: scale(0.03) translate(26px, 16px);
   text-align: center;
 }
 
+.illustItem--gold,
+.illustItem--frankincense,
+.illustItem--myrrh {
+  width: 150px;
+  top: 184px;
+}
+
 .illustItem--gold {
-  width: 100px;
-  height: 50px;
-  top: 178px;
-  left: 121px;
-  -webkit-transform: scale(0.025) translateX(6px);
-     -moz-transform: scale(0.025) translateX(6px);
-      -ms-transform: scale(0.025) translateX(6px);
-          transform: scale(0.025) translateX(6px);
+  left: 96px;
+  -webkit-transform: scale(0.025) translate(6px, 14px);
+     -moz-transform: scale(0.025) translate(6px, 14px);
+      -ms-transform: scale(0.025) translate(6px, 14px);
+          transform: scale(0.025) translate(6px, 14px);
   text-align: center;
 }
 
 .illustItem--frankincense {
-  width: 150px;
-  height: 50px;
-  top: 178px;
   left: 100px;
-  -webkit-transform: scale(0.025) translateX(2px);
-     -moz-transform: scale(0.025) translateX(2px);
-      -ms-transform: scale(0.025) translateX(2px);
-          transform: scale(0.025) translateX(2px);
+  -webkit-transform: scale(0.025) translate(2px, 14px);
+     -moz-transform: scale(0.025) translate(2px, 14px);
+      -ms-transform: scale(0.025) translate(2px, 14px);
+          transform: scale(0.025) translate(2px, 14px);
   text-align: center;
 }
 
 .illustItem--myrrh {
-  width: 150px;
-  height: 50px;
-  top: 178px;
   left: 103px;
-  -webkit-transform: scale(0.025) translateX(28px);
-     -moz-transform: scale(0.025) translateX(28px);
-      -ms-transform: scale(0.025) translateX(28px);
-          transform: scale(0.025) translateX(28px);
+  -webkit-transform: scale(0.025) translate(28px, 14px);
+     -moz-transform: scale(0.025) translate(28px, 14px);
+      -ms-transform: scale(0.025) translate(28px, 14px);
+          transform: scale(0.025) translate(28px, 14px);
   text-align: center;
 }
 
 .illustItem--stable {
-  width: 100px;
-  height: 50px;
-  top: 161px;
-  left: 125px;
-  -webkit-transform: scale(0.032) translate(4px, -2px);
-     -moz-transform: scale(0.032) translate(4px, -2px);
-      -ms-transform: scale(0.032) translate(4px, -2px);
-          transform: scale(0.032) translate(4px, -2px);
+  top: 157px;
+  left: 50%;
+  padding: 10px;
+  background-color: #033649;
+  -webkit-transform: translate(-50%, 0) scale(0.032);
+     -moz-transform: translate(-50%, 0) scale(0.032);
+      -ms-transform: translate(-50%, 0) scale(0.032);
+          transform: translate(-50%, 0) scale(0.032);
   text-align: center;
 }
 
 .illustItem--sleigh {
   width: 180px;
-  height: 50px;
-  top: 124px;
+  top: 136px;
   left: 104px;
   -webkit-transform: scale(0.035) translate(0, 2px) rotate(8deg);
      -moz-transform: scale(0.035) translate(0, 2px) rotate(8deg);
@@ -1894,14 +1939,44 @@ body.night {
 
 .illustItem--elf {
   width: 180px;
-  height: 50px;
-  top: 120px;
+  top: 124px;
   left: 106px;
   -webkit-transform: scale(0.03) translate(0, 19px) rotate(8deg);
      -moz-transform: scale(0.03) translate(0, 19px) rotate(8deg);
       -ms-transform: scale(0.03) translate(0, 19px) rotate(8deg);
           transform: scale(0.03) translate(0, 19px) rotate(8deg);
   text-align: center;
+}
+
+.illustItem--santa {
+  width: 180px;
+  top: 124px;
+  left: 106px;
+  -webkit-transform: scale(0.03) translate(0, 19px) rotate(8deg);
+     -moz-transform: scale(0.03) translate(0, 19px) rotate(8deg);
+      -ms-transform: scale(0.03) translate(0, 19px) rotate(8deg);
+          transform: scale(0.03) translate(0, 19px) rotate(8deg);
+}
+
+.illustItem--hohoho {
+  width: 140px;
+  height: 50px;
+  top: 114px;
+  left: 120px;
+  -webkit-transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
+     -moz-transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
+      -ms-transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
+          transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
+}
+
+.illustItem--sack {
+  width: 180px;
+  top: 121px;
+  left: 111px;
+  -webkit-transform: scale(0.03) translate(0, 19px) rotate(-20deg);
+     -moz-transform: scale(0.03) translate(0, 19px) rotate(-20deg);
+      -ms-transform: scale(0.03) translate(0, 19px) rotate(-20deg);
+          transform: scale(0.03) translate(0, 19px) rotate(-20deg);
 }
 
 .illustItem--rudolph,
@@ -2001,27 +2076,41 @@ body.night {
 }
 
 .page-header {
-  position: fixed;
   z-index: 20;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-     -moz-transform: translate(-50%, 0);
-      -ms-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  -moz-transition: -moz-transform 600ms;
-       transition: -webkit-transform 600ms;
-       transition: transform 600ms;
+  -webkit-transform: translate(0, -18%) scale(0.7);
+     -moz-transform: translate(0, -18%) scale(0.7);
+      -ms-transform: translate(0, -18%) scale(0.7);
+          transform: translate(0, -18%) scale(0.7);
 }
-@media screen and (min-width: 28.125em) {
+@media screen and (min-width: 34.375em) {
   .page-header {
+    position: fixed;
+    left: 50%;
     width: 600px;
+    -webkit-transform: translate(-50%, -18%) scale(0.7);
+       -moz-transform: translate(-50%, -18%) scale(0.7);
+        -ms-transform: translate(-50%, -18%) scale(0.7);
+            transform: translate(-50%, -18%) scale(0.7);
+    -moz-transition: -moz-transform 600ms;
+         transition: -webkit-transform 600ms;
+         transition: transform 600ms;
   }
 }
-.page-header.scaled {
-  -webkit-transform: translate(-50%, -18%) scale(0.7);
-     -moz-transform: translate(-50%, -18%) scale(0.7);
-      -ms-transform: translate(-50%, -18%) scale(0.7);
-          transform: translate(-50%, -18%) scale(0.7);
+@media screen and (min-width: 43.75em) {
+  .page-header {
+    -webkit-transform: translate(-50%, 0);
+       -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+@media screen and (min-width: 34.375em) {
+  .page-header.scaled {
+    -webkit-transform: translate(-50%, -18%) scale(0.7);
+       -moz-transform: translate(-50%, -18%) scale(0.7);
+        -ms-transform: translate(-50%, -18%) scale(0.7);
+            transform: translate(-50%, -18%) scale(0.7);
+  }
 }
 .page-header:before, .page-header:after {
   content: '';
@@ -2045,7 +2134,7 @@ body.night {
   text-align: center;
   padding-top: 18px;
 }
-@media screen and (min-width: 28.125em) {
+@media screen and (min-width: 34.375em) {
   .page-header-text {
     min-height: 265px;
   }
@@ -2103,10 +2192,15 @@ body.night {
   z-index: 4;
   position: fixed;
   width: 100%;
-  padding: 20px 10% 20px;
+  padding: 0px 5% 16px;
   background: #fff;
   bottom: 0;
   left: 0;
+}
+@media screen and (min-width: 34.375em) {
+  .page-footer {
+    padding: 20px 10%;
+  }
 }
 .page-footer:before {
   content: '';
@@ -2119,8 +2213,15 @@ body.night {
   background-image: url("data:image/png;base64,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");
 }
 
-.page-footer-links > li {
-  float: left;
+@media screen and (max-width: 34.3125em) {
+  .page-footer-links {
+    float: left;
+  }
+}
+@media screen and (min-width: 34.375em) {
+  .page-footer-links > li {
+    float: left;
+  }
 }
 .page-footer-links > li:first-child a {
   border-left: none;
@@ -2166,6 +2267,36 @@ body.night {
 .infoWindow-baseText {
   border-top: 1px solid #ccc;
   padding-top: 20px;
+}
+
+@media screen and (max-width: 34.3125em) {
+  .overlay--intro {
+    z-index: inherit;
+    opacity: 1 !important;
+    position: static;
+    -webkit-transform: none;
+       -moz-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin-bottom: 20px;
+    width: 94%;
+    padding: 0;
+  }
+  .overlay--intro .infoWindow-title, .overlay--intro .btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 34.3125em) {
+  .infoWindow-subText {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 34.375em) {
+  .infoWindow-subText--narrow {
+    display: none;
+  }
 }
 
 .info-helper {
