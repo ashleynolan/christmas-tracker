@@ -100,19 +100,27 @@ function Zoomer( content ) {
 
 	this.setLevels = function() {
 
-		if (this.docWidth > 1100) {
-			this.levels = 5.9;
-			this.verticalTranslate = 2600;
-		} else if (this.docWidth > 1000) {
+		if (this.docWidth > 1250) {
+			this.levels = 5.8;
+			this.verticalTranslate = 2450;
+		} else if (this.docWidth > 1150) {
+			this.levels = 5.7;
+			this.verticalTranslate = 2350;
+		} else if (this.docWidth > 1050) {
 			this.levels = 5.5;
-			this.verticalTranslate = 2600;
-		} else if (this.docWidth > 700) {
-			this.levels = 5.4;
-			this.verticalTranslate = 2600;
+			this.verticalTranslate = 2100;
+		} else if (this.docWidth > 950) {
+			this.levels = 5.35;
+			this.verticalTranslate = 1900;
+		} else if (this.docWidth > 850) {
+			this.levels = 5.15;
+			this.verticalTranslate = 1700;
 		} else {
-			this.levels = 5.4;
-			this.verticalTranslate = 2600;
+			this.levels = 4.9;
+			this.verticalTranslate = 1520;
 		}
+
+		log(this.verticalTranslate);
 
 	};
 

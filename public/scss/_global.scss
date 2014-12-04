@@ -60,9 +60,15 @@ body {
 				display: block;
 				color: #000;
 
-				.symbol--snowflake & { color: $turquoise; }
+				.symbol--snowflake &,
+				.symbol--snow & { color: $turquoise; }
 				.symbol--holly & { color: $red; }
+				.symbol--robin & { color: $green; }
 				.symbol--ivy & { color: $brown; }
+				.symbol--cold & { color: #fff; }
+				.symbol--wreath & { color: $brown; }
+				.symbol--christmaslights & { color: $pink; }
+				.symbol--carols & { color: $brownLight; }
 
 			}
 
