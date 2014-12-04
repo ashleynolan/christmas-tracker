@@ -1093,6 +1093,8 @@ body.night {
 .symbol-title {
   font-size: 18px;
   font-size: 1.125rem;
+}
+.symbol--inline .symbol-title {
   margin-right: 6px;
 }
 
