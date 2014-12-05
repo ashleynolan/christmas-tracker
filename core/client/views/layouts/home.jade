@@ -10,7 +10,7 @@ html
 		div(class="l-container #{page}")
 			include ../includes/header
 			
-			.overlay.overlay--intro
+			.overlay.overlay--intro.inactive
 				.overlay-contents
 					p.infoWindow-subText
 						| Christmas Tracker is an interactive illustration showing you how many times a bunch of Christmassy words have been mentioned so far today on Twitter.
@@ -105,8 +105,10 @@ html
 						include ../illustrations/house.html
 					include ../illustrations/sleigh.html
 					include ../illustrations/sledge.html
-					include ../illustrations/carollers.html
+					.svg-carollers
+						include ../illustrations/carollers.html
 					include ../illustrations/nativity.html
+					include ../illustrations/firstfloor.html
 					
 					.illust-level.illust-level--symbolsTown
 						
@@ -150,6 +152,72 @@ html
 									p.symbol-total #{symbols.carols.total}
 								
 						.symbols--inside.inactive
+							//- First Floor
+							.illustItem.illustItem--festive.symbol.symbol--festive
+								a.symbol-link(href="")
+									p.symbol-total #{symbols.festive.total}
+							.illustItem.illustItem--roast.symbol.symbol--roast
+								a.symbol-link(href="")
+									p.symbol-total #{symbols.roast.total}
+							.illustItem.illustItem--sprouts.symbol.symbol--sprouts
+								a.symbol-link(href="")
+									h2.symbol-title sprouts
+									p.symbol-total #{symbols.sprouts.total}
+							.illustItem.illustItem--turkey.symbol.symbol--turkey
+								a.symbol-link(href="")
+									h2.symbol-title turkey
+									p.symbol-total #{symbols.turkey.total}
+							.illustItem.illustItem--stuffing.symbol.symbol--stuffing
+								a.symbol-link(href="")
+									h2.symbol-title stuffing
+									p.symbol-total #{symbols.stuffing.total}
+							.illustItem.illustItem--pudding.symbol.symbol--pudding
+								a.symbol-link(href="")
+									h2.symbol-title pudding
+									p.symbol-total #{symbols.pudding.total}
+							.illustItem.illustItem--punch.symbol.symbol--punch
+								a.symbol-link(href="")
+									h2.symbol-title punch
+									p.symbol-total #{symbols.punch.total}
+							.illustItem.illustItem--cracker.symbol.symbol--cracker
+								a.symbol-link(href="")
+									h2.symbol-title cracker
+									p.symbol-total #{symbols.cracker.total}
+							.illustItem.illustItem--eggnog.symbol.symbol--eggnog
+								a.symbol-link(href="")
+									p.symbol-total #{symbols.eggnog.total}
+							.illustItem.illustItem--fairy.symbol.symbol--fairy
+								a.symbol-link(href="")
+									h2.symbol-title fairy
+									p.symbol-total #{symbols.fairy.total}
+							.illustItem.illustItem--bauble.symbol.symbol--bauble
+								a.symbol-link(href="")
+									h2.symbol-title bauble
+									p.symbol-total #{symbols.bauble.total}
+							.illustItem.illustItem--bells.symbol.symbol--bells
+								a.symbol-link(href="")
+									h2.symbol-title bells
+									p.symbol-total #{symbols.bells.total}
+							.illustItem.illustItem--gingerbread.symbol.symbol--gingerbread
+								a.symbol-link(href="")
+									h2.symbol-title gingerbread
+									p.symbol-total #{symbols.gingerbread.total}
+							.illustItem.illustItem--tinsel.symbol.symbol--tinsel.symbol--inline
+								a.symbol-link(href="")
+									h2.symbol-title tinsel
+									p.symbol-total #{symbols.tinsel.total}
+							.illustItem.illustItem--present.symbol.symbol--present
+								a.symbol-link(href="")
+									h2.symbol-title present
+									p.symbol-total #{symbols.present.total}
+							.illustItem.illustItem--nutcracker.symbol.symbol--nutcracker
+								a.symbol-link(href="")
+									h2.symbol-title nutcracker
+									p.symbol-total #{symbols.nutcracker.total}
+									
+									
+									
+									
 							//- Nativity Scene totals
 							.illustItem.illustItem--mary.symbol.symbol--mary
 								a.symbol-link(href="")

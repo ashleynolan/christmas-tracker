@@ -41,6 +41,11 @@
 				.symbol--christmaslights & { color: $pink; }
 				.symbol--carols & { color: $brownLight; }
 
+				.symbol--tinsel &,
+				.symbol--gingerbread & {
+					color: $orange;
+				}
+
 				.symbol--rudolph &,
 				.symbol--dancer &,
 				.symbol--vixen &,
@@ -76,7 +81,9 @@
 				.symbol--doves & {
 					@include font-size(16);
 				}
-				.symbol--yule & {
+				.symbol--yule &,
+				.symbol--festive &,
+				.symbol--roast & {
 					@include font-size(20);
 				}
 			}

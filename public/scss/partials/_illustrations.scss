@@ -107,13 +107,16 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			.illustItem--snowflake {
 				z-index: index($layerIndex, level-3);
 				top: 140px;
-				left: 10%;
+				left: 5%;
 				width: 14%;
 				min-height: 166px;
 
 				background-position: left top;
+				padding: 110px 0 0 7%;
 
-				padding: 10% 0 0 7%;
+				transition: left 300ms;
+
+				@include respond-min($bp-wide) { left: 10%; }
 			}
 
 			.illustItem--fencePost {
@@ -244,7 +247,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					width: 162px;
 					padding: 56px 0 0 25px;
 				}
-				@include respond-min($bp-mid) {
+				@include respond-min($bp-wide) {
 					right: 8%;
 					width: 212px;
 					padding: 62px 0 0 38px;
@@ -288,6 +291,18 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					width: 100%; height: 100%;
 				}
 
+				.svg-house,
+				.svg-carollers {
+					transition: opacity 300ms;
+
+					&.inactive { @include opacity(0); }
+
+					& svg {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
 				.svg-house {
 					z-index: index($layerIndex, level-3);
 					position: absolute;
@@ -295,14 +310,6 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					top: 51%; left: 49.73%;
 					transform-origin: left top;
 					transform: scale(0.265) translate(-50%, 0);
-
-					transition: opacity 300ms;
-					&.inactive { @include opacity(0); }
-
-					& svg {
-						width: 100%;
-						height: 100%;
-					}
 				}
 
 				.svg-sleigh {
@@ -339,6 +346,15 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					top: 55.6%; left: 50%;
 					transform-origin: left top;
 					transform: scale(0.11) translate(-50%, 0);
+				}
+
+				.svg-firstfloor {
+					z-index: index($layerIndex, level-2);
+					position: absolute;
+					width: 100%; height: 100%;
+					top: 66.4%; left: 50%;
+					transform-origin: left top;
+					transform: scale(0.1277) translate(-50.15%, 0);
 				}
 
 
@@ -402,6 +418,116 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: center;
 			}
 
+		// INSIDE LABELS
+			.illustItem--turkey {
+				width: 202px;
+				top: 200px; left: 54px;
+				padding: 8px 0;
+				transform: scale(0.03) translate(0, 18px);
+				text-align: center;
+			}
+			.illustItem--bells {
+				width: 202px;
+				top: 196px; left: 67px;
+				padding: 8px 0;
+				transform: scale(0.03) translate(18px, 0);
+				text-align: center;
+			}
+			.illustItem--sprouts,
+			.illustItem--stuffing,
+			.illustItem--pudding,
+			.illustItem--punch,
+			.illustItem--cracker {
+				width: 208px;
+				top: 208px;
+				padding: 8px 0;
+				text-align: center;
+			}
+			.illustItem--sprouts {
+				left: 52px;
+				transform: scale(0.03) translate(7px, 18px);
+			}
+			.illustItem--stuffing {
+				left: 57px;
+				transform: scale(0.03) translate(29px, 18px);
+			}
+			.illustItem--pudding {
+				left: 64px;
+				transform: scale(0.03) translate(5px, 18px);
+			}
+			.illustItem--punch {
+				left: 71px;
+				transform: scale(0.03) translate(0, 18px);
+			}
+			.illustItem--cracker {
+				left: 76px;
+				transform: scale(0.03) translate(17px, 18px);
+			}
+
+			.illustItem--festive,
+			.illustItem--roast {
+				width: 208px;
+				top: 215px;
+			}
+			.illustItem--festive {
+				left: 60px;
+				transform: scale(0.03) translate(30px, 25px);
+				text-align: right;
+			}
+			.illustItem--roast {
+				left: 68px;
+				transform: scale(0.03) translate(5px, 25px);
+				text-align: left;
+			}
+			.illustItem--eggnog {
+				width: 110px;
+				top: 220px; left: 123px;
+				transform: scale(0.03) translate(18px, 15px) rotate(-90deg);
+				text-align: left;
+			}
+
+			.illustItem--present {
+				width: 110px;
+				top: 218px; left: 141px;
+				transform: scale(0.025) translate(-6px, 5px) rotate(-30deg);
+				text-align: left;
+			}
+			.illustItem--nutcracker {
+				width: 110px;
+				top: 220px; left: 128px;
+				transform: scale(0.025) translate(-6px, 5px) rotate(14deg);
+				text-align: left;
+			}
+
+			.illustItem--fairy {
+				width: 110px;
+				top: 205px; left: 132px;
+				transform: scale(0.03) translate(10px, 16px);
+				text-align: left;
+			}
+			.illustItem--bauble {
+				width: 110px;
+				top: 210px; left: 141px;
+				transform: scale(0.03) translate(10px, 10px);
+				text-align: left;
+			}
+			.illustItem--gingerbread {
+				width: 180px;
+				top: 214px; left: 103px;
+				transform: scale(0.03) translate(0px, 8px) rotate(-16deg);
+				text-align: left;
+			}
+			.illustItem--tinsel {
+				width: 180px;
+				top: 219px; left: 101px;
+				transform: scale(0.03) translate(0px, 8px) rotate(16deg);
+				text-align: left;
+			}
+
+
+
+
+
 		// NATIVITY LABELS
 
 			.illustItem--jesus {
@@ -411,7 +537,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--mary,
 			.illustItem--joseph {
-				background-color: #033649;
+				background-color: $brown;
 				top: 163px;
 				padding: 10px;
 				text-align: center;
@@ -438,17 +564,20 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				transform: scale(0.035) translate(1px, -2px);
 				text-align: center;
 			}
+			.illustItem--wisemen,
+			.illustItem--shepherd {
+				top: 188px;
+				text-align: center;
+			}
 			.illustItem--wisemen {
 				width: 350px;
-				top: 188px; left: -14px;
-				transform: scale(0.03) translate(14px, 16px);
-				text-align: center;
+				left: -14px;
+				transform: scale(0.03) translate(14px, 18px);
 			}
 			.illustItem--shepherd {
 				width: 350px;
-				top: 188px; left: 13px;
-				transform: scale(0.03) translate(26px, 16px);
-				text-align: center;
+				left: 13px;
+				transform: scale(0.03) translate(26px, 18px);
 			}
 			.illustItem--gold,
 			.illustItem--frankincense,
@@ -457,8 +586,8 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				top: 184px;
 			}
 			.illustItem--gold {
-				left: 96px;
-				transform: scale(0.025) translate(6px, 14px);
+				left: 95px;
+				transform: scale(0.025) translate(24px, 14px);
 				text-align: center;
 			}
 			.illustItem--frankincense {
@@ -467,8 +596,8 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: center;
 			}
 			.illustItem--myrrh {
-				left: 103px;
-				transform: scale(0.025) translate(28px, 14px);
+				left: 104px;
+				transform: scale(0.025) translate(11px, 14px);
 				text-align: center;
 			}
 			.illustItem--stable {
