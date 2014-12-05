@@ -1,7 +1,7 @@
 {
   "name": "christmas-tracker",
   "title": "Christmas Tracker",
-  "description": "Christmas Tracker – Tracks popular Christmas related words and phrases as they are mentioned on Twitter",
+  "description": "An interactive illustration showing you how many times a bunch of Christmassy words have been mentioned so far today on Twitter.",
   "url": "http://www.christmastracker.com",
   "version": "1.0.0",
   "private": true,

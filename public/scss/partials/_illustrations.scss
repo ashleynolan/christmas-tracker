@@ -191,7 +191,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 						}
 					}
 					.symbol-title {
-						padding-left: 20px;
+						padding-left: 15px;
 						padding-right: 5px;
 					}
 
@@ -292,7 +292,8 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				}
 
 				.svg-house,
-				.svg-carollers {
+				.svg-carollers,
+				.svg-star {
 					transition: opacity 300ms;
 
 					&.inactive { @include opacity(0); }
@@ -320,6 +321,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					transform: scale(0.14) translate(-43%, -245%)  rotate(8deg);
 
 					&.inactive { @include opacity(0); }
+				}
+				.svg-star {
+					position: absolute;
+					width: 100%; height: 100%;
+					top: 38.5%; left: 47%;
+					background-color: rgb(13, 15, 39);
+					transform-origin: left top;
+					transform: scale(0.025) translate(-100%, 0);
 				}
 
 				.svg-sledge {
@@ -493,9 +502,9 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: left;
 			}
 			.illustItem--nutcracker {
-				width: 110px;
-				top: 220px; left: 128px;
-				transform: scale(0.025) translate(-6px, 5px) rotate(14deg);
+				width: 140px;
+				top: 220px; left: 113px;
+				transform: scale(0.025) translate(-10px, 17px) rotate(14deg);
 				text-align: left;
 			}
 
@@ -513,14 +522,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--gingerbread {
 				width: 180px;
-				top: 214px; left: 103px;
-				transform: scale(0.03) translate(0px, 8px) rotate(-16deg);
+				top: 222px; left: 102px;
+				transform: scale(0.03) translate(-30px, 30px) rotate(-14deg);
 				text-align: left;
 			}
 			.illustItem--tinsel {
 				width: 180px;
-				top: 219px; left: 101px;
-				transform: scale(0.03) translate(0px, 8px) rotate(16deg);
+				top: 220px; left: 101px;
+				transform: scale(0.03) translate(0px, 6px) rotate(12deg);
 				text-align: left;
 			}
 
@@ -554,14 +563,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--angel {
 				width: 120px;
-				top: 153px; left: 115px;
-				transform: scale(0.032) translate(4px, -2px);
+				top: 170px; left: 108px;
+				transform: scale(0.032) translate(4px, -2px) rotate(-45deg);
 				text-align: center;
 			}
 			.illustItem--god {
 				width: 100px; height: 50px;
-				top: 153px; left: 138px;
-				transform: scale(0.035) translate(1px, -2px);
+				top: 157px; left: 131px;
+				transform: scale(0.035) translate(6px, 9px) rotate(45deg);
 				text-align: center;
 			}
 			.illustItem--wisemen,
@@ -608,7 +617,20 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: center;
 			}
 
+			.illustItem--chimney {
+				top: 147px; left: 101px;
+				padding: 10px;
+				transform: scale(0.032) translate(13px, 0) ;
+				text-align: center;
+			}
+
 		// SLEIGH LABELS
+
+			.illustItem--star {
+				width: 180px;
+				top: 105px; left: 73px;
+				transform: scale(0.035) translate(12px, 10px) rotate(-15deg);
+			}
 
 			.illustItem--sleigh {
 				width: 180px;

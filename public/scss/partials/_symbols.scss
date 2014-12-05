@@ -31,7 +31,8 @@
 				.symbol--joseph &,
 				.symbol--wisemen &,
 				.symbol--shepherd &,
-				.symbol--stable & {
+				.symbol--stable &,
+				.symbol--tinsel & {
 					color: #fff;
 				}
 
@@ -41,7 +42,8 @@
 				.symbol--christmaslights & { color: $pink; }
 				.symbol--carols & { color: $brownLight; }
 
-				.symbol--tinsel &,
+				.symbol--star & { color: $yellow; }
+
 				.symbol--gingerbread & {
 					color: $orange;
 				}

@@ -104,6 +104,8 @@ html
 					.svg-house
 						include ../illustrations/house.html
 					include ../illustrations/sleigh.html
+					.svg-star.inactive
+						include ../illustrations/star.html
 					include ../illustrations/sledge.html
 					.svg-carollers
 						include ../illustrations/carollers.html
@@ -198,7 +200,7 @@ html
 								a.symbol-link(href="")
 									h2.symbol-title bells
 									p.symbol-total #{symbols.bells.total}
-							.illustItem.illustItem--gingerbread.symbol.symbol--gingerbread
+							.illustItem.illustItem--gingerbread.symbol.symbol--gingerbread.symbol--inline
 								a.symbol-link(href="")
 									h2.symbol-title gingerbread
 									p.symbol-total #{symbols.gingerbread.total}
@@ -235,7 +237,7 @@ html
 								a.symbol-link(href="")
 									h2.symbol-title Jesus
 									p.symbol-total #{symbols.jesus.total}
-							.illustItem.illustItem--god.symbol.symbol--god
+							.illustItem.illustItem--god.symbol.symbol--god.symbol--inline
 								a.symbol-link(href="")
 									h2.symbol-title God
 									p.symbol-total #{symbols.god.total}
@@ -251,7 +253,7 @@ html
 								a.symbol-link(href="")
 									h2.symbol-title Shepherds
 									p.symbol-total #{symbols.shepherd.total}
-							.illustItem.illustItem--angel.symbol.symbol--angel
+							.illustItem.illustItem--angel.symbol.symbol--angel.symbol--inline
 								a.symbol-link(href="")
 									h2.symbol-title Angel
 									p.symbol-total #{symbols.angel.total}
@@ -268,7 +270,16 @@ html
 									h2.symbol-title Myrrh
 									p.symbol-total #{symbols.myrrh.total}
 									
+							.illustItem.illustItem--chimney.symbol.symbol--chimney
+								a.symbol-link(href="")
+									h2.symbol-title Chimney
+									p.symbol-total #{symbols.chimney.total}
+									
 							//- Santa + Sleigh Scene totals
+							.illustItem.illustItem--star.symbol.symbol--star
+								a.symbol-link(href="")
+									h2.symbol-title Star
+									p.symbol-total #{symbols.star.total}
 							.illustItem.illustItem--sleigh.symbol.symbol--sleigh.symbol--inline
 								a.symbol-link(href="")
 									h2.symbol-title Sleigh

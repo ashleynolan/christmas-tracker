@@ -108,7 +108,7 @@ function Zoomer( content ) {
 			this.verticalTranslate = 3000;
 		} else if (this.docWidth > 1350) {
 			this.levels = 6;
-			this.verticalTranslate = 2550;
+			this.verticalTranslate = 2750;
 		} else if (this.docWidth > 1250) {
 			this.levels = 5.8;
 			this.verticalTranslate = 2450;
@@ -129,6 +129,8 @@ function Zoomer( content ) {
 			this.verticalTranslate = 1520;
 		}
 
+		log(this.levels);
+
 	};
 
 	// keep track of DOM
@@ -140,6 +142,7 @@ function Zoomer( content ) {
 	this.townSymbols = $('.illust-level--symbolsTown')[0];
 	this.house = $('.svg-house')[0];
 	this.carollers = $('.svg-carollers')[0];
+	this.star = $('.svg-star')[0];
 
 	// position of vertical scroll
 	this.scrolled = 0;
@@ -275,6 +278,7 @@ Zoomer.prototype.checkStates = function () {
 
 		this.house.classList.remove('inactive'); //make house visible
 		this.carollers.classList.remove('inactive'); //make carollers invisible
+		this.star.classList.add('inactive'); //make carollers invisible
 		this.townSymbols.querySelector('.symbols--inside').classList.add('inactive'); //make nativity symbols not visible
 		this.townSymbols.querySelector('.symbols--outside').classList.remove('inactive'); //make nativity symbols not visible
 
@@ -282,6 +286,7 @@ Zoomer.prototype.checkStates = function () {
 
 		this.house.classList.add('inactive'); //make house not visible
 		this.carollers.classList.add('inactive'); //make carollers invisible
+		this.star.classList.remove('inactive'); //make carollers invisible
 		this.townSymbols.querySelector('.symbols--inside').classList.remove('inactive'); //make nativity symbols visible
 		this.townSymbols.querySelector('.symbols--outside').classList.add('inactive'); //make nativity symbols not visible
 
