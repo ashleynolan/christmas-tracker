@@ -24,6 +24,7 @@
 }
 	.social-links {
 		@include respond-max($bp-narrow - 1) {
+			display: none;
 			float: left;
 		}
 		> li {
@@ -47,8 +48,12 @@
 	}
 
 	.page-footer-links {
-		float: right;
-		text-align: right;
+		text-align: center;
+
+		@include respond-min($bp-narrow) {
+			float: right;
+			text-align: right;
+		}
 
 		li {
 			display: inline-block;
@@ -59,6 +64,10 @@
 			}
 			@include respond-max($bp-mid) {
 				display: block;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 

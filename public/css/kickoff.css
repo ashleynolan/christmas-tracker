@@ -2017,7 +2017,7 @@ body.night {
 
 .illustItem--bells {
   width: 202px;
-  height: 41px;
+  height: 57px;
   top: 196px;
   left: 67px;
   padding: 8px 0;
@@ -2238,7 +2238,7 @@ body.night {
 
 .illustItem--candle {
   width: 202px;
-  height: 41px;
+  height: 57px;
   top: 177px;
   left: 55px;
   padding: 8px 0;
@@ -2872,6 +2872,7 @@ body.night {
 
 @media screen and (max-width: 34.3125em) {
   .social-links {
+    display: none;
     float: left;
   }
 }
@@ -2896,8 +2897,13 @@ body.night {
 }
 
 .page-footer-links {
-  float: right;
-  text-align: right;
+  text-align: center;
+}
+@media screen and (min-width: 34.375em) {
+  .page-footer-links {
+    float: right;
+    text-align: right;
+  }
 }
 .page-footer-links li {
   display: inline-block;
@@ -2912,6 +2918,9 @@ body.night {
   .page-footer-links li {
     display: block;
   }
+}
+.page-footer-links li:last-child {
+  margin-bottom: 0;
 }
 .page-footer-links .page-footer-info {
   text-decoration: underline;

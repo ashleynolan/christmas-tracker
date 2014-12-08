@@ -1840,7 +1840,7 @@ body.night {
 
 .illustItem--bells {
   width: 202px;
-  height: 41px;
+  height: 57px;
   top: 196px;
   left: 67px;
   padding: 8px 0;
@@ -2061,7 +2061,7 @@ body.night {
 
 .illustItem--candle {
   width: 202px;
-  height: 41px;
+  height: 57px;
   top: 177px;
   left: 55px;
   padding: 8px 0;
@@ -2689,12 +2689,16 @@ body.night {
 }
 
 .page-footer-links {
+  text-align: center;
   float: right;
   text-align: right;
 }
 .page-footer-links li {
   display: inline-block;
   margin-bottom: 10px;
+  margin-bottom: 0;
+}
+.page-footer-links li:last-child {
   margin-bottom: 0;
 }
 .page-footer-links .page-footer-info {
