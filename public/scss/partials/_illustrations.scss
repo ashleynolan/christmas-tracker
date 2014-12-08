@@ -378,7 +378,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					z-index: index($layerIndex, level-2);
 					position: absolute;
 					width: 100%; height: 100%;
-					top: 55.6%; left: 50%;
+					top: 54.7%; left: 50%;
 					transform-origin: left top;
 					transform: scale(0.11) translate(-50%, 0);
 				}
@@ -630,6 +630,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				transform: scale(0.03) translate(0, 10px);
 				text-align: center;
 			}
+			.illustItem--mincepie {
+				width: 202px;
+				top: 191px; left: 58px;
+				padding: 8px 0;
+				transform: scale(0.025) translate(30px, 2px);
+				text-align: center;
+			}
+
 			.illustItem--mistletoe {
 				width: 202px;
 				top: 175px; left: 93px;
@@ -786,21 +794,21 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			.illustItem--frankincense,
 			.illustItem--myrrh {
 				width: 150px;
-				top: 184px;
+				top: 182px;
 			}
 			.illustItem--gold {
 				left: 95px;
-				transform: scale(0.025) translate(24px, 14px);
+				transform: scale(0.025) translate(24px, 18px);
 				text-align: center;
 			}
 			.illustItem--frankincense {
 				left: 100px;
-				transform: scale(0.025) translate(2px, 14px);
+				transform: scale(0.025) translate(2px, 18px);
 				text-align: center;
 			}
 			.illustItem--myrrh {
 				left: 104px;
-				transform: scale(0.025) translate(11px, 14px);
+				transform: scale(0.025) translate(11px, 18px);
 				text-align: center;
 			}
 			.illustItem--stable {

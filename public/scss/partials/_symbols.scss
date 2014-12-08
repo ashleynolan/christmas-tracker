@@ -67,7 +67,8 @@
 
 				.symbol--stocking & { color: $redBrown; }
 				.symbol--carols & { color: $brownLight; }
-				.symbol--star & { color: $yellow; }
+				.symbol--star &,
+				.symbol--mincepie & { color: $yellow; }
 
 				.symbol--gingerbread & {
 					color: $orange;
