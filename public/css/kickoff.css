@@ -2004,6 +2004,7 @@ body.night {
 
 .illustItem--turkey {
   width: 202px;
+  height: 57px;
   top: 200px;
   left: 54px;
   padding: 8px 0;
@@ -2016,6 +2017,7 @@ body.night {
 
 .illustItem--bells {
   width: 202px;
+  height: 41px;
   top: 196px;
   left: 67px;
   padding: 8px 0;
@@ -2040,42 +2042,42 @@ body.night {
 
 .illustItem--sprouts {
   left: 52px;
-  -webkit-transform: scale(0.03) translate(7px, 14px);
-     -moz-transform: scale(0.03) translate(7px, 14px);
-      -ms-transform: scale(0.03) translate(7px, 14px);
-          transform: scale(0.03) translate(7px, 14px);
+  -webkit-transform: scale(0.03) translate(7px, 12px);
+     -moz-transform: scale(0.03) translate(7px, 12px);
+      -ms-transform: scale(0.03) translate(7px, 12px);
+          transform: scale(0.03) translate(7px, 12px);
 }
 
 .illustItem--stuffing {
   left: 57px;
-  -webkit-transform: scale(0.03) translate(29px, 14px);
-     -moz-transform: scale(0.03) translate(29px, 14px);
-      -ms-transform: scale(0.03) translate(29px, 14px);
-          transform: scale(0.03) translate(29px, 14px);
+  -webkit-transform: scale(0.03) translate(29px, 12px);
+     -moz-transform: scale(0.03) translate(29px, 12px);
+      -ms-transform: scale(0.03) translate(29px, 12px);
+          transform: scale(0.03) translate(29px, 12px);
 }
 
 .illustItem--pudding {
   left: 64px;
-  -webkit-transform: scale(0.03) translate(5px, 14px);
-     -moz-transform: scale(0.03) translate(5px, 14px);
-      -ms-transform: scale(0.03) translate(5px, 14px);
-          transform: scale(0.03) translate(5px, 14px);
+  -webkit-transform: scale(0.03) translate(5px, 12px);
+     -moz-transform: scale(0.03) translate(5px, 12px);
+      -ms-transform: scale(0.03) translate(5px, 12px);
+          transform: scale(0.03) translate(5px, 12px);
 }
 
 .illustItem--punch {
   left: 71px;
-  -webkit-transform: scale(0.03) translate(0, 14px);
-     -moz-transform: scale(0.03) translate(0, 14px);
-      -ms-transform: scale(0.03) translate(0, 14px);
-          transform: scale(0.03) translate(0, 14px);
+  -webkit-transform: scale(0.03) translate(0, 12px);
+     -moz-transform: scale(0.03) translate(0, 12px);
+      -ms-transform: scale(0.03) translate(0, 12px);
+          transform: scale(0.03) translate(0, 12px);
 }
 
 .illustItem--cracker {
   left: 76px;
-  -webkit-transform: scale(0.03) translate(17px, 14px);
-     -moz-transform: scale(0.03) translate(17px, 14px);
-      -ms-transform: scale(0.03) translate(17px, 14px);
-          transform: scale(0.03) translate(17px, 14px);
+  -webkit-transform: scale(0.03) translate(17px, 12px);
+     -moz-transform: scale(0.03) translate(17px, 12px);
+      -ms-transform: scale(0.03) translate(17px, 12px);
+          transform: scale(0.03) translate(17px, 12px);
 }
 
 .illustItem--festive,
@@ -2115,6 +2117,7 @@ body.night {
 
 .illustItem--present {
   width: 110px;
+  height: 41px;
   top: 218px;
   left: 141px;
   -webkit-transform: scale(0.025) translate(-6px, 5px) rotate(-30deg);
@@ -2126,6 +2129,7 @@ body.night {
 
 .illustItem--nutcracker {
   width: 140px;
+  height: 41px;
   top: 220px;
   left: 113px;
   -webkit-transform: scale(0.025) translate(-10px, 17px) rotate(14deg);
@@ -2137,6 +2141,7 @@ body.night {
 
 .illustItem--fairy {
   width: 110px;
+  height: 41px;
   top: 205px;
   left: 132px;
   -webkit-transform: scale(0.03) translate(10px, 16px);
@@ -2148,6 +2153,7 @@ body.night {
 
 .illustItem--bauble {
   width: 110px;
+  height: 41px;
   top: 210px;
   left: 141px;
   -webkit-transform: scale(0.03) translate(10px, 10px);
@@ -2185,6 +2191,7 @@ body.night {
 .illustItem--thepogues,
 .illustItem--wham {
   width: 180px;
+  height: 41px;
   top: 188px;
   text-align: center;
 }
@@ -2231,6 +2238,7 @@ body.night {
 
 .illustItem--candle {
   width: 202px;
+  height: 41px;
   top: 177px;
   left: 55px;
   padding: 8px 0;
@@ -2243,18 +2251,20 @@ body.night {
 
 .illustItem--mincepie {
   width: 202px;
+  height: 57px;
   top: 191px;
   left: 63px;
   padding: 8px 0;
-  -webkit-transform: scale(0.025) translate(20px, 2px);
-     -moz-transform: scale(0.025) translate(20px, 2px);
-      -ms-transform: scale(0.025) translate(20px, 2px);
-          transform: scale(0.025) translate(20px, 2px);
+  -webkit-transform: scale(0.025) translate(20px, 1px);
+     -moz-transform: scale(0.025) translate(20px, 1px);
+      -ms-transform: scale(0.025) translate(20px, 1px);
+          transform: scale(0.025) translate(20px, 1px);
   text-align: center;
 }
 
 .illustItem--mistletoe {
   width: 202px;
+  height: 57px;
   top: 175px;
   left: 93px;
   padding: 8px 0;
@@ -2302,6 +2312,7 @@ body.night {
 .illustItem--stocking,
 .illustItem--fireplace {
   width: 202px;
+  height: 57px;
   left: 59px;
   padding: 8px 0;
   text-align: center;
@@ -2337,6 +2348,7 @@ body.night {
 
 .illustItem--christmascards {
   width: 250px;
+  height: 57px;
   top: 186px;
   left: 52px;
   padding: 8px 0;
@@ -2348,13 +2360,14 @@ body.night {
 
 .illustItem--money {
   width: 202px;
+  height: 57px;
   top: 191px;
   left: 74px;
   padding: 8px 0;
-  -webkit-transform: scale(0.03) translate(13px, 17px);
-     -moz-transform: scale(0.03) translate(13px, 17px);
-      -ms-transform: scale(0.03) translate(13px, 17px);
-          transform: scale(0.03) translate(13px, 17px);
+  -webkit-transform: scale(0.03) translate(13px, 16px);
+     -moz-transform: scale(0.03) translate(13px, 16px);
+      -ms-transform: scale(0.03) translate(13px, 16px);
+          transform: scale(0.03) translate(13px, 16px);
   text-align: center;
 }
 
@@ -2502,6 +2515,7 @@ body.night {
 .illustItem--frankincense,
 .illustItem--myrrh {
   width: 150px;
+  height: 41px;
   top: 182px;
 }
 
@@ -2533,14 +2547,14 @@ body.night {
 }
 
 .illustItem--stable {
-  top: 157px;
+  top: 155px;
   left: 50%;
   padding: 10px;
   background-color: #033649;
-  -webkit-transform: translate(-50%, 0) scale(0.032);
-     -moz-transform: translate(-50%, 0) scale(0.032);
-      -ms-transform: translate(-50%, 0) scale(0.032);
-          transform: translate(-50%, 0) scale(0.032);
+  -webkit-transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
+     -moz-transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
+      -ms-transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
+          transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
   text-align: center;
 }
 
@@ -2548,6 +2562,7 @@ body.night {
   top: 147px;
   left: 101px;
   padding: 10px;
+  height: 61px;
   -webkit-transform: scale(0.032) translate(13px, 0);
      -moz-transform: scale(0.032) translate(13px, 0);
       -ms-transform: scale(0.032) translate(13px, 0);
@@ -2557,6 +2572,7 @@ body.night {
 
 .illustItem--star {
   width: 180px;
+  height: 41px;
   top: 105px;
   left: 73px;
   -webkit-transform: scale(0.035) translate(12px, 10px) rotate(-15deg);
@@ -2569,10 +2585,10 @@ body.night {
   width: 180px;
   top: 136px;
   left: 104px;
-  -webkit-transform: scale(0.035) translate(0, -4px) rotate(8deg);
-     -moz-transform: scale(0.035) translate(0, -4px) rotate(8deg);
-      -ms-transform: scale(0.035) translate(0, -4px) rotate(8deg);
-          transform: scale(0.035) translate(0, -4px) rotate(8deg);
+  -webkit-transform: scale(0.035) translate(0, -5px) rotate(8deg);
+     -moz-transform: scale(0.035) translate(0, -5px) rotate(8deg);
+      -ms-transform: scale(0.035) translate(0, -5px) rotate(8deg);
+          transform: scale(0.035) translate(0, -5px) rotate(8deg);
   text-align: center;
 }
 
@@ -2589,6 +2605,7 @@ body.night {
 
 .illustItem--santa {
   width: 180px;
+  height: 41px;
   top: 126px;
   left: 104px;
   -webkit-transform: scale(0.03) translate(0, 0) rotate(8deg);
@@ -2610,6 +2627,7 @@ body.night {
 
 .illustItem--sack {
   width: 180px;
+  height: 41px;
   top: 119px;
   left: 110px;
   -webkit-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
