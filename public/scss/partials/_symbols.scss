@@ -35,7 +35,8 @@
 				.symbol--wisemen &,
 				.symbol--shepherd &,
 				.symbol--stable &,
-				.symbol--tinsel & {
+				.symbol--tinsel &,
+				.symbol--scrooge & {
 					color: #fff;
 				}
 
@@ -49,10 +50,23 @@
 				.symbol--santa & {
 					color: $green;
 				}
+				.symbol--fireplace &,
+				.symbol--grinch &,
+				.symbol--jumper & {
+					color: $yellowPale;
+				}
+				.symbol--candle &,
+				.symbol--money &,
+				.symbol--mistletoe &,
+				.symbol--advent &,
+				.symbol--mulledwine &,
+				.symbol--sherry &,
+				.symbol--merry &,
+				.symbol--joy &,
+				.symbol--yule & { color: $turquoiseDark; }
 
-
+				.symbol--stocking & { color: $redBrown; }
 				.symbol--carols & { color: $brownLight; }
-
 				.symbol--star & { color: $yellow; }
 
 				.symbol--gingerbread & {
@@ -94,7 +108,7 @@
 				.symbol--doves & {
 					@include font-size(16);
 				}
-				.symbol--yule &,
+				.symbol--yuletide &,
 				.symbol--festive &,
 				.symbol--roast & {
 					@include font-size(20);

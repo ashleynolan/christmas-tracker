@@ -1050,7 +1050,7 @@ body.night {
 .symbol--ivy .symbol-link, .illustItem--sleigh .symbol-link, .symbol--wreath .symbol-link {
   color: #8f693c;
 }
-.symbol--snowman .symbol-link, .symbol--partridge .symbol-link, .symbol--cold .symbol-link, .symbol--mary .symbol-link, .symbol--joseph .symbol-link, .symbol--wisemen .symbol-link, .symbol--shepherd .symbol-link, .symbol--stable .symbol-link, .symbol--tinsel .symbol-link {
+.symbol--snowman .symbol-link, .symbol--partridge .symbol-link, .symbol--cold .symbol-link, .symbol--mary .symbol-link, .symbol--joseph .symbol-link, .symbol--wisemen .symbol-link, .symbol--shepherd .symbol-link, .symbol--stable .symbol-link, .symbol--tinsel .symbol-link, .symbol--scrooge .symbol-link {
   color: #fff;
 }
 .symbol--christmaslights .symbol-link, .symbol--shopping .symbol-link {
@@ -1061,6 +1061,15 @@ body.night {
 }
 .symbol--robin .symbol-link, .symbol--santa .symbol-link {
   color: #d5ea7d;
+}
+.symbol--fireplace .symbol-link, .symbol--grinch .symbol-link, .symbol--jumper .symbol-link {
+  color: #f2e397;
+}
+.symbol--candle .symbol-link, .symbol--money .symbol-link, .symbol--mistletoe .symbol-link, .symbol--advent .symbol-link, .symbol--mulledwine .symbol-link, .symbol--sherry .symbol-link, .symbol--merry .symbol-link, .symbol--joy .symbol-link, .symbol--yule .symbol-link {
+  color: #026463;
+}
+.symbol--stocking .symbol-link {
+  color: #ae4e39;
 }
 .symbol--carols .symbol-link {
   color: #eee0b7;
@@ -1099,7 +1108,7 @@ body.night {
   font-size: 16px;
   font-size: 1rem;
 }
-.symbol--yule .symbol-title, .symbol--festive .symbol-title, .symbol--roast .symbol-title, .symbol--yule
+.symbol--yuletide .symbol-title, .symbol--festive .symbol-title, .symbol--roast .symbol-title, .symbol--yuletide
 .symbol-total, .symbol--festive
 .symbol-total, .symbol--roast
 .symbol-total {
@@ -1663,7 +1672,7 @@ body.night {
           transform: scale(0.1277) translate(-50.15%, 0);
 }
 
-.illustItem--yule {
+.illustItem--yuletide {
   width: 174px;
   height: 30px;
   bottom: -37px;
@@ -1973,6 +1982,229 @@ body.night {
       -ms-transform: scale(0.03) translate(0px, 6px) rotate(12deg);
           transform: scale(0.03) translate(0px, 6px) rotate(12deg);
   text-align: left;
+}
+
+.illustItem--bingcrosby,
+.illustItem--bandaid,
+.illustItem--cliffrichard,
+.illustItem--mariahcarey,
+.illustItem--thepogues,
+.illustItem--wham {
+  width: 180px;
+  top: 188px;
+  text-align: center;
+}
+
+.illustItem--bingcrosby {
+  left: 79px;
+  -webkit-transform: scale(0.02) translate(0px, 16px);
+     -moz-transform: scale(0.02) translate(0px, 16px);
+      -ms-transform: scale(0.02) translate(0px, 16px);
+          transform: scale(0.02) translate(0px, 16px);
+}
+
+.illustItem--bandaid {
+  left: 83px;
+  -webkit-transform: scale(0.02) translate(3px, 16px);
+     -moz-transform: scale(0.02) translate(3px, 16px);
+      -ms-transform: scale(0.02) translate(3px, 16px);
+          transform: scale(0.02) translate(3px, 16px);
+}
+
+.illustItem--cliffrichard {
+  left: 87px;
+  -webkit-transform: scale(0.02) translate(7px, 16px);
+     -moz-transform: scale(0.02) translate(7px, 16px);
+      -ms-transform: scale(0.02) translate(7px, 16px);
+          transform: scale(0.02) translate(7px, 16px);
+}
+
+.illustItem--mariahcarey {
+  left: 91px;
+  -webkit-transform: scale(0.02) translate(11px, 16px);
+     -moz-transform: scale(0.02) translate(11px, 16px);
+      -ms-transform: scale(0.02) translate(11px, 16px);
+          transform: scale(0.02) translate(11px, 16px);
+}
+
+.illustItem--thepogues {
+  left: 95px;
+  -webkit-transform: scale(0.02) translate(13px, 16px);
+     -moz-transform: scale(0.02) translate(13px, 16px);
+      -ms-transform: scale(0.02) translate(13px, 16px);
+          transform: scale(0.02) translate(13px, 16px);
+}
+
+.illustItem--wham {
+  left: 99px;
+  -webkit-transform: scale(0.02) translate(16px, 16px);
+     -moz-transform: scale(0.02) translate(16px, 16px);
+      -ms-transform: scale(0.02) translate(16px, 16px);
+          transform: scale(0.02) translate(16px, 16px);
+}
+
+.illustItem--candle {
+  width: 202px;
+  top: 177px;
+  left: 55px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.03) translate(0, 10px);
+     -moz-transform: scale(0.03) translate(0, 10px);
+      -ms-transform: scale(0.03) translate(0, 10px);
+          transform: scale(0.03) translate(0, 10px);
+  text-align: center;
+}
+
+.illustItem--mistletoe {
+  width: 202px;
+  top: 175px;
+  left: 93px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.03) translate(0, 21px);
+     -moz-transform: scale(0.03) translate(0, 21px);
+      -ms-transform: scale(0.03) translate(0, 21px);
+          transform: scale(0.03) translate(0, 21px);
+  text-align: right;
+}
+
+.illustItem--mulledwine,
+.illustItem--sherry {
+  width: 202px;
+  top: 187px;
+  padding: 8px 0;
+}
+
+.illustItem--mulledwine {
+  left: 60px;
+  -webkit-transform: scale(0.025) translate(0, -10px) rotate(-90deg);
+     -moz-transform: scale(0.025) translate(0, -10px) rotate(-90deg);
+      -ms-transform: scale(0.025) translate(0, -10px) rotate(-90deg);
+          transform: scale(0.025) translate(0, -10px) rotate(-90deg);
+}
+
+.illustItem--sherry {
+  left: 64px;
+  -webkit-transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
+     -moz-transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
+      -ms-transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
+          transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
+}
+
+.illustItem--advent {
+  width: 202px;
+  top: 183px;
+  left: 53px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.025) translate(22px, 30px) rotate(-90deg);
+     -moz-transform: scale(0.025) translate(22px, 30px) rotate(-90deg);
+      -ms-transform: scale(0.025) translate(22px, 30px) rotate(-90deg);
+          transform: scale(0.025) translate(22px, 30px) rotate(-90deg);
+}
+
+.illustItem--stocking,
+.illustItem--fireplace {
+  width: 202px;
+  left: 59px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.illustItem--stocking {
+  top: 183px;
+  -webkit-transform: scale(0.031) translate(10px, 26px);
+     -moz-transform: scale(0.031) translate(10px, 26px);
+      -ms-transform: scale(0.031) translate(10px, 26px);
+          transform: scale(0.031) translate(10px, 26px);
+}
+
+.illustItem--fireplace {
+  top: 187px;
+  -webkit-transform: scale(0.031) translate(12px, 0);
+     -moz-transform: scale(0.031) translate(12px, 0);
+      -ms-transform: scale(0.031) translate(12px, 0);
+          transform: scale(0.031) translate(12px, 0);
+}
+
+.illustItem--grinch {
+  width: 202px;
+  top: 196px;
+  left: 68px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.03) translate(16px, 10px);
+     -moz-transform: scale(0.03) translate(16px, 10px);
+      -ms-transform: scale(0.03) translate(16px, 10px);
+          transform: scale(0.03) translate(16px, 10px);
+  text-align: center;
+}
+
+.illustItem--money {
+  width: 202px;
+  top: 197px;
+  left: 74px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.03) translate(16px, 18px);
+     -moz-transform: scale(0.03) translate(16px, 18px);
+      -ms-transform: scale(0.03) translate(16px, 18px);
+          transform: scale(0.03) translate(16px, 18px);
+  text-align: center;
+}
+
+.illustItem--jumper {
+  width: 202px;
+  top: 200px;
+  left: 82px;
+  padding: 8px 0;
+  -webkit-transform: scale(0.026) translate(6px, 0);
+     -moz-transform: scale(0.026) translate(6px, 0);
+      -ms-transform: scale(0.026) translate(6px, 0);
+          transform: scale(0.026) translate(6px, 0);
+  text-align: center;
+}
+
+.illustItem--merry,
+.illustItem--joy,
+.illustItem--yule {
+  width: 202px;
+  top: 195px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.illustItem--merry {
+  top: 195px;
+  left: 75px;
+  -webkit-transform: scale(0.032) translate(23px, 16px) rotate(-32deg);
+     -moz-transform: scale(0.032) translate(23px, 16px) rotate(-32deg);
+      -ms-transform: scale(0.032) translate(23px, 16px) rotate(-32deg);
+          transform: scale(0.032) translate(23px, 16px) rotate(-32deg);
+}
+
+.illustItem--joy {
+  left: 80px;
+  -webkit-transform: scale(0.032) translate(20px, 0px) rotate(-36deg);
+     -moz-transform: scale(0.032) translate(20px, 0px) rotate(-36deg);
+      -ms-transform: scale(0.032) translate(20px, 0px) rotate(-36deg);
+          transform: scale(0.032) translate(20px, 0px) rotate(-36deg);
+}
+
+.illustItem--yule {
+  left: 85px;
+  -webkit-transform: scale(0.032) translate(8px, 23px) rotate(-25deg);
+     -moz-transform: scale(0.032) translate(8px, 23px) rotate(-25deg);
+      -ms-transform: scale(0.032) translate(8px, 23px) rotate(-25deg);
+          transform: scale(0.032) translate(8px, 23px) rotate(-25deg);
+}
+
+.illustItem--scrooge {
+  width: 202px;
+  top: 192px;
+  left: 94px;
+  padding: 8px 0;
+  text-align: center;
+  -webkit-transform: scale(0.032) translate(8px, 10px) rotate(-62deg);
+     -moz-transform: scale(0.032) translate(8px, 10px) rotate(-62deg);
+      -ms-transform: scale(0.032) translate(8px, 10px) rotate(-62deg);
+          transform: scale(0.032) translate(8px, 10px) rotate(-62deg);
 }
 
 .illustItem--jesus {

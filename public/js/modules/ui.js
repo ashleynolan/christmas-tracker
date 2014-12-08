@@ -282,9 +282,11 @@ Zoomer.prototype.recalculatePositions = function () {
 	this.town.style.transform = townTransform;
 
 	// //update scale factor of the outside illustrations and text
-	this.content.style.WebkitTransform = transformValue;
-	this.content.style.MozTransform = transformValue;
-	this.content.style.transform = transformValue;
+	if(navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
+		this.content.style.WebkitTransform = transformValue;
+		this.content.style.MozTransform = transformValue;
+		this.content.style.transform = transformValue;
+	}
 
 	// //town symbols scaling
 	this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
