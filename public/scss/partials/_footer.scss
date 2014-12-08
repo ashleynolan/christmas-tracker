@@ -30,6 +30,9 @@
 			@include respond-min($bp-narrow) {
 				float: left;
 			}
+			@include respond-max($bp-wide) {
+				clear: left;
+			}
 
 			&:first-child a {
 				border-left: none;
@@ -45,15 +48,24 @@
 
 	.page-footer-links {
 		float: right;
-		width: 50%;
 		text-align: right;
 
 		li {
 			display: inline-block;
+			margin-bottom: 10px;
+
+			@include respond-min($bp-mid) {
+				margin-bottom: 0;
+			}
+			@include respond-max($bp-mid) {
+				display: block;
+			}
 		}
 
-		& a {
+		.page-footer-info {
 			text-decoration: underline;
-			padding-left: 10px;
+		}
+		.page-footer-donate {
+			margin-left: 20px;
 		}
 	}

@@ -10,7 +10,7 @@ html
 		div(class="l-container #{page}")
 			include ../includes/header
 			
-			.overlay.overlay--intro.inactive
+			.overlay.overlay--intro
 				.overlay-contents
 					p.infoWindow-subText
 						| Christmas Tracker is an interactive illustration showing you how many times a bunch of Christmassy words have been mentioned so far today on Twitter.
@@ -22,26 +22,36 @@ html
 					p.infoWindow-subText--narrow
 						| If you view the site on a wider device you’ll be able to see the fully illustrated version of the site.
 
-					button.btn Get Started
+					button.btn Get started
 
 					p.infoWindow-baseText It would be great if this site could make a bit of a difference to those that need it at Christmas.
 					p.infoWindow-subText
-						| If you like Christmas Tracker, please consider donating a little something to Shelter – a UK charity that 
-						a(href="http://england.shelter.org.uk/what_we_do") helps the homeless
-						| .
+						| If you like Christmas Tracker, please consider 
+						a(href="https://www.givey.com/christmastracker/") donating a little something to Shelter 
+						| – a UK charity that helps the homeless.
 						
 			.overlay.overlay--info.inactive
 				.overlay-contents
 					h2.infoWindow-title Christmas Tracker was created by these little angels…
-					.info-helper
-						h3: a(href="https://twitter.com/AshNolan_" target="_blank") Ashley Nolan 
-							span.info-helper-role Developer
-					.info-helper
-						h3: a(href="" target="_blank") Lorena Teruel 
-							span.info-helper-role Designer
-					.info-helper
-						h3: a(href="https://twitter.com/kinslowdian" target="_blank") Simon Kinslow 
-							span.info-helper-role Designer
+					.info-helpers
+						.info-helper
+							h3.info-helper-title
+								a(href="https://twitter.com/AshNolan_" target="_blank") Ashley Nolan 
+									span.info-helper-role Developer &amp; Bringer of Joy
+								span.illust-person
+									include ../illustrations/ash.html
+						.info-helper
+							h3.info-helper-title
+								a(href="" target="_blank") Lorena Teruel 
+									span.info-helper-role Designer &amp; Queen of Christmas
+								span.illust-person
+									include ../illustrations/lorena.html
+						.info-helper
+							h3.info-helper-title
+								a(href="https://twitter.com/kinslowdian" target="_blank") Simon Kinslow 
+									span.info-helper-role Designer &amp; Reaper of Souls
+								span.illust-person.illust-person--simon
+									include ../illustrations/simon.html
 						
 					button.btn Close
 					

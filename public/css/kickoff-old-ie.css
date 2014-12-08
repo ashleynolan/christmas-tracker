@@ -636,7 +636,7 @@ samp {
   overflow: visible;
   /* [8] */
   text-align: center;
-  background-color: #95a5a6;
+  background-color: #34a8a6;
   border-radius: 5px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -647,7 +647,7 @@ samp {
   color: #fff;
 }
 .btn:hover, .btn:active, .btn:focus {
-  background-color: #798d8f;
+  background-color: #288180;
 }
 .btn, .btn:hover, .btn:active, .btn:focus, .btn:visited {
   text-decoration: none;
@@ -2690,15 +2690,18 @@ body.night {
 
 .page-footer-links {
   float: right;
-  width: 50%;
   text-align: right;
 }
 .page-footer-links li {
   display: inline-block;
+  margin-bottom: 10px;
+  margin-bottom: 0;
 }
-.page-footer-links a {
+.page-footer-links .page-footer-info {
   text-decoration: underline;
-  padding-left: 10px;
+}
+.page-footer-links .page-footer-donate {
+  margin-left: 20px;
 }
 
 .overlay {
@@ -2733,6 +2736,12 @@ body.night {
   padding-top: 20px;
 }
 
+.infoWindow-title {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
 .infoWindow-subText:last-child,
 .infoWindow-baseText:last-child {
   margin-bottom: 0;
@@ -2742,13 +2751,51 @@ body.night {
   display: none;
 }
 
+.overlay--info .overlay-contents {
+  overflow: hidden;
+}
+.overlay--info .btn {
+  float: right;
+  margin: 0;
+}
+
+.info-helpers {
+  text-align: center;
+  overflow: hidden;
+}
+
 .info-helper {
   float: left;
-  width: 30%;
+  width: 33%;
+  min-height: 200px;
+}
+
+.info-helper-title {
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .info-helper-role {
   display: block;
+  max-width: 200px;
+  margin: 10px auto 0;
+  font-size: 16px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.illust-person {
+  display: block;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.illust-person--simon {
+  width: 40%;
 }
 
 /*
