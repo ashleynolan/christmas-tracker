@@ -9,8 +9,6 @@ var Sockets = {
 	socket : null,
 
 	init : function () {
-		console.debug('KO.sockets module is being initialised');
-
 		this.makeSocketConnection();
 
 		this.Listeners.setup();

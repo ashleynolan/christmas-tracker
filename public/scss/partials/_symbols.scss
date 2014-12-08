@@ -18,7 +18,8 @@
 				//turquoise
 				.symbol--snowflake &,
 				.symbol--snow &,
-				.symbol--sledge & { color: $turquoise; }
+				.symbol--sledge &,
+				.symbol--peace & { color: $turquoise; }
 
 				//brown
 				.symbol--ivy &,
@@ -26,6 +27,8 @@
 				.symbol--wreath & { color: $brown; }
 
 				//white
+				.symbol--snowman &,
+				.symbol--partridge &,
 				.symbol--cold &,
 				.symbol--mary &,
 				.symbol--joseph &,
@@ -36,10 +39,18 @@
 					color: #fff;
 				}
 
-				.symbol--holly & { color: $red; }
-				.symbol--robin &,.illustItem--elf & { color: $green; }
+				.symbol--christmaslights &,
+				.symbol--shopping & {
+					color: $pink;
+				}
 
-				.symbol--christmaslights & { color: $pink; }
+				.symbol--holly & { color: $red; }
+				.symbol--robin &,
+				.symbol--santa & {
+					color: $green;
+				}
+
+
 				.symbol--carols & { color: $brownLight; }
 
 				.symbol--star & { color: $yellow; }

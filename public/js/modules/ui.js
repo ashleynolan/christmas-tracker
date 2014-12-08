@@ -19,8 +19,6 @@ var UI = {
 	overlay: null,
 
 	init : function () {
-		console.debug('KO.UI module is being initialised');
-
 		// d3.selectAll(".symbol").style("color", function() {
   // 			return "hsl(" + Math.random() * 360 + ",100%,50%)";
 		// });

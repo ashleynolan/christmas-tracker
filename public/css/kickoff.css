@@ -1106,23 +1106,23 @@ body.night {
   display: block;
   color: #000;
 }
-.symbol--snowflake .symbol-link, .symbol--snow .symbol-link, .symbol--sledge .symbol-link {
+.symbol--snowflake .symbol-link, .symbol--snow .symbol-link, .symbol--sledge .symbol-link, .symbol--peace .symbol-link {
   color: #34a8a6;
 }
 .symbol--ivy .symbol-link, .illustItem--sleigh .symbol-link, .symbol--wreath .symbol-link {
   color: #8f693c;
 }
-.symbol--cold .symbol-link, .symbol--mary .symbol-link, .symbol--joseph .symbol-link, .symbol--wisemen .symbol-link, .symbol--shepherd .symbol-link, .symbol--stable .symbol-link, .symbol--tinsel .symbol-link {
+.symbol--snowman .symbol-link, .symbol--partridge .symbol-link, .symbol--cold .symbol-link, .symbol--mary .symbol-link, .symbol--joseph .symbol-link, .symbol--wisemen .symbol-link, .symbol--shepherd .symbol-link, .symbol--stable .symbol-link, .symbol--tinsel .symbol-link {
   color: #fff;
+}
+.symbol--christmaslights .symbol-link, .symbol--shopping .symbol-link {
+  color: #ff99ad;
 }
 .symbol--holly .symbol-link {
   color: #e41f44;
 }
-.symbol--robin .symbol-link, .illustItem--elf .symbol-link {
+.symbol--robin .symbol-link, .symbol--santa .symbol-link {
   color: #d5ea7d;
-}
-.symbol--christmaslights .symbol-link {
-  color: #ff99ad;
 }
 .symbol--carols .symbol-link {
   color: #eee0b7;
@@ -1729,6 +1729,57 @@ body.night {
           transform: scale(0.08) translate(-50%, 0);
 }
 
+.svg-robins {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 72%;
+  left: 37%;
+  -webkit-transform-origin: left top;
+     -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(0.031) translate(0, 0);
+     -moz-transform: scale(0.031) translate(0, 0);
+      -ms-transform: scale(0.031) translate(0, 0);
+          transform: scale(0.031) translate(0, 0);
+}
+
+.svg-shopping {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 76%;
+  left: 17%;
+  -webkit-transform-origin: left top;
+     -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(0.06) translate(0, 0);
+     -moz-transform: scale(0.06) translate(0, 0);
+      -ms-transform: scale(0.06) translate(0, 0);
+          transform: scale(0.06) translate(0, 0);
+}
+
+.svg-peace {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 68%;
+  left: 69%;
+  -webkit-transform-origin: left top;
+     -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(0.05) translate(0, 0);
+     -moz-transform: scale(0.05) translate(0, 0);
+      -ms-transform: scale(0.05) translate(0, 0);
+          transform: scale(0.05) translate(0, 0);
+}
+
 .svg-nativity {
   z-index: 2;
   position: absolute;
@@ -1763,6 +1814,23 @@ body.night {
           transform: scale(0.1277) translate(-50.15%, 0);
 }
 
+.svg-secondfloor {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 60%;
+  left: 50%;
+  -webkit-transform-origin: left top;
+     -moz-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(0.1277) translate(-50.15%, 0);
+     -moz-transform: scale(0.1277) translate(-50.15%, 0);
+      -ms-transform: scale(0.1277) translate(-50.15%, 0);
+          transform: scale(0.1277) translate(-50.15%, 0);
+}
+
 .illustItem--yule {
   width: 174px;
   height: 30px;
@@ -1775,12 +1843,47 @@ body.night {
 .illustItem--snowman {
   width: 200px;
   height: 50px;
-  top: 78%;
-  left: 12%;
-  -webkit-transform: scale(0.2);
-     -moz-transform: scale(0.2);
-      -ms-transform: scale(0.2);
-          transform: scale(0.2);
+  top: 80%;
+  left: 4%;
+  -webkit-transform: scale(0.15) translate(10px, 10px);
+     -moz-transform: scale(0.15) translate(10px, 10px);
+      -ms-transform: scale(0.15) translate(10px, 10px);
+          transform: scale(0.15) translate(10px, 10px);
+}
+
+.illustItem--partridge {
+  width: 200px;
+  height: 50px;
+  top: 66%;
+  left: 3%;
+  -webkit-transform: scale(0.1) translate(0, 0);
+     -moz-transform: scale(0.1) translate(0, 0);
+      -ms-transform: scale(0.1) translate(0, 0);
+          transform: scale(0.1) translate(0, 0);
+}
+
+.illustItem--shopping {
+  width: 300px;
+  height: 50px;
+  top: 65%;
+  left: -26%;
+  -webkit-transform: scale(0.15) translate(-5px, 2px);
+     -moz-transform: scale(0.15) translate(-5px, 2px);
+      -ms-transform: scale(0.15) translate(-5px, 2px);
+          transform: scale(0.15) translate(-5px, 2px);
+  text-align: center;
+}
+
+.illustItem--peace {
+  width: 300px;
+  height: 50px;
+  top: 63%;
+  left: 22%;
+  -webkit-transform: scale(0.12) translate(0, 15px);
+     -moz-transform: scale(0.12) translate(0, 15px);
+      -ms-transform: scale(0.12) translate(0, 15px);
+          transform: scale(0.12) translate(0, 15px);
+  text-align: right;
 }
 
 .illustItem--cold {
@@ -2194,32 +2297,32 @@ body.night {
   width: 180px;
   top: 136px;
   left: 104px;
-  -webkit-transform: scale(0.035) translate(0, 2px) rotate(8deg);
-     -moz-transform: scale(0.035) translate(0, 2px) rotate(8deg);
-      -ms-transform: scale(0.035) translate(0, 2px) rotate(8deg);
-          transform: scale(0.035) translate(0, 2px) rotate(8deg);
+  -webkit-transform: scale(0.035) translate(0, -4px) rotate(8deg);
+     -moz-transform: scale(0.035) translate(0, -4px) rotate(8deg);
+      -ms-transform: scale(0.035) translate(0, -4px) rotate(8deg);
+          transform: scale(0.035) translate(0, -4px) rotate(8deg);
   text-align: center;
 }
 
 .illustItem--elf {
   width: 180px;
-  top: 124px;
-  left: 106px;
-  -webkit-transform: scale(0.03) translate(0, 19px) rotate(8deg);
-     -moz-transform: scale(0.03) translate(0, 19px) rotate(8deg);
-      -ms-transform: scale(0.03) translate(0, 19px) rotate(8deg);
-          transform: scale(0.03) translate(0, 19px) rotate(8deg);
+  top: 130px;
+  left: 107px;
+  -webkit-transform: scale(0.03) translate(20px, 19px) rotate(8deg);
+     -moz-transform: scale(0.03) translate(20px, 19px) rotate(8deg);
+      -ms-transform: scale(0.03) translate(20px, 19px) rotate(8deg);
+          transform: scale(0.03) translate(20px, 19px) rotate(8deg);
   text-align: center;
 }
 
 .illustItem--santa {
   width: 180px;
-  top: 124px;
-  left: 106px;
-  -webkit-transform: scale(0.03) translate(0, 19px) rotate(8deg);
-     -moz-transform: scale(0.03) translate(0, 19px) rotate(8deg);
-      -ms-transform: scale(0.03) translate(0, 19px) rotate(8deg);
-          transform: scale(0.03) translate(0, 19px) rotate(8deg);
+  top: 126px;
+  left: 104px;
+  -webkit-transform: scale(0.03) translate(0, 0) rotate(8deg);
+     -moz-transform: scale(0.03) translate(0, 0) rotate(8deg);
+      -ms-transform: scale(0.03) translate(0, 0) rotate(8deg);
+          transform: scale(0.03) translate(0, 0) rotate(8deg);
 }
 
 .illustItem--hohoho {
@@ -2227,20 +2330,20 @@ body.night {
   height: 50px;
   top: 114px;
   left: 120px;
-  -webkit-transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
-     -moz-transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
-      -ms-transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
-          transform: scale(0.03) translate(23px, 4px) rotate(-83deg);
+  -webkit-transform: scale(0.03) translate(23px, -2px) rotate(-83deg);
+     -moz-transform: scale(0.03) translate(23px, -2px) rotate(-83deg);
+      -ms-transform: scale(0.03) translate(23px, -2px) rotate(-83deg);
+          transform: scale(0.03) translate(23px, -2px) rotate(-83deg);
 }
 
 .illustItem--sack {
   width: 180px;
-  top: 121px;
-  left: 111px;
-  -webkit-transform: scale(0.03) translate(0, 19px) rotate(-20deg);
-     -moz-transform: scale(0.03) translate(0, 19px) rotate(-20deg);
-      -ms-transform: scale(0.03) translate(0, 19px) rotate(-20deg);
-          transform: scale(0.03) translate(0, 19px) rotate(-20deg);
+  top: 119px;
+  left: 110px;
+  -webkit-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
+     -moz-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
+      -ms-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
+          transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
 }
 
 .illustItem--rudolph,
@@ -2261,82 +2364,82 @@ body.night {
 .illustItem--rudolph {
   top: 128px;
   left: 63px;
-  -webkit-transform: scale(0.03) translate(10px, 30px) rotate(52deg);
-     -moz-transform: scale(0.03) translate(10px, 30px) rotate(52deg);
-      -ms-transform: scale(0.03) translate(10px, 30px) rotate(52deg);
-          transform: scale(0.03) translate(10px, 30px) rotate(52deg);
+  -webkit-transform: scale(0.03) translate(10px, 20px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(10px, 20px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(10px, 20px) rotate(52deg);
+          transform: scale(0.03) translate(10px, 20px) rotate(52deg);
 }
 
 .illustItem--dancer {
   top: 130px;
   left: 70px;
-  -webkit-transform: scale(0.03) translate(30px, 30px) rotate(52deg);
-     -moz-transform: scale(0.03) translate(30px, 30px) rotate(52deg);
-      -ms-transform: scale(0.03) translate(30px, 30px) rotate(52deg);
-          transform: scale(0.03) translate(30px, 30px) rotate(52deg);
-}
-
-.illustItem--vixen {
-  top: 132px;
-  left: 77px;
-  -webkit-transform: scale(0.03) translate(42px, 30px) rotate(52deg);
-     -moz-transform: scale(0.03) translate(42px, 30px) rotate(52deg);
-      -ms-transform: scale(0.03) translate(42px, 30px) rotate(52deg);
-          transform: scale(0.03) translate(42px, 30px) rotate(52deg);
-}
-
-.illustItem--cupid {
-  top: 134px;
-  left: 85px;
-  -webkit-transform: scale(0.03) translate(20px, 20px) rotate(52deg);
-     -moz-transform: scale(0.03) translate(20px, 20px) rotate(52deg);
-      -ms-transform: scale(0.03) translate(20px, 20px) rotate(52deg);
-          transform: scale(0.03) translate(20px, 20px) rotate(52deg);
-}
-
-.illustItem--blitzen {
-  top: 136px;
-  left: 92px;
-  -webkit-transform: scale(0.03) translate(30px, 14px) rotate(52deg);
-     -moz-transform: scale(0.03) translate(30px, 14px) rotate(52deg);
-      -ms-transform: scale(0.03) translate(30px, 14px) rotate(52deg);
-          transform: scale(0.03) translate(30px, 14px) rotate(52deg);
-}
-
-.illustItem--dasher {
-  top: 129px;
-  left: 68px;
   -webkit-transform: scale(0.03) translate(30px, 20px) rotate(52deg);
      -moz-transform: scale(0.03) translate(30px, 20px) rotate(52deg);
       -ms-transform: scale(0.03) translate(30px, 20px) rotate(52deg);
           transform: scale(0.03) translate(30px, 20px) rotate(52deg);
 }
 
-.illustItem--prancer {
-  top: 131px;
-  left: 75px;
+.illustItem--vixen {
+  top: 132px;
+  left: 77px;
   -webkit-transform: scale(0.03) translate(42px, 20px) rotate(52deg);
      -moz-transform: scale(0.03) translate(42px, 20px) rotate(52deg);
       -ms-transform: scale(0.03) translate(42px, 20px) rotate(52deg);
           transform: scale(0.03) translate(42px, 20px) rotate(52deg);
 }
 
-.illustItem--comet {
-  top: 133px;
-  left: 83px;
+.illustItem--cupid {
+  top: 134px;
+  left: 85px;
   -webkit-transform: scale(0.03) translate(20px, 10px) rotate(52deg);
      -moz-transform: scale(0.03) translate(20px, 10px) rotate(52deg);
       -ms-transform: scale(0.03) translate(20px, 10px) rotate(52deg);
           transform: scale(0.03) translate(20px, 10px) rotate(52deg);
 }
 
-.illustItem--donner {
-  top: 135px;
-  left: 90px;
+.illustItem--blitzen {
+  top: 136px;
+  left: 92px;
   -webkit-transform: scale(0.03) translate(30px, 4px) rotate(52deg);
      -moz-transform: scale(0.03) translate(30px, 4px) rotate(52deg);
       -ms-transform: scale(0.03) translate(30px, 4px) rotate(52deg);
           transform: scale(0.03) translate(30px, 4px) rotate(52deg);
+}
+
+.illustItem--dasher {
+  top: 129px;
+  left: 68px;
+  -webkit-transform: scale(0.03) translate(30px, 10px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(30px, 10px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(30px, 10px) rotate(52deg);
+          transform: scale(0.03) translate(30px, 10px) rotate(52deg);
+}
+
+.illustItem--prancer {
+  top: 131px;
+  left: 75px;
+  -webkit-transform: scale(0.03) translate(42px, 10px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(42px, 10px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(42px, 10px) rotate(52deg);
+          transform: scale(0.03) translate(42px, 10px) rotate(52deg);
+}
+
+.illustItem--comet {
+  top: 133px;
+  left: 83px;
+  -webkit-transform: scale(0.03) translate(20px, 0) rotate(52deg);
+     -moz-transform: scale(0.03) translate(20px, 0) rotate(52deg);
+      -ms-transform: scale(0.03) translate(20px, 0) rotate(52deg);
+          transform: scale(0.03) translate(20px, 0) rotate(52deg);
+}
+
+.illustItem--donner {
+  top: 135px;
+  left: 90px;
+  -webkit-transform: scale(0.03) translate(30px, -6px) rotate(52deg);
+     -moz-transform: scale(0.03) translate(30px, -6px) rotate(52deg);
+      -ms-transform: scale(0.03) translate(30px, -6px) rotate(52deg);
+          transform: scale(0.03) translate(30px, -6px) rotate(52deg);
 }
 
 .page-header {
