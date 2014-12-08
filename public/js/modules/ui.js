@@ -15,18 +15,35 @@ var $ = require('traversty'),
 $.setSelectorEngine(qwery);
 
 var UI = {
+	html: $('html')[0],
+
 	overlayBtn: null,
 	overlay: null,
+
+	supports : {
+		transform3d: false
+	},
 
 	init : function () {
 		// d3.selectAll(".symbol").style("color", function() {
   // 			return "hsl(" + Math.random() * 360 + ",100%,50%)";
 		// });
 		//
+
+		this.browserSupportChecks();
+
 		this.handleZooming();
 
 		this.initOverlay();
 		this.initInfoOverlay();
+
+	},
+
+	browserSupportChecks : function  () {
+
+		if (this.html.classList.contains('csstransforms3d')) {
+			this.supports.transform3d = true;
+		}
 
 	},
 
@@ -199,7 +216,10 @@ Zoomer.prototype.recalculatePositions = function () {
 	this.scrolled = yOffset / ( this.docHeight - window.innerHeight );
 
 	var transformValue,
-		width;
+		width,
+		transformPrefix,
+		townTransform,
+		symboltransformValue;
 
 	this.checkStates();
 
@@ -213,22 +233,34 @@ Zoomer.prototype.recalculatePositions = function () {
 	if (scrollFactor < 0.5) {
 
 		var zScale = Math.round((scale * TARGET_BG_ZSCALE) - TARGET_BG_ZSCALE);
-		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
 
-		// symboltransformValue = 'translateZ(' + zScale + 'px)';
+		//if we support translate3d
+		if (UI.supports.transform3d) {
+			transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
 
-		townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
-		symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
+			townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
+			symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
+		} else {
+			transformValue = 'translate(0, 0) scale(' + scale + ')';
+
+			townTransform = 'translate(-50%, -' + ((townHeight / 2) + townOffset) + 'px)';
+			symboltransformValue = 'translate(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px)' + ' scale(' + scale + ')';
+		}
 
 	//the second half is the translate vertically
 	} else {
 
-		transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
-
 		var percentageThroughSection = ((this.scrolled - 0.5) / 0.5); //get the percentage of the amount through the section (on a scale 0-1)
 		var verticalTranslate = percentageThroughSection * this.verticalTranslate; //gets a scaled amount dependent on the percentage of the section scrolled through
 
-		townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
+		//if we support translate3d
+		if (UI.supports.transform3d) {
+			transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
+			townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
+		} else {
+			transformValue = 'translate(0, 0) scale(' + scale + ')';
+			townTransform = 'translate(-50%, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px)';
+		}
 
 	}
 
