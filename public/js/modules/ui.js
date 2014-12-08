@@ -187,9 +187,9 @@ Zoomer.prototype.handleEvent = function( event ) {
 // triggered every time window scrolls
 Zoomer.prototype.scroll = function( event ) {
 
-	_.throttle(this.recalculatePositions, 50)
+	// _.throttle(this.recalculatePositions, 50);
 
-	// this.recalculatePositions();
+	this.recalculatePositions();
 
 };
 
