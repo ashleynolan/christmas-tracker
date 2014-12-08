@@ -1855,49 +1855,50 @@ body.night {
 .illustItem--punch,
 .illustItem--cracker {
   width: 208px;
-  top: 208px;
+  height: 43px;
+  top: 215px;
   padding: 8px 0;
   text-align: center;
 }
 
 .illustItem--sprouts {
   left: 52px;
-  -webkit-transform: scale(0.03) translate(7px, 18px);
-     -moz-transform: scale(0.03) translate(7px, 18px);
-      -ms-transform: scale(0.03) translate(7px, 18px);
-          transform: scale(0.03) translate(7px, 18px);
+  -webkit-transform: scale(0.03) translate(7px, 14px);
+     -moz-transform: scale(0.03) translate(7px, 14px);
+      -ms-transform: scale(0.03) translate(7px, 14px);
+          transform: scale(0.03) translate(7px, 14px);
 }
 
 .illustItem--stuffing {
   left: 57px;
-  -webkit-transform: scale(0.03) translate(29px, 18px);
-     -moz-transform: scale(0.03) translate(29px, 18px);
-      -ms-transform: scale(0.03) translate(29px, 18px);
-          transform: scale(0.03) translate(29px, 18px);
+  -webkit-transform: scale(0.03) translate(29px, 14px);
+     -moz-transform: scale(0.03) translate(29px, 14px);
+      -ms-transform: scale(0.03) translate(29px, 14px);
+          transform: scale(0.03) translate(29px, 14px);
 }
 
 .illustItem--pudding {
   left: 64px;
-  -webkit-transform: scale(0.03) translate(5px, 18px);
-     -moz-transform: scale(0.03) translate(5px, 18px);
-      -ms-transform: scale(0.03) translate(5px, 18px);
-          transform: scale(0.03) translate(5px, 18px);
+  -webkit-transform: scale(0.03) translate(5px, 14px);
+     -moz-transform: scale(0.03) translate(5px, 14px);
+      -ms-transform: scale(0.03) translate(5px, 14px);
+          transform: scale(0.03) translate(5px, 14px);
 }
 
 .illustItem--punch {
   left: 71px;
-  -webkit-transform: scale(0.03) translate(0, 18px);
-     -moz-transform: scale(0.03) translate(0, 18px);
-      -ms-transform: scale(0.03) translate(0, 18px);
-          transform: scale(0.03) translate(0, 18px);
+  -webkit-transform: scale(0.03) translate(0, 14px);
+     -moz-transform: scale(0.03) translate(0, 14px);
+      -ms-transform: scale(0.03) translate(0, 14px);
+          transform: scale(0.03) translate(0, 14px);
 }
 
 .illustItem--cracker {
   left: 76px;
-  -webkit-transform: scale(0.03) translate(17px, 18px);
-     -moz-transform: scale(0.03) translate(17px, 18px);
-      -ms-transform: scale(0.03) translate(17px, 18px);
-          transform: scale(0.03) translate(17px, 18px);
+  -webkit-transform: scale(0.03) translate(17px, 14px);
+     -moz-transform: scale(0.03) translate(17px, 14px);
+      -ms-transform: scale(0.03) translate(17px, 14px);
+          transform: scale(0.03) translate(17px, 14px);
 }
 
 .illustItem--festive,
