@@ -40,10 +40,16 @@
 					color: #fff;
 				}
 
+				.symbol--money & {
+					color: #BB5169;
+				}
+
 				.symbol--christmaslights &,
 				.symbol--shopping & {
 					color: $pink;
 				}
+
+				.symbol--christmastree & { color: $greenDark; }
 
 				.symbol--holly & { color: $red; }
 				.symbol--robin &,
@@ -55,20 +61,20 @@
 				.symbol--jumper & {
 					color: $yellowPale;
 				}
+				.symbol--star &,
+				.symbol--mincepie & {
+					color: $yellow;
+				}
+
 				.symbol--candle &,
-				.symbol--money &,
 				.symbol--mistletoe &,
 				.symbol--advent &,
 				.symbol--mulledwine &,
-				.symbol--sherry &,
-				.symbol--merry &,
-				.symbol--joy &,
-				.symbol--yule & { color: $turquoiseDark; }
+				.symbol--sherry & { color: $turquoiseDark; }
 
 				.symbol--stocking & { color: $redBrown; }
 				.symbol--carols & { color: $brownLight; }
-				.symbol--star &,
-				.symbol--mincepie & { color: $yellow; }
+
 
 				.symbol--gingerbread & {
 					color: $orange;

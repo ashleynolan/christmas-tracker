@@ -378,7 +378,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					z-index: index($layerIndex, level-2);
 					position: absolute;
 					width: 100%; height: 100%;
-					top: 54.7%; left: 50%;
+					top: 54.62%; left: 50%;
 					transform-origin: left top;
 					transform: scale(0.11) translate(-50%, 0);
 				}
@@ -423,6 +423,12 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				top: 66%; left: 3%;
 
 				transform: scale(0.1) translate(0, 0);
+			}
+			.illustItem--christmastree {
+				width: 200px; height: 50px;
+				top: 57%; left: 5.4%;
+
+				transform: scale(0.08) translate(0, 0) rotate(74deg);
 			}
 			.illustItem--shopping {
 				width: 300px; height: 50px;
@@ -590,7 +596,6 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 
 			.illustItem--bingcrosby,
 			.illustItem--bandaid,
-			.illustItem--cliffrichard,
 			.illustItem--mariahcarey,
 			.illustItem--thepogues,
 			.illustItem--wham {
@@ -599,14 +604,10 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				text-align: center;
 			}
 			.illustItem--bingcrosby {
-				left: 79px;
-				transform: scale(0.02) translate(0px, 16px);
-			}
-			.illustItem--bandaid {
 				left: 83px;
 				transform: scale(0.02) translate(3px, 16px);
 			}
-			.illustItem--cliffrichard {
+			.illustItem--bandaid {
 				left: 87px;
 				transform: scale(0.02) translate(7px, 16px);
 			}
@@ -632,9 +633,9 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--mincepie {
 				width: 202px;
-				top: 191px; left: 58px;
+				top: 191px; left: 63px;
 				padding: 8px 0;
-				transform: scale(0.025) translate(30px, 2px);
+				transform: scale(0.025) translate(20px, 2px);
 				text-align: center;
 			}
 
@@ -662,9 +663,9 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 
 			.illustItem--advent {
 				width: 202px;
-				top: 183px; left: 53px;
+				top: 192px; left: 54px;
 				padding: 8px 0;
-				transform: scale(0.025) translate(22px, 30px) rotate(-90deg);
+				transform: scale(0.025) translate(-8px, 20px) rotate(-90deg);
 			}
 
 			.illustItem--stocking,
@@ -690,11 +691,17 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				transform: scale(0.03) translate(16px, 10px);
 				text-align: center;
 			}
+			.illustItem--christmascards {
+				width: 250px;
+				top: 186px; left: 52px;
+				padding: 8px 0;
+				transform: scale(0.03) translate(10px, 14px);
+			}
 			.illustItem--money {
 				width: 202px;
-				top: 197px; left: 74px;
+				top: 191px; left: 74px;
 				padding: 8px 0;
-				transform: scale(0.03) translate(16px, 18px);
+				transform: scale(0.03) translate(13px, 17px);
 				text-align: center;
 			}
 			.illustItem--jumper {
@@ -709,22 +716,21 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			.illustItem--joy,
 			.illustItem--yule {
 				width: 202px;
-				top: 195px;
+				top: 194px;
 				padding: 8px 0;
 				text-align: center;
 			}
 			.illustItem--merry {
-				top: 195px;
-				left: 75px;
-				transform: scale(0.032) translate(23px, 16px) rotate(-32deg);
+				left: 78px;
+				transform: scale(0.032) translate(11px, 8px) rotate(-32deg);
 			}
 			.illustItem--joy {
-				left: 80px;
-				transform: scale(0.032) translate(20px, 0px) rotate(-36deg);
+				left: 82px;
+				transform: scale(0.032) translate(26px, 31px) rotate(-36deg);
 			}
 			.illustItem--yule {
-				left: 85px;
-				transform: scale(0.032) translate(8px, 23px) rotate(-25deg);
+				left: 87px;
+				transform: scale(0.032) translate(6px, 11px) rotate(-25deg);
 			}
 
 			.illustItem--scrooge {
@@ -732,7 +738,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				top: 192px; left: 94px;
 				padding: 8px 0;
 				text-align: center;
-				transform: scale(0.032) translate(8px, 10px) rotate(-62deg);
+				transform: scale(0.035) translate(8px, 10px) rotate(-62deg);
 			}
 
 
@@ -742,26 +748,26 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 		// NATIVITY LABELS
 
 			.illustItem--jesus {
-				top: 177px; left: 50%;
+				top: 175px; left: 50%;
 				transform: translate(-50%, 0) scale(0.03);
 				text-align: center;
 			}
 			.illustItem--mary,
 			.illustItem--joseph {
 				background-color: $brown;
-				top: 163px;
+				top: 162px;
 				padding: 10px;
 				text-align: center;
 			}
 			.illustItem--mary {
 				width: 120px;
 				left: 118px;
-				transform: scale(0.03) translate(23px, -2px);
+				transform: scale(0.03) translate(23px, 12px);
 			}
 			.illustItem--joseph {
 				width: 120px;
 				left: 111px;
-				transform: scale(0.03) translate(6px, -2px);
+				transform: scale(0.03) translate(6px, 12px);
 			}
 			.illustItem--angel {
 				width: 220px;
@@ -798,17 +804,17 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--gold {
 				left: 95px;
-				transform: scale(0.025) translate(24px, 18px);
+				transform: scale(0.025) translate(24px, 15px);
 				text-align: center;
 			}
 			.illustItem--frankincense {
 				left: 100px;
-				transform: scale(0.025) translate(2px, 18px);
+				transform: scale(0.025) translate(2px, 15px);
 				text-align: center;
 			}
 			.illustItem--myrrh {
 				left: 104px;
-				transform: scale(0.025) translate(11px, 18px);
+				transform: scale(0.025) translate(11px, 15px);
 				text-align: center;
 			}
 			.illustItem--stable {
