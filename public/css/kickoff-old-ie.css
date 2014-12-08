@@ -1127,6 +1127,13 @@ body.night {
   opacity: 0;
 }
 
+.symbols--inside,
+.symbols--outside {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .symbol-list-wrapper {
   width: 94%;
   max-width: 1000px;
@@ -1169,6 +1176,9 @@ body.night {
   -webkit-transform: translate3d(0, 0, 0);
      -moz-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 .illust-level {
@@ -1199,18 +1209,17 @@ body.night {
 
 .illust-level--town {
   position: fixed;
+  top: 50%;
+  left: 50%;
   z-index: 2;
   width: 350px;
   height: 320px;
-  -webkit-transform: translate(-50%, -160px);
-     -moz-transform: translate(-50%, -160px);
-      -ms-transform: translate(-50%, -160px);
-          transform: translate(-50%, -160px);
+  -webkit-transform: translate3d(-50%, -160px, 0);
+     -moz-transform: translate3d(-50%, -160px, 0);
+          transform: translate3d(-50%, -160px, 0);
   -webkit-backface-visibility: hidden;
      -moz-backface-visibility: hidden;
           backface-visibility: hidden;
-  top: 50%;
-  left: 50%;
 }
 
 .illust-level--symbolsTown {
@@ -2365,7 +2374,7 @@ body.night {
 }
 
 .page-footer {
-  z-index: 4;
+  z-index: 100;
   position: fixed;
   width: 100%;
   padding: 0px 5% 16px;

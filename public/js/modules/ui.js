@@ -7,7 +7,9 @@
 var $ = require('traversty'),
 	qwery = require('qwery'),
 
-	d3 = require('d3');
+	d3 = require('d3'),
+
+	_ = require('underscore');
 
 
 
@@ -172,6 +174,7 @@ function Zoomer( content ) {
 	// zero-based number of sections
 	this.setLevels();
 
+
 	// bind Zoomer to scroll event
 	window.addEventListener( 'scroll', this, false);
 }
@@ -187,14 +190,11 @@ Zoomer.prototype.handleEvent = function( event ) {
 // triggered every time window scrolls
 Zoomer.prototype.scroll = function( event ) {
 
-	// _.throttle(this.recalculatePositions, 50);
-
 	this.recalculatePositions();
 
 };
 
 Zoomer.prototype.recalculatePositions = function () {
-
 
 	//LETS HAVE SOME DEFAULTS HERE
 	var INITIAL_TOWN_WIDTH = 350,
@@ -236,17 +236,19 @@ Zoomer.prototype.recalculatePositions = function () {
 
 		var zScale = Math.round((scale * TARGET_BG_ZSCALE) - TARGET_BG_ZSCALE);
 
+		var townYPos = Math.round(((townHeight / 2) + townOffset));
+
 		//if we support translate3d
 		if (UI.supports.transform3d) {
 			transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
 
-			townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset) + 'px, 0)';
-			symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px, 0)' + ' scale(' + scale + ')';
+			townTransform = 'translate3d(-50%, -' + townYPos + 'px, 0)';
+			symboltransformValue = 'translate3d(-' + (townWidth / 2) + 'px, -' + townYPos + 'px, 0)' + ' scale(' + scale + ')';
 		} else {
 			transformValue = 'translate(0, 0) scale(' + scale + ')';
 
-			townTransform = 'translate(-50%, -' + ((townHeight / 2) + townOffset) + 'px)';
-			symboltransformValue = 'translate(-' + (townWidth / 2) + 'px, -' + ((townHeight / 2) + townOffset) + 'px)' + ' scale(' + scale + ')';
+			townTransform = 'translate(-50%, -' + townYPos + 'px)';
+			symboltransformValue = 'translate(-' + (townWidth / 2) + 'px, -' + townYPos + 'px)' + ' scale(' + scale + ')';
 		}
 
 	//the second half is the translate vertically
@@ -255,13 +257,15 @@ Zoomer.prototype.recalculatePositions = function () {
 		var percentageThroughSection = ((this.scrolled - 0.5) / 0.5); //get the percentage of the amount through the section (on a scale 0-1)
 		var verticalTranslate = percentageThroughSection * this.verticalTranslate; //gets a scaled amount dependent on the percentage of the section scrolled through
 
+		var townYPos = Math.round((townHeight / 2) + townOffset - verticalTranslate);
+
 		//if we support translate3d
 		if (UI.supports.transform3d) {
 			transformValue = 'translate3d(0, 0, 0) scale(' + scale + ')';
-			townTransform = 'translate3d(-50%, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px, 0)';
+			townTransform = 'translate3d(-50%, -' + townYPos + 'px, 0)';
 		} else {
 			transformValue = 'translate(0, 0) scale(' + scale + ')';
-			townTransform = 'translate(-50%, -' + ((townHeight / 2) + townOffset - verticalTranslate) + 'px)';
+			townTransform = 'translate(-50%, -' + townYPos + 'px)';
 		}
 
 	}
@@ -272,17 +276,17 @@ Zoomer.prototype.recalculatePositions = function () {
 	this.town.style.width = townWidth + 'px';
 	this.town.style.height = townHeight + 'px';
 
-	//update the transformed value for the town
+	// //update the transformed value for the town
 	this.town.style.WebkitTransform = townTransform;
 	this.town.style.MozTransform = townTransform;
 	this.town.style.transform = townTransform;
 
-	//update scale factor of the outside illustrations and text
-	this.content.style.WebkitTransform = transformValue;
-	this.content.style.MozTransform = transformValue;
-	this.content.style.transform = transformValue;
+	// //update scale factor of the outside illustrations and text
+	// this.content.style.WebkitTransform = transformValue;
+	// this.content.style.MozTransform = transformValue;
+	// this.content.style.transform = transformValue;
 
-	//town symbols scaling
+	// //town symbols scaling
 	this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.transform = 'scale(' + scale + ')';

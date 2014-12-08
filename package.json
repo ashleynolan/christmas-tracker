@@ -45,6 +45,7 @@
     "qwery": "^3.4.2",
     "traversty": "^1.0.5",
     "uglifyify": "~2.5.0",
+    "underscore": "^1.7.0",
     "velocity-animate": "^1.1.0",
     "xcharts": "^0.3.0"
   },

@@ -9,7 +9,9 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 	height: 100%;
 
 	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
 }
+
 
 //for small widths - hide the illustrations as won’t be able to see the words
 .illust-container,
@@ -49,14 +51,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 
 		.illust-level--town {
 			position: fixed;
+			top: 50%; left: 50%;
 			z-index: index($layerIndex, level-2);
 			width: 350px;
 			height: 320px;
-			transform: translate(-50%, -160px);
+			transform: translate3d(-50%, -160px, 0);
 
 			backface-visibility: hidden;
 
-			top: 50%; left: 50%;
 		}
 
 			.illust-level--symbolsTown {
@@ -64,6 +66,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				width: 350px; height: 320px;
 				transform-origin: left top;
 				// background-color: rgba(0, 0, 0, 0.5);
+				//
 			}
 
 // INTRO LEVEL (HOME) ILLUSTRATIONS
