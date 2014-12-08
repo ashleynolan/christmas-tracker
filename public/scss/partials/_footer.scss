@@ -8,7 +8,7 @@
 	left: 0;
 
 	@include respond-min($bp-narrow) {
-		padding: 20px 10%;
+		padding: 15px 10%;
 	}
 
 	&:before {

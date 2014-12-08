@@ -2502,19 +2502,19 @@ body.night {
 .illustItem--wisemen {
   width: 350px;
   left: -14px;
-  -webkit-transform: scale(0.03) translate(14px, 18px);
-     -moz-transform: scale(0.03) translate(14px, 18px);
-      -ms-transform: scale(0.03) translate(14px, 18px);
-          transform: scale(0.03) translate(14px, 18px);
+  -webkit-transform: scale(0.03) translate(14px, 16px);
+     -moz-transform: scale(0.03) translate(14px, 16px);
+      -ms-transform: scale(0.03) translate(14px, 16px);
+          transform: scale(0.03) translate(14px, 16px);
 }
 
 .illustItem--shepherd {
   width: 350px;
   left: 13px;
-  -webkit-transform: scale(0.03) translate(26px, 18px);
-     -moz-transform: scale(0.03) translate(26px, 18px);
-      -ms-transform: scale(0.03) translate(26px, 18px);
-          transform: scale(0.03) translate(26px, 18px);
+  -webkit-transform: scale(0.03) translate(26px, 16px);
+     -moz-transform: scale(0.03) translate(26px, 16px);
+      -ms-transform: scale(0.03) translate(26px, 16px);
+          transform: scale(0.03) translate(26px, 16px);
 }
 
 .illustItem--gold,
@@ -2862,7 +2862,7 @@ body.night {
 }
 @media screen and (min-width: 34.375em) {
   .page-footer {
-    padding: 20px 10%;
+    padding: 15px 10%;
   }
 }
 .page-footer:before {
