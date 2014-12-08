@@ -1229,6 +1229,12 @@ body.night {
   z-index: 2;
   width: 350px;
   height: 320px;
+  -webkit-transform: translate(-50%, -160px);
+     -moz-transform: translate(-50%, -160px);
+      -ms-transform: translate(-50%, -160px);
+          transform: translate(-50%, -160px);
+}
+.csstransforms3d .illust-level--town {
   -webkit-transform: translate3d(-50%, -160px, 0);
      -moz-transform: translate3d(-50%, -160px, 0);
           transform: translate3d(-50%, -160px, 0);
