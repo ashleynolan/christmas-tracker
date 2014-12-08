@@ -13,18 +13,18 @@ require("./helpers/log");
 require("./helpers/shims");
 // require("./helpers/throttle");
 
-var Sockets = require('./modules/sockets'),
-	UI = require('./modules/ui');
-
 
 //initialise KO object
-var KO = {};
+var KO = window.KO = {};
+
+KO.Sockets = require('./modules/sockets');
+KO.UI = require('./modules/ui');
 
 KO.Config = {
 
 	init : function () {
-		UI.init();
-		Sockets.init();
+		KO.UI.init();
+		KO.Sockets.init();
 	}
 };
 
