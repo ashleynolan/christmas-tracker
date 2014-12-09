@@ -19,7 +19,6 @@ var server = {
 	init : function (app, config) {
 		app.set('showStackError', true);
 
-
 		// should be placed before express.static - compressed with gzip
 		app.use(compress({
 			filter: function (req, res) {
