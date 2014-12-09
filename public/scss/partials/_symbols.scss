@@ -154,6 +154,8 @@
 		padding: 30px;
 		border: 12px solid $turquoise;
 
+		transition: opacity 300ms;
+
 		@include respond-min($bp-narrow) {
 			z-index: 30;
 			position: absolute;
@@ -170,8 +172,9 @@
 			}
 		}
 
-		transition: opacity 300ms;
-
+		&.hide {
+			display: none;
+		}
 
 		.btn--close {
 			position: absolute;

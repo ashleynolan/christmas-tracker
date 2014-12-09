@@ -26,7 +26,7 @@ html
 						p.infoWindow-subText--narrow
 							| If you view the site on a wider device you’ll be able to see the fully illustrated version of the site.
 
-						button.btn Get started
+						button.btn(data-close="overlay--intro") Get started
 
 					.info-donate.info-text
 						p.infoWindow-baseText It would be great if the site could make a bit of a difference to those that need it at Christmas.
@@ -67,7 +67,7 @@ html
 									span.illust-person.illust-person--simon
 										include ../illustrations/simon.html
 							
-						button.btn Close
+						button.btn(data-close="overlay--info") Close
 					
 
 			- if (symbols !== null) {
@@ -471,7 +471,7 @@ html
 
 
 			.symbol-list-wrapper.inactive
-				.btn.btn--close Close
+				.btn.btn--close(data-close="symbol-list-wrapper") Close
 				ul.symbol-list.unstyled
 					include ../symbols/index
 

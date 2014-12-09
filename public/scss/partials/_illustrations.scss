@@ -401,7 +401,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					width: 100%; height: 100%;
 					top: 66.4%; left: 50%;
 					transform-origin: left top;
-					transform: scale(0.1277) translate(-50.15%, 0);
+					transform: scale(0.1278) translate(-50.12%, 0);
 				}
 				.svg-secondfloor {
 					z-index: index($layerIndex, level-2);
@@ -409,7 +409,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 					width: 100%; height: 100%;
 					top: 60%; left: 50%;
 					transform-origin: left top;
-					transform: scale(0.1277) translate(-50.15%, 0);
+					transform: scale(0.1278) translate(-50.12%, 0);
 				}
 
 
@@ -511,7 +511,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				width: 202px; height: 57px;
 				top: 196px; left: 67px;
 				padding: 8px 0;
-				transform: scale(0.03) translate(18px, 0);
+				transform: scale(0.03) translate(19px, 0);
 				text-align: center;
 			}
 			.illustItem--sprouts,
@@ -617,30 +617,30 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--bingcrosby {
 				left: 83px;
-				transform: scale(0.02) translate(3px, 16px);
+				transform: scale(0.02) translate(3px, 14px);
 			}
 			.illustItem--bandaid {
 				left: 87px;
-				transform: scale(0.02) translate(7px, 16px);
+				transform: scale(0.02) translate(7px, 14px);
 			}
 			.illustItem--mariahcarey {
 				left: 91px;
-				transform: scale(0.02) translate(11px, 16px);
+				transform: scale(0.02) translate(11px, 14px);
 			}
 			.illustItem--thepogues {
 				left: 95px;
-				transform: scale(0.02) translate(13px, 16px);
+				transform: scale(0.02) translate(13px, 14px);
 			}
 			.illustItem--wham {
 				left: 99px;
-				transform: scale(0.02) translate(16px, 16px);
+				transform: scale(0.02) translate(16px, 14px);
 			}
 
 			.illustItem--candle {
 				width: 202px; height: 57px;
 				top: 177px; left: 55px;
 				padding: 8px 0;
-				transform: scale(0.03) translate(0, 10px);
+				transform: scale(0.03) translate(18px, 10px);
 				text-align: center;
 			}
 			.illustItem--mincepie {
@@ -666,11 +666,11 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--mulledwine {
 				left: 60px;
-				transform: scale(0.025) translate(0, -10px) rotate(-90deg);
+				transform: scale(0.025) translate(0, -8px) rotate(-90deg);
 			}
 			.illustItem--sherry {
 				left: 64px;
-				transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
+				transform: scale(0.025) translate(-10px, -8px) rotate(-90deg);
 			}
 
 			.illustItem--advent {
@@ -713,7 +713,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				width: 202px; height: 57px;
 				top: 191px; left: 74px;
 				padding: 8px 0;
-				transform: scale(0.03) translate(13px, 16px);
+				transform: scale(0.03) translate(13px, 14px);
 				text-align: center;
 			}
 			.illustItem--jumper {
@@ -750,7 +750,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 				top: 192px; left: 94px;
 				padding: 8px 0;
 				text-align: center;
-				transform: scale(0.035) translate(8px, 10px) rotate(-62deg);
+				transform: scale(0.026) translate(8px, 26px) rotate(-64deg);
 			}
 
 
@@ -760,14 +760,14 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 		// NATIVITY LABELS
 
 			.illustItem--jesus {
-				top: 175px; left: 50%;
+				top: 174px; left: 50%;
 				transform: translate(-50%, 0) scale(0.03);
 				text-align: center;
 			}
 			.illustItem--mary,
 			.illustItem--joseph {
 				background-color: $brown;
-				top: 162px;
+				top: 161px;
 				padding: 10px;
 				text-align: center;
 			}
@@ -816,24 +816,24 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			}
 			.illustItem--gold {
 				left: 95px;
-				transform: scale(0.025) translate(24px, 15px);
+				transform: scale(0.025) translate(24px, 11px);
 				text-align: center;
 			}
 			.illustItem--frankincense {
 				left: 100px;
-				transform: scale(0.025) translate(2px, 15px);
+				transform: scale(0.025) translate(2px, 11px);
 				text-align: center;
 			}
 			.illustItem--myrrh {
 				left: 104px;
-				transform: scale(0.025) translate(11px, 15px);
+				transform: scale(0.025) translate(11px, 11px);
 				text-align: center;
 			}
 			.illustItem--stable {
 				top: 155px; left: 50%;
 				padding: 10px;
 				background-color: #033649;
-				transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
+				transform: translate(-50%, 0) scale(0.032) translate(0, -18px);
 				text-align: center;
 			}
 
@@ -877,7 +877,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 			.illustItem--sack {
 				width: 180px; height: 41px;
 				top: 119px; left: 110px;
-				transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
+				transform: scale(0.021) translate(-12px, 30px) rotate(-20deg);
 			}
 
 		// REINDEER

@@ -18,13 +18,15 @@ $.setSelectorEngine(qwery);
 
 var UI = {
 	html: $('html')[0],
+	body: $('body')[0],
 
-	overlayBtn: null,
-	overlay: null,
+	overlay: $('.overlay'),
+	overlayBtn: $('.overlay .btn'),
 
-	symbolListBtn: null,
+	symbolList: $('.symbol-list-wrapper')[0],
+	symbolListBtn: $('.btn-list')[0],
 
-	scrollActive: true,
+	scrollActive: false,
 
 	supports : {
 		transform3d: false
@@ -40,7 +42,7 @@ var UI = {
 
 		this.handleZooming();
 
-		this.initOverlay();
+		this.initOverlays();
 		this.initInfoOverlay();
 		this.symbolOverlay();
 
@@ -54,19 +56,24 @@ var UI = {
 
 	},
 
-	initOverlay : function () {
-
-		this.overlay = $('.overlay');
-		this.overlayBtn = $('.overlay .btn');
+	initOverlays : function () {
 
 		var index = 0,
 			overlayNum = this.overlay.length;
 
+		//loop through each overlay and attach listeners
 		for (index; index < overlayNum; index++) {
 			this.overlayBtn[index].addEventListener('click', function (e) {
 				e.preventDefault();
 
-				this.parentElement.parentElement.parentElement.classList.add('inactive');
+				var context = this.getAttribute('data-close');
+				$('.' + context)[0].classList.add('inactive');
+				UI.scrollActive = true;
+
+				//if the intro modal is closed, scroll to the top of the window
+				if (context === 'overlay--intro') {
+					window.scrollTo(0, 0);
+				}
 			});
 		}
 
@@ -79,20 +86,35 @@ var UI = {
 		footerLink.addEventListener('click', function (e) {
 			e.preventDefault();
 
+			UI.hideAllOverlays();
 			$('.overlay--info')[0].classList.remove('inactive');
+
 		});
+
+	},
+
+	hideAllOverlays : function () {
+
+		var index = 0,
+			overlayNum = this.overlay.length;
+
+		//loop through each overlay and attach listeners
+		for (index; index < overlayNum; index++) {
+			this.overlay[index].classList.add('inactive');
+		}
 
 	},
 
 	symbolOverlay : function () {
 
-		this.symbolListBtn = $('.btn-list')[0];
-
 		this.symbolListBtn.addEventListener('click', function (e) {
 			e.preventDefault();
 
-			$('.symbol-list-wrapper')[0].classList.remove('inactive');
+			//only open if we are in 'open scrolling mode'
+			UI.hideAllOverlays();
+			UI.symbolList.classList.remove('inactive', 'hide');
 			$('#scroll-proxy')[0].classList.add('inactive');
+			window.scrollTo(0, 0);
 			UI.scrollActive = false;
 		});
 
@@ -100,7 +122,7 @@ var UI = {
 		$('.btn--close')[0].addEventListener('click', function (e) {
 			e.preventDefault();
 
-			this.parentElement.classList.add('inactive');
+			UI.symbolList.classList.add('inactive');
 			$('#scroll-proxy')[0].classList.remove('inactive');
 			UI.scrollActive = true;
 		});

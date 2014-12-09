@@ -1246,6 +1246,9 @@ body.night {
     opacity: 0;
   }
 }
+.symbol-list-wrapper.hide {
+  display: none;
+}
 .symbol-list-wrapper .btn--close {
   position: absolute;
   top: 20px;
@@ -1888,10 +1891,10 @@ body.night {
      -moz-transform-origin: left top;
       -ms-transform-origin: left top;
           transform-origin: left top;
-  -webkit-transform: scale(0.1277) translate(-50.15%, 0);
-     -moz-transform: scale(0.1277) translate(-50.15%, 0);
-      -ms-transform: scale(0.1277) translate(-50.15%, 0);
-          transform: scale(0.1277) translate(-50.15%, 0);
+  -webkit-transform: scale(0.1278) translate(-50.12%, 0);
+     -moz-transform: scale(0.1278) translate(-50.12%, 0);
+      -ms-transform: scale(0.1278) translate(-50.12%, 0);
+          transform: scale(0.1278) translate(-50.12%, 0);
 }
 
 .svg-secondfloor {
@@ -1905,10 +1908,10 @@ body.night {
      -moz-transform-origin: left top;
       -ms-transform-origin: left top;
           transform-origin: left top;
-  -webkit-transform: scale(0.1277) translate(-50.15%, 0);
-     -moz-transform: scale(0.1277) translate(-50.15%, 0);
-      -ms-transform: scale(0.1277) translate(-50.15%, 0);
-          transform: scale(0.1277) translate(-50.15%, 0);
+  -webkit-transform: scale(0.1278) translate(-50.12%, 0);
+     -moz-transform: scale(0.1278) translate(-50.12%, 0);
+      -ms-transform: scale(0.1278) translate(-50.12%, 0);
+          transform: scale(0.1278) translate(-50.12%, 0);
 }
 
 .illustItem--yuletide {
@@ -2077,10 +2080,10 @@ body.night {
   top: 196px;
   left: 67px;
   padding: 8px 0;
-  -webkit-transform: scale(0.03) translate(18px, 0);
-     -moz-transform: scale(0.03) translate(18px, 0);
-      -ms-transform: scale(0.03) translate(18px, 0);
-          transform: scale(0.03) translate(18px, 0);
+  -webkit-transform: scale(0.03) translate(19px, 0);
+     -moz-transform: scale(0.03) translate(19px, 0);
+      -ms-transform: scale(0.03) translate(19px, 0);
+          transform: scale(0.03) translate(19px, 0);
   text-align: center;
 }
 
@@ -2254,42 +2257,42 @@ body.night {
 
 .illustItem--bingcrosby {
   left: 83px;
-  -webkit-transform: scale(0.02) translate(3px, 16px);
-     -moz-transform: scale(0.02) translate(3px, 16px);
-      -ms-transform: scale(0.02) translate(3px, 16px);
-          transform: scale(0.02) translate(3px, 16px);
+  -webkit-transform: scale(0.02) translate(3px, 14px);
+     -moz-transform: scale(0.02) translate(3px, 14px);
+      -ms-transform: scale(0.02) translate(3px, 14px);
+          transform: scale(0.02) translate(3px, 14px);
 }
 
 .illustItem--bandaid {
   left: 87px;
-  -webkit-transform: scale(0.02) translate(7px, 16px);
-     -moz-transform: scale(0.02) translate(7px, 16px);
-      -ms-transform: scale(0.02) translate(7px, 16px);
-          transform: scale(0.02) translate(7px, 16px);
+  -webkit-transform: scale(0.02) translate(7px, 14px);
+     -moz-transform: scale(0.02) translate(7px, 14px);
+      -ms-transform: scale(0.02) translate(7px, 14px);
+          transform: scale(0.02) translate(7px, 14px);
 }
 
 .illustItem--mariahcarey {
   left: 91px;
-  -webkit-transform: scale(0.02) translate(11px, 16px);
-     -moz-transform: scale(0.02) translate(11px, 16px);
-      -ms-transform: scale(0.02) translate(11px, 16px);
-          transform: scale(0.02) translate(11px, 16px);
+  -webkit-transform: scale(0.02) translate(11px, 14px);
+     -moz-transform: scale(0.02) translate(11px, 14px);
+      -ms-transform: scale(0.02) translate(11px, 14px);
+          transform: scale(0.02) translate(11px, 14px);
 }
 
 .illustItem--thepogues {
   left: 95px;
-  -webkit-transform: scale(0.02) translate(13px, 16px);
-     -moz-transform: scale(0.02) translate(13px, 16px);
-      -ms-transform: scale(0.02) translate(13px, 16px);
-          transform: scale(0.02) translate(13px, 16px);
+  -webkit-transform: scale(0.02) translate(13px, 14px);
+     -moz-transform: scale(0.02) translate(13px, 14px);
+      -ms-transform: scale(0.02) translate(13px, 14px);
+          transform: scale(0.02) translate(13px, 14px);
 }
 
 .illustItem--wham {
   left: 99px;
-  -webkit-transform: scale(0.02) translate(16px, 16px);
-     -moz-transform: scale(0.02) translate(16px, 16px);
-      -ms-transform: scale(0.02) translate(16px, 16px);
-          transform: scale(0.02) translate(16px, 16px);
+  -webkit-transform: scale(0.02) translate(16px, 14px);
+     -moz-transform: scale(0.02) translate(16px, 14px);
+      -ms-transform: scale(0.02) translate(16px, 14px);
+          transform: scale(0.02) translate(16px, 14px);
 }
 
 .illustItem--candle {
@@ -2298,10 +2301,10 @@ body.night {
   top: 177px;
   left: 55px;
   padding: 8px 0;
-  -webkit-transform: scale(0.03) translate(0, 10px);
-     -moz-transform: scale(0.03) translate(0, 10px);
-      -ms-transform: scale(0.03) translate(0, 10px);
-          transform: scale(0.03) translate(0, 10px);
+  -webkit-transform: scale(0.03) translate(18px, 10px);
+     -moz-transform: scale(0.03) translate(18px, 10px);
+      -ms-transform: scale(0.03) translate(18px, 10px);
+          transform: scale(0.03) translate(18px, 10px);
   text-align: center;
 }
 
@@ -2340,18 +2343,18 @@ body.night {
 
 .illustItem--mulledwine {
   left: 60px;
-  -webkit-transform: scale(0.025) translate(0, -10px) rotate(-90deg);
-     -moz-transform: scale(0.025) translate(0, -10px) rotate(-90deg);
-      -ms-transform: scale(0.025) translate(0, -10px) rotate(-90deg);
-          transform: scale(0.025) translate(0, -10px) rotate(-90deg);
+  -webkit-transform: scale(0.025) translate(0, -8px) rotate(-90deg);
+     -moz-transform: scale(0.025) translate(0, -8px) rotate(-90deg);
+      -ms-transform: scale(0.025) translate(0, -8px) rotate(-90deg);
+          transform: scale(0.025) translate(0, -8px) rotate(-90deg);
 }
 
 .illustItem--sherry {
   left: 64px;
-  -webkit-transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
-     -moz-transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
-      -ms-transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
-          transform: scale(0.025) translate(-10px, -10px) rotate(-90deg);
+  -webkit-transform: scale(0.025) translate(-10px, -8px) rotate(-90deg);
+     -moz-transform: scale(0.025) translate(-10px, -8px) rotate(-90deg);
+      -ms-transform: scale(0.025) translate(-10px, -8px) rotate(-90deg);
+          transform: scale(0.025) translate(-10px, -8px) rotate(-90deg);
 }
 
 .illustItem--advent {
@@ -2420,10 +2423,10 @@ body.night {
   top: 191px;
   left: 74px;
   padding: 8px 0;
-  -webkit-transform: scale(0.03) translate(13px, 16px);
-     -moz-transform: scale(0.03) translate(13px, 16px);
-      -ms-transform: scale(0.03) translate(13px, 16px);
-          transform: scale(0.03) translate(13px, 16px);
+  -webkit-transform: scale(0.03) translate(13px, 14px);
+     -moz-transform: scale(0.03) translate(13px, 14px);
+      -ms-transform: scale(0.03) translate(13px, 14px);
+          transform: scale(0.03) translate(13px, 14px);
   text-align: center;
 }
 
@@ -2478,14 +2481,14 @@ body.night {
   left: 94px;
   padding: 8px 0;
   text-align: center;
-  -webkit-transform: scale(0.035) translate(8px, 10px) rotate(-62deg);
-     -moz-transform: scale(0.035) translate(8px, 10px) rotate(-62deg);
-      -ms-transform: scale(0.035) translate(8px, 10px) rotate(-62deg);
-          transform: scale(0.035) translate(8px, 10px) rotate(-62deg);
+  -webkit-transform: scale(0.026) translate(8px, 26px) rotate(-64deg);
+     -moz-transform: scale(0.026) translate(8px, 26px) rotate(-64deg);
+      -ms-transform: scale(0.026) translate(8px, 26px) rotate(-64deg);
+          transform: scale(0.026) translate(8px, 26px) rotate(-64deg);
 }
 
 .illustItem--jesus {
-  top: 175px;
+  top: 174px;
   left: 50%;
   -webkit-transform: translate(-50%, 0) scale(0.03);
      -moz-transform: translate(-50%, 0) scale(0.03);
@@ -2497,7 +2500,7 @@ body.night {
 .illustItem--mary,
 .illustItem--joseph {
   background-color: #8f693c;
-  top: 162px;
+  top: 161px;
   padding: 10px;
   text-align: center;
 }
@@ -2577,28 +2580,28 @@ body.night {
 
 .illustItem--gold {
   left: 95px;
-  -webkit-transform: scale(0.025) translate(24px, 15px);
-     -moz-transform: scale(0.025) translate(24px, 15px);
-      -ms-transform: scale(0.025) translate(24px, 15px);
-          transform: scale(0.025) translate(24px, 15px);
+  -webkit-transform: scale(0.025) translate(24px, 11px);
+     -moz-transform: scale(0.025) translate(24px, 11px);
+      -ms-transform: scale(0.025) translate(24px, 11px);
+          transform: scale(0.025) translate(24px, 11px);
   text-align: center;
 }
 
 .illustItem--frankincense {
   left: 100px;
-  -webkit-transform: scale(0.025) translate(2px, 15px);
-     -moz-transform: scale(0.025) translate(2px, 15px);
-      -ms-transform: scale(0.025) translate(2px, 15px);
-          transform: scale(0.025) translate(2px, 15px);
+  -webkit-transform: scale(0.025) translate(2px, 11px);
+     -moz-transform: scale(0.025) translate(2px, 11px);
+      -ms-transform: scale(0.025) translate(2px, 11px);
+          transform: scale(0.025) translate(2px, 11px);
   text-align: center;
 }
 
 .illustItem--myrrh {
   left: 104px;
-  -webkit-transform: scale(0.025) translate(11px, 15px);
-     -moz-transform: scale(0.025) translate(11px, 15px);
-      -ms-transform: scale(0.025) translate(11px, 15px);
-          transform: scale(0.025) translate(11px, 15px);
+  -webkit-transform: scale(0.025) translate(11px, 11px);
+     -moz-transform: scale(0.025) translate(11px, 11px);
+      -ms-transform: scale(0.025) translate(11px, 11px);
+          transform: scale(0.025) translate(11px, 11px);
   text-align: center;
 }
 
@@ -2607,10 +2610,10 @@ body.night {
   left: 50%;
   padding: 10px;
   background-color: #033649;
-  -webkit-transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
-     -moz-transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
-      -ms-transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
-          transform: translate(-50%, 0) scale(0.032) translate(0, 12px);
+  -webkit-transform: translate(-50%, 0) scale(0.032) translate(0, -18px);
+     -moz-transform: translate(-50%, 0) scale(0.032) translate(0, -18px);
+      -ms-transform: translate(-50%, 0) scale(0.032) translate(0, -18px);
+          transform: translate(-50%, 0) scale(0.032) translate(0, -18px);
   text-align: center;
 }
 
@@ -2686,10 +2689,10 @@ body.night {
   height: 41px;
   top: 119px;
   left: 110px;
-  -webkit-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
-     -moz-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
-      -ms-transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
-          transform: scale(0.021) translate(-12px, 33px) rotate(-20deg);
+  -webkit-transform: scale(0.021) translate(-12px, 30px) rotate(-20deg);
+     -moz-transform: scale(0.021) translate(-12px, 30px) rotate(-20deg);
+      -ms-transform: scale(0.021) translate(-12px, 30px) rotate(-20deg);
+          transform: scale(0.021) translate(-12px, 30px) rotate(-20deg);
 }
 
 .illustItem--rudolph,
@@ -3038,16 +3041,52 @@ body.night {
 }
 
 .info-donate {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 40px;
   background-color: #e2f7f6;
+  text-align: left;
 }
-@media screen and (min-width: 62em) {
+@media screen and (min-width: 48em) {
   .info-donate {
     padding-top: 40px;
     padding-bottom: 80px;
-    padding-left: 14%;
-    background: #e2f7f6 url("data:image/png;base64,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") no-repeat 10% 10px;
+    padding-left: 25%;
+    background-color: #e2f7f6;
+  }
+}
+@media screen and (min-width: 62em) {
+  .info-donate {
+    padding-left: 28%;
+  }
+}
+.info-donate:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8%;
+  top: 12px;
+  width: 130px;
+  height: 130px;
+  background-image: url("data:image/png;base64,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");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 47.9375em) {
+  .info-donate:before {
+    display: none;
+  }
+}
+@media screen and (min-width: 62em) {
+  .info-donate:before {
+    left: 15%;
+  }
+}
+@media screen and (min-width: 48em) {
+  .info-donate .infoWindow-baseText,
+  .info-donate .infoWindow-subText {
+    margin-left: inherit;
+    margin-right: inherit;
   }
 }
 
