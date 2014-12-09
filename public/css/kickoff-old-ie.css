@@ -1435,16 +1435,18 @@ body.night {
 .illustItem--holly {
   z-index: 3;
   top: 540px;
-  left: -160px;
-  width: 232px;
-  height: 134px;
+  left: -260px;
+  width: 400px;
+  height: 130px;
   background-repeat: repeat;
   background-position: right center;
-  padding: 52px 0 0 90px;
+  padding: 50px 0 0 230px;
   -moz-transition: left 300ms;
        transition: left 300ms;
-  left: -60px;
-  left: 0;
+  left: -200px;
+  left: -160px;
+  left: -100px;
+  left: -40px;
 }
 @media screen and (min-height: 750px) {
   .illustItem--holly {
@@ -1486,7 +1488,7 @@ body.night {
 .illustItem--ivy {
   z-index: 3;
   top: 540px;
-  right: -260px;
+  right: -200px;
   width: 325px;
   height: 114px;
   padding: 38px 0 0 80px;

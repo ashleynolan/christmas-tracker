@@ -229,17 +229,19 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 
 			.illustItem--holly {
 				z-index: index($layerIndex, level-3);
-				top: 540px; left: -160px;
-				width: 232px; height: 134px;
+				top: 540px; left: -260px;
+				width: 400px; height: 130px;
 				background-repeat: repeat;
 				background-position: right center;
 
-				padding: 52px 0 0 90px;
+				padding: 50px 0 0 230px;
 
 				transition: left 300ms;
 
-				@include respond-min(660) { left: -60px; }
-				@include respond-min(800) { left: 0; }
+				@include respond-min(660) { left: -200px; }
+				@include respond-min(720) { left: -160px; }
+				@include respond-min(840) { left: -100px; }
+				@include respond-min(980) { left: -40px; }
 
 				@media screen and (min-height: 750px) { top: 580px; }
 			}
@@ -272,7 +274,7 @@ $layerIndex: level-1, level-2, level-3, level-4, level-5;
 
 			.illustItem--ivy {
 				z-index: index($layerIndex, level-3);
-				top: 540px; right: -260px;
+				top: 540px; right: -200px;
 				width: 325px; height: 114px;
 
 				//spacing for text
