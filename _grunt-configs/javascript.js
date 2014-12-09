@@ -32,7 +32,7 @@ module.exports.tasks = {
 			}
 		},
 		prod: {
-			src: ['<%=config.js.srcFile%>'],
+			src: ['<%=config.js.jsDir%>/<%=config.js.srcFile%>'],
 			dest: '<%=config.js.distDir%><%=config.js.distFile%>',
 			options : {
 				transform: [

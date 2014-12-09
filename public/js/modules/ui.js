@@ -5,12 +5,9 @@
 
 // dependencies for this module go here
 var $ = require('traversty'),
-	qwery = require('qwery'),
+	qwery = require('qwery');
 
-	d3 = require('d3'),
-
-	_ = require('underscore');
-
+	// d3 = require('d3');
 
 
 //give us old IE selector support (<8)
