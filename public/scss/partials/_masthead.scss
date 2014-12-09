@@ -95,9 +95,23 @@
 					margin-left: 10px;
 				}
 
+.btn-list {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+	background-color: #fff;
+	padding: 10px;
+	border-bottom: 2px solid $turquoise;
+	border-right: 2px solid $turquoise;
 
+	transition: background-color 300ms;
 
-
+	&:hover {
+		background-color: $blue;
+		cursor: pointer;
+	}
+}
 
 
 

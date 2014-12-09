@@ -376,7 +376,6 @@ a {
 }
 a:hover, a:focus {
   color: #1c5a59;
-  text-decoration: underline;
 }
 a:active {
   color: #1c5a59;
@@ -1089,6 +1088,9 @@ body.night {
     height: 10000px;
   }
 }
+#scroll-proxy.inactive {
+  display: none;
+}
 
 .symbol {
   position: relative;
@@ -1185,6 +1187,7 @@ body.night {
 }
 
 .overlay,
+.symbol-list-wrapper,
 .symbols--inside,
 .symbols--outside {
   zoom: 1;
@@ -1194,6 +1197,7 @@ body.night {
        transition: opacity 300ms;
 }
 .overlay.inactive,
+.symbol-list-wrapper.inactive,
 .symbols--inside.inactive,
 .symbols--outside.inactive {
   z-index: -10;
@@ -1217,12 +1221,11 @@ body.night {
   margin-left: auto;
   margin-right: auto;
   background: #fff;
-  padding: 20px;
-  border-radius: 6px;
+  padding: 30px;
+  border: 12px solid #34a8a6;
 }
 @media screen and (min-width: 34.375em) {
   .symbol-list-wrapper {
-    display: none;
     z-index: 30;
     position: absolute;
     top: 280px;
@@ -1232,11 +1235,24 @@ body.night {
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     width: 84%;
+    margin-bottom: 140px;
   }
+}
+.symbol-list-wrapper .btn--close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
 .symbol-list {
   overflow: hidden;
+}
+.symbol-list > .symbol {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAn1BMVEUxqaYxqaYxqaY4rag2rKc8r6kxqaYxqaYxqaY1q6cxqaYxqaYxqaYxqaYxqaYxqaYxqaYAAAAfoJcZnZIlo5yv3dcioZUcn5XC5eFVt7AopJrY7+7l9PSMzskyqJ1evLeV09A8rKBWtqtiw7PM6ullv7yY1NM8r6k4ragrpqE1q6cuqKRDsqtNuK5YvrBGtKxUvK8/sapfwbJbwLExqaZS6a5IAAAAEnRSTlMwz+/vv+9AcJ/Pv4Cvj2AgEAAPa/NDAAAAm0lEQVQI1wXBBUIDQRBFwQ4EkqzOxx3i62Pv/mejyiSpqVY3Rd1KMsmt55RzWmIpmdwuzQPQJV/LtM0enl6APN1bOwXg9W2EIVW2CVeAE0C4WpnpD3+Xr8v3D3O0MtPvf8+f5/cP5mhNmIDxBLDcWRsX4PF5hO64NdWLh/4BhhRbk9vl0AHx6BuZ5CqfU07htpFMkqwuimrjJP0Du/MaE+sUTYYAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+  padding-left: 20px;
 }
 @media screen and (max-width: 34.3125em) {
   .symbol-list .symbol-label {
@@ -1246,6 +1262,7 @@ body.night {
 @media screen and (min-width: 34.375em) {
   .symbol-list .symbol-total {
     display: block;
+    font-size: inherit;
   }
 }
 
@@ -1371,7 +1388,7 @@ body.night {
       -ms-transform: translate(-50%);
           transform: translate(-50%);
 }
-@media screen and (min-height: 700px) {
+@media screen and (min-height: 750px) {
   .illustItem--bgGrass {
     top: 520px;
   }
@@ -1413,7 +1430,7 @@ body.night {
   }
 }
 .illustItem--fencePost.illustItem--fencePost--first {
-  top: 350px;
+  top: 320px;
   left: 12%;
   -moz-transition: left 300ms;
        transition: left 300ms;
@@ -1428,8 +1445,13 @@ body.night {
     left: 20%;
   }
 }
+@media screen and (min-height: 750px) {
+  .illustItem--fencePost.illustItem--fencePost--first {
+    top: 350px;
+  }
+}
 .illustItem--fencePost.illustItem--fencePost--second {
-  top: 400px;
+  top: 360px;
   right: 10%;
   -moz-transition: right 300ms;
        transition: right 300ms;
@@ -1437,6 +1459,11 @@ body.night {
 @media screen and (min-width: 47.5em) {
   .illustItem--fencePost.illustItem--fencePost--second {
     right: 15%;
+  }
+}
+@media screen and (min-height: 750px) {
+  .illustItem--fencePost.illustItem--fencePost--second {
+    top: 400px;
   }
 }
 .illustItem--fencePost .symbol-title, .illustItem--fencePost .symbol-total {
@@ -1542,13 +1569,13 @@ body.night {
 
 .illustItem--holly {
   z-index: 3;
-  top: 580px;
+  top: 540px;
   left: -160px;
   width: 232px;
   height: 134px;
   background-repeat: repeat;
   background-position: right center;
-  padding: 52px 0 0 100px;
+  padding: 52px 0 0 90px;
   -moz-transition: left 300ms;
        transition: left 300ms;
 }
@@ -1560,6 +1587,11 @@ body.night {
 @media screen and (min-width: 50em) {
   .illustItem--holly {
     left: 0;
+  }
+}
+@media screen and (min-height: 750px) {
+  .illustItem--holly {
+    top: 580px;
   }
 }
 
@@ -1604,7 +1636,7 @@ body.night {
 
 .illustItem--ivy {
   z-index: 3;
-  top: 580px;
+  top: 540px;
   right: -260px;
   width: 325px;
   height: 114px;
@@ -1625,6 +1657,11 @@ body.night {
 @media screen and (min-width: 62em) {
   .illustItem--ivy {
     right: 0;
+  }
+}
+@media screen and (min-height: 750px) {
+  .illustItem--ivy {
+    top: 580px;
   }
 }
 
@@ -1677,15 +1714,15 @@ body.night {
   width: 100%;
   height: 100%;
   top: 51%;
-  left: 49.73%;
+  left: 49.72%;
   -webkit-transform-origin: left top;
      -moz-transform-origin: left top;
       -ms-transform-origin: left top;
           transform-origin: left top;
-  -webkit-transform: scale(0.265) translate(-50%, 0);
-     -moz-transform: scale(0.265) translate(-50%, 0);
-      -ms-transform: scale(0.265) translate(-50%, 0);
-          transform: scale(0.265) translate(-50%, 0);
+  -webkit-transform: scale(0.266) translate(-50%, 0);
+     -moz-transform: scale(0.266) translate(-50%, 0);
+      -ms-transform: scale(0.266) translate(-50%, 0);
+          transform: scale(0.266) translate(-50%, 0);
 }
 
 .svg-sleigh {
@@ -2600,7 +2637,7 @@ body.night {
 
 .illustItem--elf {
   width: 180px;
-  top: 130px;
+  top: 129px;
   left: 107px;
   -webkit-transform: scale(0.03) translate(20px, 19px) rotate(8deg);
      -moz-transform: scale(0.03) translate(20px, 19px) rotate(8deg);
@@ -2849,6 +2886,23 @@ body.night {
   width: 116px;
   text-align: left;
   margin-left: 10px;
+}
+
+.btn-list {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  background-color: #fff;
+  padding: 10px;
+  border-bottom: 2px solid #34a8a6;
+  border-right: 2px solid #34a8a6;
+  -moz-transition: background-color 300ms;
+       transition: background-color 300ms;
+}
+.btn-list:hover {
+  background-color: #e2f7f6;
+  cursor: pointer;
 }
 
 .page-footer {

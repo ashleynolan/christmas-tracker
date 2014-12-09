@@ -58,4 +58,8 @@ body {
 	@include respond-min($bp-narrow) {
 		height: 10000px;
 	}
+
+	&.inactive {
+		display: none;
+	}
 }

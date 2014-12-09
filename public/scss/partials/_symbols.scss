@@ -124,6 +124,7 @@
 
 			//hide symbols until needed
 			.overlay,
+			.symbol-list-wrapper,
 			.symbols--inside,
 			.symbols--outside {
 				@include opacity(100);
@@ -151,22 +152,36 @@
 		max-width: 1000px;
 		margin-left: auto;	margin-right: auto;
 		background: #fff;
-		padding: 20px;
-		border-radius: 6px;
+		padding: 30px;
+		border: 12px solid $turquoise;
 
 		@include respond-min($bp-narrow) {
-			display: none;
 			z-index: 30;
 			position: absolute;
 			top: 280px;
 			left: 50%;
 			transform: translate(-50%, 0);
 			width: 84%;
+			margin-bottom: 140px;
+		}
+
+		.btn--close {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 10;
 		}
 	}
 	.symbol-list {
 		overflow: hidden;
 		// padding-bottom: 50px;
+		//
+		& > .symbol {
+			background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAn1BMVEUxqaYxqaYxqaY4rag2rKc8r6kxqaYxqaYxqaY1q6cxqaYxqaYxqaYxqaYxqaYxqaYxqaYAAAAfoJcZnZIlo5yv3dcioZUcn5XC5eFVt7AopJrY7+7l9PSMzskyqJ1evLeV09A8rKBWtqtiw7PM6ullv7yY1NM8r6k4ragrpqE1q6cuqKRDsqtNuK5YvrBGtKxUvK8/sapfwbJbwLExqaZS6a5IAAAAEnRSTlMwz+/vv+9AcJ/Pv4Cvj2AgEAAPa/NDAAAAm0lEQVQI1wXBBUIDQRBFwQ4EkqzOxx3i62Pv/mejyiSpqVY3Rd1KMsmt55RzWmIpmdwuzQPQJV/LtM0enl6APN1bOwXg9W2EIVW2CVeAE0C4WpnpD3+Xr8v3D3O0MtPvf8+f5/cP5mhNmIDxBLDcWRsX4PF5hO64NdWLh/4BhhRbk9vl0AHx6BuZ5CqfU07htpFMkqwuimrjJP0Du/MaE+sUTYYAAAAASUVORK5CYII=');
+			background-repeat: no-repeat;
+			background-position: 0 3px;
+			padding-left: 20px;
+		}
 
 		& .symbol-label {
 			@include respond-max($bp-narrow - 1) {
@@ -177,6 +192,7 @@
 		& .symbol-total {
 			@include respond-min($bp-narrow) {
 				display: block;
+				font-size: inherit;
 			}
 		}
 	}

@@ -22,6 +22,10 @@ var UI = {
 	overlayBtn: null,
 	overlay: null,
 
+	symbolListBtn: null,
+
+	scrollActive: true,
+
 	supports : {
 		transform3d: false
 	},
@@ -38,6 +42,7 @@ var UI = {
 
 		this.initOverlay();
 		this.initInfoOverlay();
+		this.symbolOverlay();
 
 	},
 
@@ -75,6 +80,29 @@ var UI = {
 			e.preventDefault();
 
 			$('.overlay--info')[0].classList.remove('inactive');
+		});
+
+	},
+
+	symbolOverlay : function () {
+
+		this.symbolListBtn = $('.btn-list')[0];
+
+		this.symbolListBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+
+			$('.symbol-list-wrapper')[0].classList.remove('inactive');
+			$('#scroll-proxy')[0].classList.add('inactive');
+			UI.scrollActive = false;
+		});
+
+		//close button for the symbol overlay
+		$('.btn--close')[0].addEventListener('click', function (e) {
+			e.preventDefault();
+
+			this.parentElement.classList.add('inactive');
+			$('#scroll-proxy')[0].classList.remove('inactive');
+			UI.scrollActive = true;
 		});
 
 	},
@@ -146,8 +174,6 @@ function Zoomer( content ) {
 			this.verticalTranslate = 1520;
 		}
 
-		log(this.levels);
-
 	};
 
 	// keep track of DOM
@@ -190,7 +216,9 @@ Zoomer.prototype.handleEvent = function( event ) {
 // triggered every time window scrolls
 Zoomer.prototype.scroll = function( event ) {
 
-	this.recalculatePositions();
+	if (UI.scrollActive) {
+		this.recalculatePositions();
+	}
 
 };
 
