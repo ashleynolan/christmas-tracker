@@ -51,6 +51,8 @@ var UI = {
 			this.supports.transform3d = true;
 		}
 
+		this.body.classList.remove('preload');
+
 	},
 
 	initOverlays : function () {
