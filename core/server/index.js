@@ -19,14 +19,6 @@ var server = {
 	init : function (app, config) {
 		app.set('showStackError', true);
 
-		// middleware which blocks requests when we're too busy
-		app.use(function(req, res, next) {
-			if (toobusy()) {
-				res.status(503).send("I'm busy right now, sorry.")
-			} else {
-				next();
-			}
-		});
 
 		// should be placed before express.static - compressed with gzip
 		app.use(compress({
@@ -35,6 +27,17 @@ var server = {
 			},
 			level: 9
 		}));
+
+		toobusy.maxLag(1000);
+
+		// middleware which blocks requests when we're too busy
+		app.use(function(req, res, next) {
+			if (toobusy()) {
+				res.status(503).send("I'm busy right now, sorry.")
+			} else {
+				next();
+			}
+		});
 
 		// don't use logger for test env
 		if (process.env.NODE_ENV !== 'test') {

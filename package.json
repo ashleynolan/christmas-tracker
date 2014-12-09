@@ -23,8 +23,7 @@
     "newrelic": "^1.13.3",
     "socket.io": "^1.1.0",
     "socket.io-client": "^1.2.1",
-    "toobusy": "^0.2.4",
-    "underscore": "^1.7.0"
+    "toobusy": "^0.2.4"
   },
   "devDependencies": {
     "d3": "^3.4.13",
