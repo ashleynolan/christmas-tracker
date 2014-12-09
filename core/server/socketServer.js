@@ -40,7 +40,7 @@ var SocketServer = {
 				});
 
 				socket.on('state', function (data) {
-					// console.log('Received new tweet', data);
+					console.log('Received new state');
 					socketServer.sockets.emit('state', data);
 				});
 			}
