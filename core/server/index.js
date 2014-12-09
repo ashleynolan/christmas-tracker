@@ -4,8 +4,7 @@
  */
 
 var express = require('express'),
-	toobusy = require('toobusy'),
-	memwatch = require('memwatch'),
+	// toobusy = require('toobusy'),
 	compress = require('compression'),
 	logger  = require('morgan'),
 	bodyParser = require('body-parser'),
@@ -71,18 +70,6 @@ var server = {
 		if (config.mode === 'local') {
 			app.locals.pretty = true;
 		}
-
-		memwatch.on('leak', function(info) {
-			// look at info to find out about what might be leaking
-			console.log('We may have a memory leak – check out the info…')
-			console.log(info);
-		});
-
-		// memwatch.on('stats', function(stats) {
-		// 	// do something with post-gc memory usage stats
-		// 	console.log('Emitting stats');
-		// 	console.log(stats);
-		// });
 	}
 
 };
