@@ -12,7 +12,7 @@ var SocketServer = {
 
 		//Start a Socket.IO listen
 		var socketServer = io(server);
-		_self.client = clientio.connect(config.clientURL);
+		// _self.client = clientio.connect(config.clientURL);
 
 		//  ==================
 		//  === ON CONNECT ===
@@ -22,7 +22,7 @@ var SocketServer = {
 		//so here that would be how many tweets of each type we have stored
 		socketServer.sockets.on('connection', function (socket) {
 			console.log('socketServer: New connection logged');
-			console.log(socket.handshake.headers);
+			// console.log(socket.handshake.headers);
 
 			//test to see if our new connection is from our backend server or a front-end connection
 			//if it’s the backend server, set up these events
@@ -56,9 +56,9 @@ var SocketServer = {
 
 
 		//setup a keepalive from the client to the server
-		setInterval(function() {
-			_self.client.emit('keepalive');
-		}, 20000);
+		// setInterval(function() {
+		// 	_self.client.emit('keepalive');
+		// }, 20000);
 
 		return socketServer;
 	}
