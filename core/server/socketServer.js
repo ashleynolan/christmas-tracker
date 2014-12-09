@@ -35,7 +35,7 @@ var SocketServer = {
 
 				//received an updated state of our tweets
 				socket.on('tweet', function (data) {
-					// console.log('Received new tweet');
+					// console.log('Received new tweet', data);
 					socketServer.sockets.emit('tweet', data);
 				});
 			}

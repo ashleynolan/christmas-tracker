@@ -30,11 +30,9 @@ var Sockets = {
 
 		},
 
-		onTweetReceived : function (stateObj) {
+		onTweetReceived : function (symbolObj) {
 
-			for (var key in stateObj) {
-				UI.updateSymbol(key, stateObj[key]);
-			}
+			UI.updateSymbol(symbolObj.key, symbolObj.symbol);
 
 		}
 
