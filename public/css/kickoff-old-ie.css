@@ -2782,7 +2782,7 @@ body.night {
   display: none;
 }
 
-.overlay--info .overlay-contents {
+.overlay--info .info-text {
   overflow: hidden;
 }
 .overlay--info .btn {
@@ -2812,15 +2812,11 @@ body.night {
   font-size: 1.25rem;
 }
 
-.info-helper-name {
-  text-decoration: underline;
-}
-
 .info-helper-role {
   display: block;
-  margin: 10px auto 0;
-  font-size: 16px;
-  font-size: 1rem;
+  margin: 6px auto 0;
+  font-size: 14px;
+  font-size: 0.875rem;
   color: #000;
 }
 

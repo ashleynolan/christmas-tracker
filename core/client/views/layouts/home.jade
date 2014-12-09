@@ -36,36 +36,37 @@ html
 						
 			.overlay.overlay--info.inactive
 				.overlay-contents
-					h2.infoWindow-title
-						| Christmas Tracker
-						.infoWindow-title-sub was created by these little angels…
-					.info-helpers
-						.info-helper
-							h3.info-helper-title
-								a(href="https://twitter.com/AshNolan_" target="_blank")
-									span.info-helper-name Ashley Nolan 
-									span.info-helper-role Developer
-										span.info-helper-role-sub &amp; Bringer of Joy
-								span.illust-person
-									include ../illustrations/ash.html
-						.info-helper
-							h3.info-helper-title
-								a(href="" target="_blank")
-									span.info-helper-name Lorena Teruel 
-									span.info-helper-role Designer
-										span.info-helper-role-sub &amp; Glitter Queen
-								span.illust-person
-									include ../illustrations/lorena.html
-						.info-helper
-							h3.info-helper-title
-								a(href="https://twitter.com/kinslowdian" target="_blank")
-									span.info-helper-name Simon Kinslow 
-									span.info-helper-role Designer
-										span.info-helper-role-sub &amp; Reaper of Souls
-								span.illust-person.illust-person--simon
-									include ../illustrations/simon.html
-						
-					button.btn Close
+					.info-text
+						h2.infoWindow-title
+							| Christmas Tracker
+							.infoWindow-title-sub was created by these little angels…
+						.info-helpers
+							.info-helper
+								h3.info-helper-title
+									a(href="https://twitter.com/AshNolan_" target="_blank")
+										span.info-helper-name Ashley Nolan 
+										span.info-helper-role Developer
+											span.info-helper-role-sub &amp; Bringer of Joy
+									span.illust-person
+										include ../illustrations/ash.html
+							.info-helper
+								h3.info-helper-title
+									a(href="" target="_blank")
+										span.info-helper-name Lorena Teruel 
+										span.info-helper-role Designer
+											span.info-helper-role-sub &amp; Glitter Queen
+									span.illust-person
+										include ../illustrations/lorena.html
+							.info-helper
+								h3.info-helper-title
+									a(href="https://twitter.com/kinslowdian" target="_blank")
+										span.info-helper-name Simon Kinslow 
+										span.info-helper-role Designer
+											span.info-helper-role-sub &amp; Reaper of Souls
+									span.illust-person.illust-person--simon
+										include ../illustrations/simon.html
+							
+						button.btn Close
 					
 
 			- if (symbols !== null) {

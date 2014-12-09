@@ -98,8 +98,7 @@
 
 //helper overlay
 .overlay--info {
-
-	.overlay-contents {
+	.info-text {
 		overflow: hidden;
 	}
 		& .btn {
@@ -123,13 +122,10 @@
 				display: block;
 				@include font-size(20);
 			}
-				.info-helper-name {
-					text-decoration: underline;
-				}
 				.info-helper-role {
 					display: block;
-					margin: 10px auto 0;
-					@include font-size(16);
+					margin: 6px auto 0;
+					@include font-size(14);
 					color: #000;
 				}
 					.info-helper-role-sub {
