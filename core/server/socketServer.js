@@ -39,6 +39,11 @@ var SocketServer = {
 					socketServer.sockets.emit('tweet', data);
 				});
 			}
+
+			//log disconnects so we can check they get handled properly
+			socket.on('disconnect', function () {
+				console.log('user disconnected');
+			});
 		});
 
 		//  ============================
