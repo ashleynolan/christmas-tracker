@@ -136,7 +136,12 @@ var UI = {
 		var symbolTotal = $('.symbol--' + name + ' .symbol-total');
 
 		if (symbolTotal.length > 0) {
-			symbolTotal[0].innerHTML = this.numberWithCommas(data.total);
+			var index = 0,
+				symLength = symbolTotal.length;
+
+			for (index; index < symLength; index++) {
+				symbolTotal[index].innerHTML = this.numberWithCommas(data.total);
+			}
 		}
 
 	},
