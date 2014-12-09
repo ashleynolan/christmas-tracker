@@ -12,7 +12,7 @@ var SocketServer = {
 
 		//Start a Socket.IO listen
 		var socketServer = io(server);
-		// _self.client = clientio.connect(config.clientURL);
+		_self.client = clientio.connect(config.clientURL, {transports: ["websocket"]});
 
 		//  ==================
 		//  === ON CONNECT ===
@@ -56,9 +56,9 @@ var SocketServer = {
 
 
 		//setup a keepalive from the client to the server
-		// setInterval(function() {
-		// 	_self.client.emit('keepalive');
-		// }, 20000);
+		setInterval(function() {
+			_self.client.emit('keepalive');
+		}, 20000);
 
 		return socketServer;
 	}
