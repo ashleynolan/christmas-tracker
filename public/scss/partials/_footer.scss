@@ -53,6 +53,7 @@
 		@include respond-min($bp-narrow) {
 			float: right;
 			text-align: right;
+			margin-top: -10px;
 		}
 
 		li {
@@ -75,6 +76,8 @@
 			text-decoration: underline;
 		}
 		.page-footer-donate {
+			background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAAAjCAMAAAAwoG+IAAAAMFBMVEUAAAAvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaYvqaaNTsezAAAAEHRSTlMAYK//z4AQACCP7zDfv0Bw2lfhAwAAAIlJREFUeNrt0UEOwyAMRFHIYEygOPe/bbsgyo4dqYzm3+Dph/XFA7+SZB2VMwGoR9R1BV1c+2BUh0Nw17NbV654kg7Ujqfk1nViWvTq6pgmXl3yr1/FlhYxq9qqgmDL6KKLLrroosulq9iF7bosqBq2y5Quuuiiiy666KKLLrrooouu11ytb1fTLwjLejRbyBZNAAAAAElFTkSuQmCC') no-repeat center center;
+			padding-top: 5px;
 			margin-left: 20px;
 		}
 	}

@@ -61,7 +61,7 @@ var UI = {
 			this.overlayBtn[index].addEventListener('click', function (e) {
 				e.preventDefault();
 
-				this.parentElement.parentElement.classList.add('inactive');
+				this.parentElement.parentElement.parentElement.classList.add('inactive');
 			});
 		}
 
@@ -291,6 +291,7 @@ Zoomer.prototype.recalculatePositions = function () {
 	// //town symbols scaling
 	this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
+
 	this.townSymbols.style.transform = 'scale(' + scale + ')';
 
 };
