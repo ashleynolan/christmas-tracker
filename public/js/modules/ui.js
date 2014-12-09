@@ -329,19 +329,21 @@ Zoomer.prototype.recalculatePositions = function () {
 	// //update the transformed value for the town
 	this.town.style.WebkitTransform = townTransform;
 	this.town.style.MozTransform = townTransform;
+	this.town.style.msTransform = townTransform;
 	this.town.style.transform = townTransform;
 
 	// //update scale factor of the outside illustrations and text
-	if(navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
+	// if(navigator.userAgent.toLowerCase().indexOf('firefox') === -1) {
 		this.content.style.WebkitTransform = transformValue;
 		this.content.style.MozTransform = transformValue;
+		this.content.style.msTransform = transformValue;
 		this.content.style.transform = transformValue;
-	}
+	// }
 
 	// //town symbols scaling
 	this.townSymbols.style.WebkitTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.MozTransform = 'scale(' + scale + ')';
-
+	this.townSymbols.style.msTransform = 'scale(' + scale + ')';
 	this.townSymbols.style.transform = 'scale(' + scale + ')';
 
 };
