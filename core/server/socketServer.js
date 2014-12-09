@@ -1,8 +1,6 @@
 
 
-var io = require('socket.io')({
-		'transports': ['websocket']
-	}), //socket.io - used for our websocket connection;
+var io = require('socket.io'), //socket.io - used for our websocket connection;
 
 	clientio  = require('socket.io-client'),
 	twitter = require('core/server/controllers/twitterController');
@@ -13,8 +11,8 @@ var SocketServer = {
 	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
-		var socketServer = io.listen(server);
-		_self.client = clientio.connect(config.clientURL);
+		var socketServer = io(server);
+		_self.client = clientio.connect(config.clientURL, {transports: ["websocket"]});
 
 		//  ==================
 		//  === ON CONNECT ===
