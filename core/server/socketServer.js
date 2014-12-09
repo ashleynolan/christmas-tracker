@@ -38,6 +38,11 @@ var SocketServer = {
 					// console.log('Received new tweet', data);
 					socketServer.sockets.emit('tweet', data);
 				});
+
+				socket.on('state', function (data) {
+					// console.log('Received new tweet', data);
+					socketServer.sockets.emit('state', data);
+				});
 			}
 
 			//log disconnects so we can check they get handled properly
