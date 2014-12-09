@@ -28,16 +28,16 @@ var server = {
 			level: 9
 		}));
 
-		toobusy.maxLag(1000);
+		// toobusy.maxLag(1000);
 
 		// middleware which blocks requests when we're too busy
-		app.use(function(req, res, next) {
-			if (toobusy()) {
-				res.status(503).send("I'm busy right now, sorry.")
-			} else {
-				next();
-			}
-		});
+		// app.use(function(req, res, next) {
+		// 	if (toobusy()) {
+		// 		res.status(503).send("I'm busy right now, sorry.")
+		// 	} else {
+		// 		next();
+		// 	}
+		// });
 
 		// don't use logger for test env
 		if (process.env.NODE_ENV !== 'test') {
