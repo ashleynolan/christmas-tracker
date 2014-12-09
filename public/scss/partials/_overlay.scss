@@ -173,6 +173,10 @@
 				margin-top: 20px;
 				text-align: center;
 				vertical-align: bottom;
+
+				& svg {
+					max-height: 220px;
+				}
 			}
 				.illust-person--simon {
 					width: 40%;

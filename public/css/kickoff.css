@@ -2937,7 +2937,12 @@ body.night {
 }
 @media screen and (min-width: 34.375em) {
   .page-footer {
-    padding: 15px 10%;
+    padding: 10px 20px;
+  }
+}
+@media screen and (min-width: 62em) {
+  .page-footer {
+    padding: 10px 6%;
   }
 }
 .page-footer:before {
@@ -2962,7 +2967,7 @@ body.night {
     float: left;
   }
 }
-@media screen and (max-width: 62em) {
+@media screen and (max-width: 48em) {
   .social-links > li {
     clear: left;
   }
@@ -3200,6 +3205,9 @@ body.night {
   margin-top: 20px;
   text-align: center;
   vertical-align: bottom;
+}
+.illust-person svg {
+  max-height: 220px;
 }
 
 .illust-person--simon {
