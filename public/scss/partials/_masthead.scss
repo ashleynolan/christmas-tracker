@@ -107,6 +107,10 @@
 
 	transition: background-color 300ms;
 
+	@include respond-max($bp-narrow - 1) {
+		display: none;
+	}
+
 	&:hover {
 		background-color: $blue;
 		cursor: pointer;

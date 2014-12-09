@@ -1125,7 +1125,6 @@ body.night {
 }
 
 .overlay,
-.symbol-list-wrapper,
 .symbols--inside,
 .symbols--outside {
   zoom: 1;
@@ -1135,7 +1134,6 @@ body.night {
        transition: opacity 300ms;
 }
 .overlay.inactive,
-.symbol-list-wrapper.inactive,
 .symbols--inside.inactive,
 .symbols--outside.inactive {
   z-index: -10;
@@ -1163,7 +1161,7 @@ body.night {
   border: 12px solid #34a8a6;
   z-index: 30;
   position: absolute;
-  top: 280px;
+  top: 145px;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
      -moz-transform: translate(-50%, 0);
@@ -1171,6 +1169,16 @@ body.night {
           transform: translate(-50%, 0);
   width: 84%;
   margin-bottom: 140px;
+  -moz-transition: opacity 300ms;
+       transition: opacity 300ms;
+}
+.symbol-list-wrapper.inactive {
+  z-index: -10;
+  -moz-transition: opacity 300ms, z-index 0ms 300ms;
+       transition: opacity 300ms, z-index 0ms 300ms;
+  zoom: 1;
+  filter: alpha(opacity=0);
+  opacity: 0;
 }
 .symbol-list-wrapper .btn--close {
   position: absolute;
@@ -1849,10 +1857,10 @@ body.night {
   height: 50px;
   top: 207px;
   left: 74px;
-  -webkit-transform: scale(0.05) translate(0, 5px);
-     -moz-transform: scale(0.05) translate(0, 5px);
-      -ms-transform: scale(0.05) translate(0, 5px);
-          transform: scale(0.05) translate(0, 5px);
+  -webkit-transform: scale(0.05) translate(0, 7px);
+     -moz-transform: scale(0.05) translate(0, 7px);
+      -ms-transform: scale(0.05) translate(0, 7px);
+          transform: scale(0.05) translate(0, 7px);
   text-align: center;
 }
 

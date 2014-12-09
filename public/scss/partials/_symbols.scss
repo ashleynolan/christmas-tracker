@@ -124,7 +124,6 @@
 
 			//hide symbols until needed
 			.overlay,
-			.symbol-list-wrapper,
 			.symbols--inside,
 			.symbols--outside {
 				@include opacity(100);
@@ -158,18 +157,31 @@
 		@include respond-min($bp-narrow) {
 			z-index: 30;
 			position: absolute;
-			top: 280px;
+			top: 145px;
 			left: 50%;
 			transform: translate(-50%, 0);
 			width: 84%;
 			margin-bottom: 140px;
+
+			&.inactive {
+				z-index: -10;
+				transition: opacity 300ms, z-index 0ms 300ms;
+				@include opacity(0);
+			}
 		}
+
+		transition: opacity 300ms;
+
 
 		.btn--close {
 			position: absolute;
 			top: 20px;
 			right: 20px;
 			z-index: 10;
+
+			@include respond-max($bp-narrow - 1) {
+				display: none;
+			}
 		}
 	}
 	.symbol-list {
