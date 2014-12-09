@@ -1055,6 +1055,9 @@ body.night {
 .symbol--snowman .symbol-link, .symbol--partridge .symbol-link, .symbol--cold .symbol-link, .symbol--mary .symbol-link, .symbol--joseph .symbol-link, .symbol--wisemen .symbol-link, .symbol--shepherd .symbol-link, .symbol--stable .symbol-link, .symbol--tinsel .symbol-link, .symbol--scrooge .symbol-link {
   color: #fff;
 }
+.symbol--santa .symbol-link {
+  color: #ffcc88;
+}
 .symbol--money .symbol-link {
   color: #BB5169;
 }
@@ -1067,7 +1070,7 @@ body.night {
 .symbol--holly .symbol-link {
   color: #e41f44;
 }
-.symbol--robin .symbol-link, .symbol--santa .symbol-link {
+.symbol--robin .symbol-link {
   color: #d5ea7d;
 }
 .symbol--fireplace .symbol-link, .symbol--grinch .symbol-link, .symbol--jumper .symbol-link {
@@ -2501,11 +2504,12 @@ body.night {
   width: 180px;
   height: 41px;
   top: 126px;
-  left: 104px;
-  -webkit-transform: scale(0.03) translate(0, 0) rotate(8deg);
-     -moz-transform: scale(0.03) translate(0, 0) rotate(8deg);
-      -ms-transform: scale(0.03) translate(0, 0) rotate(8deg);
-          transform: scale(0.03) translate(0, 0) rotate(8deg);
+  left: 105px;
+  -webkit-transform: scale(0.03) translate(-10px, 9px) rotate(8deg);
+     -moz-transform: scale(0.03) translate(-10px, 9px) rotate(8deg);
+      -ms-transform: scale(0.03) translate(-10px, 9px) rotate(8deg);
+          transform: scale(0.03) translate(-10px, 9px) rotate(8deg);
+  text-align: center;
 }
 
 .illustItem--hohoho {

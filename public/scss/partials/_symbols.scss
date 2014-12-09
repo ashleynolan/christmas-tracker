@@ -40,6 +40,10 @@
 					color: #fff;
 				}
 
+				.symbol--santa & {
+					color: #ffcc88;
+				}
+
 				.symbol--money & {
 					color: #BB5169;
 				}
@@ -52,8 +56,7 @@
 				.symbol--christmastree & { color: $greenDark; }
 
 				.symbol--holly & { color: $red; }
-				.symbol--robin &,
-				.symbol--santa & {
+				.symbol--robin & {
 					color: $green;
 				}
 				.symbol--fireplace &,
