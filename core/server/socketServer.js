@@ -12,7 +12,7 @@ var SocketServer = {
 
 		//Start a Socket.IO listen
 		var socketServer = io(server);
-		_self.client = clientio.connect(config.clientURL, {transports: ["websocket"]});
+		_self.client = clientio.connect(config.clientURL);
 
 		//  ==================
 		//  === ON CONNECT ===
@@ -22,11 +22,11 @@ var SocketServer = {
 		//so here that would be how many tweets of each type we have stored
 		socketServer.sockets.on('connection', function (socket) {
 			console.log('socketServer: New connection logged');
-			console.log(socket.handshake.headers['user-agent']);
+			console.log(socket.handshake.headers);
 
 			//test to see if our new connection is from our backend server or a front-end connection
 			//if it’s the backend server, set up these events
-			if (socket.handshake.headers['user-agent'] === 'node-XMLHttpRequest') {
+			if (socket.handshake.headers['user-agent'] === 'node-XMLHttpRequest' || socket.handshake.headers.upgrade === 'websocket') {
 				console.log('Backend connection made – setup event listeners');
 				//recieved symbolState data from the daemon
 				socket.on('symbolState', function (data) {
