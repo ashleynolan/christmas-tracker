@@ -26,8 +26,10 @@ var SocketServer = {
 
 			//test to see if our new connection is from our backend server or a front-end connection
 			//if it’s the backend server, set up these events
-			if (socket.handshake.headers['user-agent'] === 'node-XMLHttpRequest' || socket.handshake.headers.upgrade === 'websocket') {
+			if (socket.handshake.headers.upgrade === 'websocket') {
 				console.log('Backend connection made – setup event listeners');
+				console.log(socket.handshake.headers);
+
 				//recieved symbolState data from the daemon
 				socket.on('symbolState', function (data) {
 					twitter.storeReceivedState(data);
