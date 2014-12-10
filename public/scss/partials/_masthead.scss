@@ -33,10 +33,12 @@
 		background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAEiCAMAAADd1ELPAAABrVBMVEXcjZ7Hjk/Hjk/Hjk/Hjk/Hjk/Hjk/Hjk/hTGnHjk/sWXT5yNHlIUbHjk/dfZHHjk/ykKPHjk/lIUbHjk/Hjk/Hjk/////lIUb5yNHlIUbHjk/sWXTnNFXpRmX97fD////ykKMAAADnzrLq3M/w5du2iGDHpIXEjlbz7Oaoc0a6hVHi0MGnbz2rcz/48eny7efgv5zf0cPLq5Du3MjAh0u1fEWgdUqyekPNtp/s49vGrJLZyLetiGLFooTCiky3fkbjx6e5j2uzhl/OnGW7g0i5gUfq1b2pcT7ZsYakbDvo2s6weEK+hUrx49P59vPVqnvFjE7So3DcuJH8+PTLlVr16t6iajqabD7Hjk/sWXT5yNHykKPvdIvtZoD3usXwgpfnL1L61dzoPV384+jqS2n1rLr98fP0nq7tj6H////gwMrijZ/UJUbyxs/ZZn3lIUbdWXPbS2fz09rbgJPcTGjuna3j5+vaMlLjmqr37/Lo3OLnWXTVMlHYWXLjPV3ac4jbP13lS2j24ebmwszrgZb4/P3r9/jYJEbhIkbk9PbdmanmTGnnz9fo0NfeprS1Mb4QAAAAInRSTlOAUHAwEK8gQFC/v78wgHDfv49An2DPv79AEO9Av7+/QEAA8gRFPQAAAzBJREFUeF7slrduw0AQRFUakmEILGQZcvysvWPOisE555y+2VgdCKjZrcSDi92S070B517jAG/LWbqNxpqzvvhsQme6dG+j9+nmSsK9yNdeSoX9xalMQ0yF5p4+n2GbCl8/XvqdlYTdiA4RQuppP6FCc+BqdYkhSej6KmjXD75rsDPgsZmYCqtmhje3GJL48lb9rTixp31shgaPzaiECs3N7kq1Wz/4HmBAg0/MD8GAx2bgHkOa0Dhr1w++pzOFAQ2+aoYBn3rDwSOGNL6mhR1KlHaB3yEzVewO/fyWsGNhhxS/QzGYZhjwOFXf7A6NvlwbO1S4wO8QNpNSYdXMcPLA7lDfxg6FECB2Djw2E/E7NJ+UfsvGDoXsDuXmh2DAYzPeMb9Dh37bAvjU1SrhwYNbqJwFH86OTlTHAviUfwAi1B0evMoCOGPBn44LC+D3zboz4ME0w4GH4HxwwT4AYfP/iaiIqIioiKiIqIioiKiIqIioiKiIqIioiKiIqIioiKiIqIjoX2l0suMoDEZh1EncFbGIIgRsvHPPY3XNc2ceIAkQJtd9Bd7/Bfo3WLAokUX3tz0yujbcEXibNdQ4MPQmWzI+Rlc91kdnY/Z6otOIE/07/scgG50JdiY6ccSk22We/ivDsYHjgToaEiOpkViQTLdKLX4otZ1qd7iskXvAKlDUfKeoYEXqGiTbkxjU7UmHFdqNqauv3xoVnPAMWBv7E11+/AJMVvfBFLAJHRwDgt1CqfLhLoqRXyfAGgBnHLitT306pOXvDfKiyFHVZy7wU+k+ZwkuitYAjzm4UVU3aZbEYWsUs7CqtnxIkGZFeU72/jpv8HYxn19Fl5kfnz+/RLN48/hcxHGcE47xfbfbRbSzKKK714csLJ9eyjAMU0KruuUi0juzx6cyRVpGafPZg6KSC71zk81os+/D4AgICKEtj0OkpCbBevXLVoYNSavvmBSYaNRGO7Ml6bJGl8kRcK/UZJYDGe1MAL/GsWSSCxy3ag0qyWhnk0soeyD9BZ0ftmZJjdIm3R80xi16vEbpwNSiN5AGZd/gcmbM4rJBObDQBtEnaZAaOsKQ53JZ9xfJKW6oDloVywAAAABJRU5ErkJggg==');
 	}
 	&:before {
-		left: 136px;
+		left: 20%;
+		@include respond-min($bp-narrow) { left: 136px; }
 	}
 	&:after {
-		right: 136px;
+		right: 20%;
+		@include respond-min($bp-narrow) { right: 136px; }
 	}
 }
 	.page-header-text {
@@ -65,7 +67,8 @@
 		.page-header-total-wrapper {
 			position: relative;
 			z-index: 2;
-			width: 372px;
+			width: 100%;
+			max-width: 372px;
 			min-height: 58px;
 			margin: -21px auto 0;
 
