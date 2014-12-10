@@ -26,7 +26,7 @@ var server = {
 			level: 9
 		}));
 
-		toobusy.maxLag(3000);
+		toobusy.maxLag(5000);
 
 		// middleware which blocks requests when we're too busy
 		app.use(function(req, res, next) {
