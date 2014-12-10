@@ -121,7 +121,9 @@
 				.symbol--yuletide &,
 				.symbol--festive &,
 				.symbol--roast & {
-					@include font-size(20);
+					@include respond-min($bp-narrow) {
+						@include font-size(20);
+					}
 				}
 			}
 
