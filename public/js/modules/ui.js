@@ -51,7 +51,9 @@ var UI = {
 			this.supports.transform3d = true;
 		}
 
-		this.body.classList.remove('preload');
+		window.onload = function () {
+			UI.body.classList.remove('preload');
+		};
 
 	},
 
