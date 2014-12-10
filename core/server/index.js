@@ -4,7 +4,7 @@
  */
 
 var express = require('express'),
-	// toobusy = require('toobusy'),
+	toobusy = require('toobusy'),
 	compress = require('compression'),
 	logger  = require('morgan'),
 	bodyParser = require('body-parser'),
@@ -26,16 +26,16 @@ var server = {
 			level: 9
 		}));
 
-		// toobusy.maxLag(1000);
+		toobusy.maxLag(3000);
 
 		// middleware which blocks requests when we're too busy
-		// app.use(function(req, res, next) {
-		// 	if (toobusy()) {
-		// 		res.status(503).send("I'm busy right now, sorry.")
-		// 	} else {
-		// 		next();
-		// 	}
-		// });
+		app.use(function(req, res, next) {
+			if (toobusy()) {
+				res.status(503).send("We’re experiencing a higher number of visitors than we can handle at the moment. Please try reloading the page.")
+			} else {
+				next();
+			}
+		});
 
 		// don't use logger for test env
 		if (process.env.NODE_ENV !== 'test') {
