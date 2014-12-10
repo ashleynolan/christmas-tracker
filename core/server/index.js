@@ -42,8 +42,11 @@ var server = {
 			app.use(logger('dev'));
 		}
 
+
+		var oneDay = 86400000;
 		//app.use(express.favicon(__dirname + '../public/favicon.ico'));
-		app.use(express.static('public'));
+		app.use(express.static('public', { maxAge: oneDay }));
+		// app.use(express.static('public'));
 
 		// set views path, template engine and default layout
 		app.set('views', 'core/client/views');
