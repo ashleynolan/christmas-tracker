@@ -85,6 +85,8 @@ var UI = {
 				if (context === 'overlay--intro') {
 					window.scrollTo(0, 0);
 				}
+
+				trak.event({category: 'engagement', action: 'overlay', label: 'closed ' + context});
 			});
 		}
 
