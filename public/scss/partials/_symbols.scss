@@ -199,6 +199,17 @@
 			background-repeat: no-repeat;
 			background-position: 0 3px;
 			padding-left: 20px;
+
+			@include respond-max($bp-narrow - 1) {
+				text-align: center;
+			}
+			@include respond-min($bp-narrow) {
+				float: left;
+				width: 50%;
+			}
+			@include respond-min($bp-wide) {
+				width: 33%;
+			}
 		}
 
 		& .symbol-label {
@@ -221,17 +232,6 @@
 					border-top: 1px solid #ccc;
 					padding-top: 10px;
 				}
-			}
-
-			@include respond-max($bp-narrow - 1) {
-				text-align: center;
-			}
-			@include respond-min($bp-narrow) {
-				float: left;
-				width: 50%;
-			}
-			@include respond-min($bp-wide) {
-				width: 33%;
 			}
 
 	}
