@@ -48,8 +48,8 @@ var SocketServer = {
 			}
 
 			//log disconnects so we can check they get handled properly
-			socket.on('disconnect', function () {
-				console.log('user disconnected');
+			socket.on('disconnect', function (reason) {
+				console.log('user disconnected' + reason);
 			});
 		});
 
