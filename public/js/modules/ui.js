@@ -7,6 +7,8 @@
 var $ = require('traversty'),
 	qwery = require('qwery');
 
+	trak = require('trak.js');
+
 	// d3 = require('d3');
 
 
@@ -28,6 +30,8 @@ var UI = {
 	supports : {
 		transform3d: false
 	},
+
+	scrollFired : false,
 
 	init : function () {
 		// d3.selectAll(".symbol").style("color", function() {
@@ -53,7 +57,13 @@ var UI = {
 
 		window.onload = function () {
 			UI.body.classList.remove('preload');
+
 		};
+
+		document.addEventListener('DOMContentLoaded', function(e) {
+			trak.start();
+		});
+
 
 	},
 
@@ -90,6 +100,8 @@ var UI = {
 			UI.hideAllOverlays();
 			$('.overlay--info')[0].classList.remove('inactive');
 
+			trak.event({category: 'engagement', action: 'overlay', label: 'info'});
+
 		});
 
 	},
@@ -117,6 +129,8 @@ var UI = {
 			$('#scroll-proxy')[0].classList.add('inactive');
 			window.scrollTo(0, 0);
 			UI.scrollActive = false;
+
+			trak.event({category: 'engagement', action: 'overlay', label: 'symbol list'});
 		});
 
 		//close button for the symbol overlay
@@ -386,6 +400,11 @@ Zoomer.prototype.checkStates = function () {
 		this.star.classList.remove('inactive'); //make carollers invisible
 		this.townSymbols.querySelector('.symbols--inside').classList.remove('inactive'); //make nativity symbols visible
 		this.townSymbols.querySelector('.symbols--outside').classList.add('inactive'); //make nativity symbols not visible
+
+		if (UI.scrollFired === false) {
+			UI.scrollFired = true;
+			trak.event({category: 'engagement', action: 'scroll', label: 'halfway'});
+		}
 
 	}
 
