@@ -11,6 +11,7 @@
 // force compilation of global libs that don't return a value.
 require("./helpers/log");
 require("./helpers/shims");
+window.io = require('./libs/socket.io-1.1.0');
 
 
 //initialise KO object
