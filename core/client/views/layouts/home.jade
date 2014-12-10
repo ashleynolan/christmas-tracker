@@ -18,7 +18,7 @@ html
 							span.infoWindow-subText-highlight Christmas Tracker 
 							| is an interactive illustration showing you how many times a bunch of Christmassy words have been mentioned so far today on Twitter.
 						p.infoWindow-subText
-							| Scroll to see more words and click on one to see it’s mentions over a number of days.
+							| Scroll to see more words and click on a word to see it’s mentions on Twitter.
 							
 						p.infoWindow-subText--narrow
 							span.infoWindow-subText-highlight Christmas Tracker
@@ -84,13 +84,13 @@ html
 						include ../illustrations/fence-post.html
 						.illustItem.illustItem--northpole.illustItem--fence-arrow.illustItem--fence-arrow-left.symbol.symbol--northpole
 							include ../illustrations/fence-left.html
-							a.symbol-link(href="https://twitter.com/search?f=realtime&q=fence&src=typd" target="_blank")
+							a.symbol-link(href="https://twitter.com/search?f=realtime&q=north%20pole&src=typd" target="_blank")
 								h2.symbol-title North Pole
 								p.symbol-total #{symbols.northpole.total}
 
 						.illustItem.illustItem--grotto.illustItem--fence-arrow.illustItem--fence-arrow-right.symbol.symbol--grotto
 							include ../illustrations/fence-right.html
-							a.symbol-link(href="https://twitter.com/search?f=realtime&q=fence&src=typd" target="_blank")
+							a.symbol-link(href="https://twitter.com/search?f=realtime&q=grotto&src=typd" target="_blank")
 								h2.symbol-title Grotto
 								p.symbol-total #{symbols.grotto.total}
 
@@ -110,7 +110,7 @@ html
 						include ../illustrations/fence-post.html
 						.illustItem.illustItem--lapland.illustItem--fence-arrow.illustItem--fence-arrow-right.symbol.symbol--lapland
 							include ../illustrations/fence-right.html
-							a.symbol-link(href="https://twitter.com/search?f=realtime&q=fence&src=typd" target="_blank")
+							a.symbol-link(href="https://twitter.com/search?f=realtime&q=lapland&src=typd" target="_blank")
 								h2.symbol-title Lapland
 								p.symbol-total #{symbols.lapland.total}
 
@@ -158,7 +158,7 @@ html
 									h2.symbol-title Robin
 									p.symbol-total #{symbols.robin.total}
 							.illustItem.illustItem--christmaslights.symbol.symbol--christmaslights.symbol--inline
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=christmaslights&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=christmas%20lights&src=typd" target="_blank")
 									h2.symbol-title Christmas Lights
 									p.symbol-total #{symbols.christmaslights.total}
 							.illustItem.illustItem--snow.symbol.symbol--snow.symbol--inline
@@ -174,7 +174,7 @@ html
 									h2.symbol-title Partridge
 									p.symbol-total #{symbols.partridge.total}
 							.illustItem.illustItem--christmastree.symbol.symbol--christmastree.symbol--inline
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=christmastree&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=christmas%20tree&src=typd" target="_blank")
 									h2.symbol-title Christmas Tree
 									p.symbol-total #{symbols.christmastree.total}
 							.illustItem.illustItem--peace.symbol.symbol--peace.symbol--inline
@@ -264,19 +264,19 @@ html
 									
 							//- Second Floor
 							.illustItem.illustItem--bingcrosby.symbol.symbol--bingcrosby
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=bingcrosby&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=bing%20crosby&src=typd" target="_blank")
 									h2.symbol-title Bing Crosby
 									p.symbol-total #{symbols.bingcrosby.total}
 							.illustItem.illustItem--bandaid.symbol.symbol--bandaid
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=bandaid&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=band%20aid&src=typd" target="_blank")
 									h2.symbol-title Band Aid
 									p.symbol-total #{symbols.bandaid.total}
 							.illustItem.illustItem--mariahcarey.symbol.symbol--mariahcarey
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=mariahcarey&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=mariah%20carey&src=typd" target="_blank")
 									h2.symbol-title Mariah Carey
 									p.symbol-total #{symbols.mariahcarey.total}
 							.illustItem.illustItem--thepogues.symbol.symbol--thepogues
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=thepogues&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=the%20pogues&src=typd" target="_blank")
 									h2.symbol-title The Pogues
 									p.symbol-total #{symbols.thepogues.total}
 							.illustItem.illustItem--wham.symbol.symbol--wham
@@ -289,7 +289,7 @@ html
 									h2.symbol-title candle
 									p.symbol-total #{symbols.candle.total}
 							.illustItem.illustItem--mulledwine.symbol.symbol--mulledwine.symbol--inline
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=mulledwine&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=mulled%20wine&src=typd" target="_blank")
 									h2.symbol-title Mulled Wine
 									p.symbol-total #{symbols.mulledwine.total}
 							.illustItem.illustItem--sherry.symbol.symbol--sherry.symbol--inline
@@ -305,7 +305,7 @@ html
 									h2.symbol-title fireplace
 									p.symbol-total #{symbols.fireplace.total}
 							.illustItem.illustItem--mincepie.symbol.symbol--mincepie
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=mincepie&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=mince%20pie&src=typd" target="_blank")
 									h2.symbol-title Mince Pies
 									p.symbol-total #{symbols.mincepie.total}
 							.illustItem.illustItem--advent.symbol.symbol--advent.symbol--inline
@@ -343,7 +343,7 @@ html
 									h2.symbol-title mistletoe
 									p.symbol-total #{symbols.mistletoe.total}
 							.illustItem.illustItem--christmascards.symbol.symbol--christmascards
-								a.symbol-link(href="https://twitter.com/search?f=realtime&q=christmascards&src=typd" target="_blank")
+								a.symbol-link(href="https://twitter.com/search?f=realtime&q=christmas%20cards&src=typd" target="_blank")
 									h2.symbol-title Cards
 									p.symbol-total #{symbols.christmascards.total}
 									
