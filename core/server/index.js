@@ -31,7 +31,7 @@ var server = {
 		// middleware which blocks requests when we're too busy
 		app.use(function(req, res, next) {
 			if (toobusy()) {
-				res.status(503).send("We’re experiencing a higher number of visitors than we can handle at the moment. Please try reloading the page.")
+				res.status(503).send("We’re experiencing a higher number of visitors than we can handle at the moment. Please try reloading the page.");
 			} else {
 				next();
 			}

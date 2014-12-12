@@ -11,18 +11,19 @@ var SocketServer = {
 	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
-		var socketServer = io(server);
+		var socketServer = io(server, {transports: ["websocket"]});
 		_self.client = clientio.connect(config.clientURL, {transports: ["websocket"]});
 
 		//  ==================
 		//  === ON CONNECT ===
 		//  ==================
-
 		//If a client connects, give them the current data that the server has tracked
 		//so here that would be how many tweets of each type we have stored
 		socketServer.sockets.on('connection', function (socket) {
 			console.log('socketServer: New connection logged');
 			// console.log(socket.handshake.headers);
+			// emit state immediately so it’s more up to date
+			socket.emit('state', twitter.state.symbols);
 
 			//test to see if our new connection is from our backend server or a front-end connection
 			//if it’s the backend server, set up these events
@@ -49,7 +50,7 @@ var SocketServer = {
 
 			//log disconnects so we can check they get handled properly
 			socket.on('disconnect', function (reason) {
-				console.log('user disconnected' + reason);
+				console.log('user disconnected – ' + reason);
 			});
 		});
 

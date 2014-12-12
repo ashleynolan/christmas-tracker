@@ -163,6 +163,52 @@ var UI = {
 
 	},
 
+	updateRankings : function (state) {
+
+		//build a dom object of ordered list elements
+		var rankingArray = [];
+
+		for (var symbol in state) {
+			var tagString;
+			for (var tag in state[symbol].tags) {
+				tagString = tag;
+				break;
+			}
+			rankingArray.push([symbol, tagString, state[symbol].total]);
+		}
+
+		rankingArray.sort(function(a, b) {return  b[2] - a[2] });
+
+		//loop through array and make a list
+		var symbolLength = rankingArray.length,
+			i = 0,
+			listEl = document.createElement('ul');
+
+		listEl.className = 'symbol-list unstyled';
+
+		for (i; i < symbolLength; i++) {
+
+			var listItemEl = document.createElement('li'),
+				textEl = document.createElement('p'),
+				totalEl = document.createElement('span');
+
+			listItemEl.className = 'symbol symbol--' + rankingArray[i][0];
+			textEl.className = 'symbol-label';
+			totalEl.className = 'symbol-total';
+
+			textEl.innerHTML = rankingArray[i][1] + ': ';
+			totalEl.innerHTML = UI.numberWithCommas(rankingArray[i][2]);
+
+			textEl.appendChild(totalEl);
+			listItemEl.appendChild(textEl);
+			listEl.appendChild(listItemEl);
+		}
+
+		$('.symbol-list')[0].innerHTML = listEl.innerHTML;
+
+
+	},
+
 	numberWithCommas : function(x) {
 		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	},

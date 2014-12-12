@@ -18,7 +18,7 @@ var Sockets = {
 
 		var connectionURL = window.location.hostname;
 
-		this.socket = io.connect(connectionURL);
+		this.socket = io.connect(connectionURL, {transports: ['websocket']});
 
 	},
 
@@ -33,6 +33,7 @@ var Sockets = {
 
 		onTweetReceived : function (symbolObj) {
 
+			// log('on tweet received');
 			UI.updateSymbol(symbolObj.key, symbolObj.symbol);
 
 		},
@@ -42,6 +43,8 @@ var Sockets = {
 			for (var key in stateObj) {
 				UI.updateSymbol(key, stateObj[key]);
 			}
+
+			UI.updateRankings(stateObj);
 
 		}
 
