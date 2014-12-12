@@ -11,7 +11,7 @@ var SocketServer = {
 	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
-		var socketServer = io(server);
+		var socketServer = io(server, {transports: ["websocket"]});
 		_self.client = clientio.connect(config.clientURL, {transports: ["websocket"]});
 
 		//  ==================
