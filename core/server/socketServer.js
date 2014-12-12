@@ -11,7 +11,7 @@ var SocketServer = {
 	init : function (app, server, config) {
 
 		//Start a Socket.IO listen
-		var socketServer = io(server, {transports: ["websocket"]});
+		var socketServer = io(server);
 		_self.client = clientio.connect(config.clientURL, {transports: ["websocket"]});
 
 		//  ==================
@@ -22,6 +22,7 @@ var SocketServer = {
 		socketServer.sockets.on('connection', function (socket) {
 			console.log('socketServer: New connection logged');
 			// console.log(socket.handshake.headers);
+
 			// emit state immediately so it’s more up to date
 			socket.emit('state', twitter.state.symbols);
 

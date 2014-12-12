@@ -18,6 +18,7 @@ var Sockets = {
 
 		var connectionURL = window.location.hostname;
 
+		// this.socket = io.connect(connectionURL, {transports: ['websocket']});
 		this.socket = io.connect(connectionURL, {transports: ['websocket']});
 
 	},
